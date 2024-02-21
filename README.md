@@ -11,7 +11,20 @@ NOTA: Ya no están ni nwg-bar, ni nwg-drawer. Ambas cosas están fusionadas en e
 
 # Dependencias
 
-Las mismas que en sebekdots 2.0 pero sin nwg-bar ni nwg-drawer, sólo instalen nwg-menu con "sudo pacman -S nwg-menu" y recuerden darles permiso de ejecución a los scripts con "sudo chmod +x nombre-del-script.sh"
+Las mismas que en sebekdots 2.0 pero sin nwg-bar, nwg-drawer, o swaylock. Sólo instalen nwg-menu con "sudo pacman -S nwg-menu" y recuerden darles permiso de ejecución a los scripts con "sudo chmod +x nombre-del-script.sh"
+    
+    nwg-menu
+    swaync (SwayNotificationCenter)
+    rofi
+    pywal
+    swww
+    grim
+    swappy
+    slurp
+    nm-applet
+    gtklock
+    trizen
+
 
 # Enlaces de video
 
