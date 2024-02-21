@@ -16,4 +16,5 @@ Las mismas que en sebekdots 2.0 pero sin nwg-bar ni nwg-drawer, sólo instalen n
 # Enlaces de video
 
 Guía de instalación de mis dotfiles: https://youtu.be/LjF1Sx_-GtY
+
 Sebekdots 2.1 en acción: https://youtu.be/ijHihLKIY8A
