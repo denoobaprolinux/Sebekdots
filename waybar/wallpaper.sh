@@ -64,6 +64,7 @@ echo "Wallpaper: $wallpaper"
 echo "$wallpaper" > "$cache_file"
 echo "* { current-image: url(\"$wallpaper\", height); }" > "$rasi_file"
 cp $wallpaper ~/.cache/current_wallpaper.jpg
+convert ~/.cache/current_wallpaper.jpg ~/.cache/current_wallpaper.png # instalar imagemagick para que esto funcione
 
 # ----------------------------------------------------- 
 # Matar Swaync y Waybar, y volver a cargar todo
