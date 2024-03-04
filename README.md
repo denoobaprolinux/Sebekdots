@@ -22,7 +22,8 @@ Las mismas que en sebekdots 2.0 pero sin nwg-bar, nwg-drawer, o swaylock. Sólo 
     swappy
     slurp
     nm-applet
-    gtklock
+    gtklock (comentado en hypr.conf)
+    kyprlock (instrucciones de instalación y configuración: https://youtu.be/0mCxxQQQdO4)
     trizen
 
 
