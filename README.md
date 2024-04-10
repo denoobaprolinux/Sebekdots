@@ -26,21 +26,21 @@ _Vista previa de hyprexpo_
 
 # Dependencias
 
-nwg-menu
-swaync (SwayNotificationCenter)
-rofi
-pywal
-swww
-grim
-swappy
-slurp
-nm-applet
-gtklock (comentado en hypr.conf)
-kyprlock (instrucciones de instalación y configuración: https://youtu.be/0mCxxQQQdO4)
-trizen
-NetworkManager
-blueman
-kooha (herramienta muy sencilla para captura de pantalla)
+- nwg-menu
+- swaync (SwayNotificationCenter)
+- rofi
+- pywal
+- swww
+- grim
+- swappy
+- slurp
+- nm-applet
+- gtklock (comentado en hypr.conf)
+- kyprlock (instrucciones de instalación y configuración: https://youtu.be/0mCxxQQQdO4)
+- trizen
+- NetworkManager
+- blueman
+- kooha (herramienta muy sencilla para captura de pantalla)
 
 # Fuente "Neuropolitical"
 
