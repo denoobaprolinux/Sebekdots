@@ -6,8 +6,8 @@ _Apariencia general de Hyprland con Sebekdots 2.1.1_
 
 He vuelto con una actualización en mis dotfiles, básicamente añadiendo par de funcionalidades: un centro de energía completo en Sway Notification Center, y Hyprexpo, un plugin desarrollado por Vaxry para mostrar todos los espacios de trabajo "at glance", similar a como muestra la información Gnome o Plasma (activado en mis dotfiles usando la tecla Super + A), aparte de una nueva fuente para Waybar, llamada "Neuropolitical". También ha sido mejorada la velocidad en las transiciones, en la apertura y cierre de los programas, los efectos visuales en general, añadido el efecto "dim" para la ventanas activas e inactivas (100% para las activas y 70% para las inactivas) y han sido eliminados los bordes coloridos... Realmente sólo cambié los parámetros en las líneas de código, y si aún los quieres, cambia esos parámetros en hypr.conf:
 
--43    border_size = 0 (estaba originalmente en 2)
--80    drop_shadow = no (originalmente en yes)
+- 43    border_size = 0 (estaba originalmente en 2)
+- 80    drop_shadow = no (originalmente en yes)
 
 Con esas dos modificaciones, vuelven las visuales del borde (colores rotativos basados en el wallpaper con el script de Pywal) y la luz neón detrás de cada ventana (también con el script de Pywal)
 
