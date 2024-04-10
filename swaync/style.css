@@ -372,14 +372,14 @@
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
   margin: 3px;
-  background: @noti-bg;
+  background: @dnd-switch-bg;
   border-radius: 5px;
   color: @text-color;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: rgba(122, 162, 247, 1);
-  color: @noti-bg-hover;
+  background: @dnd-switch;
+  color: @text-color;
 }
 
 /* Title widget */
