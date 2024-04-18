@@ -11,13 +11,19 @@ He vuelto con una actualización en mis dotfiles, básicamente añadiendo par de
 
 Con esas dos modificaciones, vuelven las visuales del borde (colores rotativos basados en el wallpaper con el script de Pywal) y la luz neón detrás de cada ventana (también con el script de Pywal)
 
-# Importante, MUY importante
+# Importante, MUY importante (ACTUALIZACIÓN)
 
-Para que funcione el plugin "Hyprexpo" debes usar la versión git de Hyprland, hyprland-git, y se instala desde AUR. Si no quieres usar esa funcionalidad, basta con que elimines o comentes la primera línea de código de hypr.conf:
+*YA NO NECESITAS USAR HYPRLAND-GIT*
 
-`exec-once = hyprpm enable hyprexpo`
+Actualmente "hyprexpo" es funcional en la rama estable de Hyprland. Si instalaste hyprland-git, para revertir el cambio sencillamente usa "sudo pacman -S hyprland" y vuelves a la versión estable, así nada más. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la primera línea de código de hyprland.conf:
 
-Varxy tiene planificado hacer que este plugin funcione en la actualización de Hyprland 0.38, así que por los momentos, hyprland-git es la opción elegida.
+`exec-once = hyprpm reload -n`
+
+Asimismo, comenta o elimina la línea 145:
+
+`bind = $mainMod, A, hyprexpo:expo, toggle # puede ser: toggle (alternar entre mostrar/ocultar), off(deshabilitar) u on(habilitar)`
+
+Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plugins por Hyprland.
 
 **Instrucciones acerca de cómo habilitar el repositorio de plugins y hyprexpo en mi último video**
 
