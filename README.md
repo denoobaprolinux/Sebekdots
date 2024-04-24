@@ -49,12 +49,13 @@ _Vista previa de hyprexpo_
 - swappy
 - slurp
 - nm-applet
-- gtklock (comentado en hypr.conf)
+- pacman-contrib
 - hyprlock [(instrucciones de instalación y configuración)](https://youtu.be/0mCxxQQQdO4)
 - trizen
 - NetworkManager
 - blueman
 - kooha (herramienta muy sencilla para captura de pantalla)
+- udiskie
 
 # Fuente "Neuropolitical"
 
