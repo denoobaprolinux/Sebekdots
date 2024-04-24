@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nwg-drawer &
