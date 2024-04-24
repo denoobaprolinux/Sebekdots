@@ -1,0 +1,30 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+* {
+    font-size: 10px;
+    font-family: neuropolitical;    
+}
+
+window {
+    background: alpha(@color0, 0.8);
+    border-radius: 15px;
+    color: #fff
+}
+
+list {
+    background: none;
+}
+
+entry {
+    background-color: rgba (0, 0, 0, 0.2);
+}
+
+button {
+    background: @color0;
+    border-radius: 25px;
+}
+
+button:hover {
+    background: alpha(@color11, 0.8);
+    border-radius: 25px;
+}
