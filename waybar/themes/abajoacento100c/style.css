@@ -1,0 +1,239 @@
+@define-color white      	#F2F2F2;
+@define-color black      	#000000;
+@define-color text       	#FFFFFF;
+@define-color lightgray  	#686868;
+@define-color darkgray   	#353535;
+@define-color red        	#b80404;
+@define-color teal		 	#017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+@define-color transparent	rgba(0, 0, 0, 0.25);
+@define-color teal-trans	rgba(1, 117, 84, 0.5);
+@define-color cyan			rgba(53, 140, 169, 1);
+
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+
+* {
+	font-size: 14px;
+	font-family: neuropolitical;	
+}
+
+window#waybar {
+	background: @border-color;
+	/*background: rgba(1, 117, 84, 0.5);*/
+	/*background: @transparent;*/
+	border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top:2px solid black;
+}
+
+#custom-notification {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: orange;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 3px 3px 3px 3px;
+    opacity:1.0;
+    border:2px solid @border-color;
+    
+}
+
+#custom-notification.none {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: white;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 3px 3px 3px 3px;
+    opacity:1.0;
+    border:2px solid @border-color;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: red;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 3px 3px 3px 3px;
+    opacity:1.0;
+    border:2px solid @border-color;
+    
+}
+
+#custom-launcher{
+
+    background-color: @background-module;
+    font-size: 24px;
+    color: #1793d1;
+    border-radius: 25px;
+    padding: 0px 22px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity:1.0;
+    border:2px solid @border-color;
+}
+
+#custom-updates {
+
+    color: white;
+    font-size:12px;
+    padding: 2px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+}
+
+#clock {
+
+    font-size:12px;
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+}
+
+
+#custom-themeswitcher,
+#custom-wallchange,
+#tray
+{
+    
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    
+}
+
+#pulseaudio,
+#memory,
+#cpu
+{
+
+    font-size: 14px;
+    padding: 0px 10px 0px 10px;
+    
+}
+
+#window {
+    
+    background-color: @background-module;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 3px 3px 3px;
+    opacity:0.8;
+    border:2px solid @border-color;
+    color:#FFFFFF;
+}
+
+window#waybar.empty #window {
+    
+    background-color: transparent;
+    border: 0px;
+
+}
+
+#workspaces {
+
+    background: @background-module;
+    margin: 3px 3px 3px 3px;
+    padding: 0px 1px;
+    border-radius: 25px;
+    border:2px solid @border-color;
+    font-weight: bold;
+    font-style: normal;
+    opacity:0.8;
+    font-size:16px;
+    color:#FFFFFF;
+    
+}
+
+#workspaces button {
+    padding: 3px 3px;
+    margin: 3px 3px;
+    border-radius: 15px;
+    border:0px;
+    color: @color13;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.active,
+#workspaces button.visible {
+    color: orange;
+    /*border-radius: 15px;
+    border: 1px solid @border-color;*/
+    /*min-width: 40px;*/
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    /*background: @button-color;
+    border-radius: 15px;
+    border: 1px solid @border-color;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;*/
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    color: @button-hover;
+    /*background: @button-hover;
+    border: 1px solid @border-color;
+    border-radius: 15px;*/
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:12px;
+}
+
+#pulseaudio {
+    color: @color7;
+    padding: 0px 10px 0px 15px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+    font-size:12px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+#memory {
+    color: #2aa198;
+}
+#cpu {
+    color: #6c71c4;
+}
+#battery {
+    color: #859900;
+}
+#disk {
+    color: #b58900;
+}
+
