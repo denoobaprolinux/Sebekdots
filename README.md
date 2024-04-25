@@ -48,7 +48,9 @@ _Vista previa de hyprexpo_
 
 ### Con Yay (AUR helper):
 
-`yay -S hyprlock pywal` (Hyprlock ya está disponible en AUR, y deben instalar la versión normal de Pywal, no la de 16 colores)
+`yay -S hyprlock pywal` 
+
+Hyprlock ya está disponible en AUR, y deben instalar la versión normal de Pywal, no la de 16 colores
 
 Les aconsejo visitar el [repositorio de Hyprlock](https://github.com/hyprwm/hyprlock) por si necesitan la lista de dependencias para instalar este software (deberían instalarse junto a Hyprlock)
 
