@@ -44,11 +44,11 @@ _Vista previa de hyprexpo_
 
 ### Con pacman:
 
-`sudo pacman -S nwg-menu swaync rofi pywal swww grim swappy slurp nm-applet pacman-contrib trizen blueman kooha udiskie`
+`sudo pacman -S nwg-menu swaync rofi swww grim swappy slurp network-manager-applet pacman-contrib trizen blueman kooha udiskie`
 
 ### Con Yay (AUR helper):
 
-`yay -S hyprlock` (Ya está disponible en AUR)
+`yay -S hyprlock pywal` (Hyprlock ya está disponible en AUR, y deben instalar la versión normal de Pywal, no la de 16 colores)
 
 Les aconsejo visitar el [repositorio de Hyprlock](https://github.com/hyprwm/hyprlock) por si necesitan la lista de dependencias para instalar este software (deberían instalarse junto a Hyprlock)
 
