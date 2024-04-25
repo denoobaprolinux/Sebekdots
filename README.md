@@ -40,22 +40,17 @@ _Vista previa de hyprexpo_
 
 ## Dependencias
 
-- nwg-menu
-- swaync (SwayNotificationCenter)
-- rofi
-- pywal
-- swww
-- grim
-- swappy
-- slurp
-- nm-applet
-- pacman-contrib
-- hyprlock [(instrucciones de instalación y configuración)](https://youtu.be/0mCxxQQQdO4)
-- trizen
-- NetworkManager
-- blueman
-- kooha (herramienta muy sencilla para captura de pantalla)
-- udiskie
+**Van a copiar en una terminal los siguientes comandos:**
+
+### Con pacman:
+
+`sudo pacman -S nwg-menu swaync rofi pywal swww grim swappy slurp nm-applet pacman-contrib trizen blueman kooha udiskie`
+
+### Con Yay (AUR helper):
+
+`yay -S hyprlock` (Ya está disponible en AUR)
+
+Les aconsejo visitar el [repositorio de Hyprlock](https://github.com/hyprwm/hyprlock) por si necesitan la lista de dependencias para instalar este software (deberían instalarse junto a Hyprlock)
 
 # Fuente "Neuropolitical"
 
