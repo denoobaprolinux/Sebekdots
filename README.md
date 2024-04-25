@@ -58,3 +58,7 @@ Les aconsejo visitar el [repositorio de Hyprlock](https://github.com/hyprwm/hypr
 
 https://www.dafont.com/neuropolitical.font 
 Incluyo el archivo .zip en mi repositorio para descarga
+
+## Importante
+
+Para que el selector de wallpapers funcione, crea la carpeta "Set" en /Imágenes/Wallpapers/ (tal cual con las mayúsculas) y coloca todos tus wallpapers allí. El selector de wallpapers te los mostrará con Rofi.
