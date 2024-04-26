@@ -44,7 +44,7 @@ _Vista previa de hyprexpo_
 
 ### Con pacman:
 
-`sudo pacman -S waybar nwg-menu swaync rofi swww grim swappy slurp network-manager-applet pacman-contrib trizen blueman kooha udiskie`
+`sudo pacman -S waybar nwg-look nwg-menu swaync rofi swww grim swappy slurp network-manager-applet pacman-contrib trizen blueman kooha udiskie`
 
 ### Con Yay (AUR helper):
 
