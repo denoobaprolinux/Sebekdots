@@ -13,6 +13,7 @@ Con esas dos modificaciones, vuelven las visuales del borde (colores rotativos b
 
 ### Cambios específicos introducidos en V.2.2-HE
 
+- **Agregado nuevo tema, "Mínima" con sus variantes arriba/abajo**
 - Corrección del tema "Modular" (ambos): desaparecieron los píxeles muertos en esos temas
 - El **área de notificaciones** sigue a la barra: todos los temas "arriba" tienen las notificaciones *arriba* y de igual modo, con todos los temas "abajo" (notificaciones abajo)
 - El **Widget de Energía** del Centro de Notificaciones sigue el mismo patrón que el área de notificaciones, pegados a la barra siempre, no importa qué tema elijas
