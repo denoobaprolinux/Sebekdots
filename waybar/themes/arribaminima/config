@@ -1,0 +1,202 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"height": 12,
+		
+	"modules-left": [
+		
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/updates",
+		"custom/themeswitcher",
+		"custom/wallchange"
+
+	],
+
+	"modules-center": [
+	
+		"mpris"	
+	
+	],
+		
+	"modules-right": [
+	
+		"hyprland/window",
+		"pulseaudio",
+		"clock",
+		"tray",
+		"custom/scleft",
+		"custom/notification"
+				
+	],
+
+	"custom/themeswitcher": { 
+	"format": "󰟡",
+		"exec": "echo ; echo Cambiar Tema de Waybar",
+        "on-click": "~/.config/waybar/themes/themeswitcher.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+    "custom/wallchange": {
+        "format": "󰆊 ",
+        "exec": "echo ; echo Cambiar Wallpaper",
+        "on-click": "~/.config/waybar/wallpaper.sh select",
+        "on-click-right": "~/.config/waybar/wallpaper.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+	"custom/updates": {
+        "format": "  {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/.config/waybar/updates.sh",
+        "restart-interval": 60,
+        "on-click": "kitty -e ~/.config/waybar/installupdates.sh",
+        "tooltip": false
+    },
+
+	"custom/powermenu": {
+		"format": "",
+		"exec": "echo ; echo Sesión...",
+		"on-click": "~/.config/waybar/powerbutton.sh",
+		"interval" : 86400, // once every day
+		"icon-size": 20,
+		"tooltip": true,
+	},
+	
+	"custom/launcher": {
+		"format": "󰣇",
+		"exec": "echo ; echo Aplicaciones",
+		"icon-size": 20,
+		"interval" : 86400, // once every day
+		"tooltip": true,
+		"on-click": "~/.config/waybar/menutop.sh",
+	},
+	
+	"hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+			"urgent": "󰊠",
+			"active": "󰮯",
+			"default": "󰊠",
+			"empty": ""
+        },
+        "persistent-workspaces": {
+             "*": 10
+        }       
+    },
+
+	"clock": {
+		 "format": "{:%I:%M %p}",
+        "format-alt": "{:%I:%M %p 󰃭 %d/%m/%y}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+	},
+	
+	"pulseaudio": {
+		"format": "{icon}  {volume}",
+		"format-bluetooth": "{icon} ",
+		"format-muted": " 󰖁 ",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				"",
+				"󰕾",
+				""
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 10
+		
+	},
+
+	"hyprland/window": {
+				"format": "{initialClass}",
+				"tooltip": true,
+				"rewrite": {
+            "firefox": "Mozilla Firefox",
+            "Google-chrome": "Google Chrome",
+            "sublime_text": "Sublime Text",
+            "kitty": "Terminal",
+            "org.gnome.Nautilus": "Archivos",
+            "com.obsproject.Studio": "OBS Studio",
+            "Gimp-2.10": "Gimp",
+            "com.github.tchx84.Flatseal": "Flatseal",
+            "com.github.wwmm.easyeffects": "EasyEffects",
+            "discord": "Discord",
+            "org.gnome.Software": "Tienda de Software",
+            "org.gnome.Music": "Reproductor de Música",
+            "thunderbird": "Thunderbird",
+            "org.telegram.desktop": "Telegram"
+        },
+        "separate-outputs": true
+    },
+
+    "mpris": {
+		"format": "{title} - {artist}",
+		"format-paused": "<i>{title} - {artist}</i>",
+		"interval": 1,
+		"player-icons": {
+			"default": "",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "",
+			"play": "",
+			"previous": "󰒮",
+		},
+		// "ignored-players": ["firefox"]
+	},
+
+	"custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰎞",
+      "none": "󱇗",
+      "dnd-notification": "󱞃",
+      "dnd-none": "󱞄",
+      "inhibited-notification": "󱞃",
+      "inhibited-none": "󱞄 ",
+      "dnd-inhibited-notification": "󱞃",
+      "dnd-inhibited-none": "󱞄"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }}

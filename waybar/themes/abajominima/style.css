@@ -1,0 +1,194 @@
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+@define-color transparent   rgba(0, 0, 0, 0.3);
+@define-color teal-trans    rgba(1, 117, 84, 0.5);
+@define-color cyan          rgba(53, 140, 169, 1);
+
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+
+* {
+    font-size: 12px;
+    font-family: neuropolitical;    
+}
+
+window#waybar {
+    /*background: linear-gradient(0deg, @border-color, black);*/
+    /*background: rgba(1, 117, 84, 0.5);*/
+    background: alpha(@color0, 0.7);
+        
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: orange;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+    
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: white;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: red;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+}
+
+#custom-launcher{
+
+    font-size: 25px;
+    color: #1793d1;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+}
+
+#custom-updates {
+
+    color: white;
+    font-size:10px;
+    padding: 0px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    
+}
+
+#clock {
+
+    font-size:11px;
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+}
+
+
+#custom-themeswitcher,
+#custom-wallchange,
+#tray  {
+    
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+}
+
+#pulseaudio,
+#memory,
+#cpu   {
+
+    font-size: 11px;
+    padding: 0px 10px 0px 10px;
+}
+
+#window  {
+    
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+window#waybar.empty #window {
+    
+    background-color: transparent;
+    border: 0px;
+}
+
+#workspaces {
+   
+    padding: 0px 1px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+#workspaces button {
+    padding: 3px 3px;
+    border-radius: 15px;
+    border:0px;
+    color: @color13;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.active,
+#workspaces button.visible {
+    color: orange;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    color: @button-hover;
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+#pulseaudio {
+    color: @color7;
+    padding: 0px 10px 0px 15px;
+    font-size:12px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#memory {
+    color: #2aa198;
+}
+#cpu {
+    color: #6c71c4;
+}
+#battery {
+    color: #859900;
+}
+#disk {
+    color: #b58900;
+}
+
