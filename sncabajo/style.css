@@ -236,7 +236,7 @@
 /* DND widget */
 .widget-dnd {
   margin: 8px;
-  font-size: 0.65rem;
+  font-size: 0.85rem;
 }
 .widget-dnd > switch {
   font-size: initial;
@@ -360,7 +360,7 @@
 }
 
 .widget-buttons-grid {
-  font-size: initial;
+  font-size: 14px;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
   border-bottom-left-radius: 12px;
