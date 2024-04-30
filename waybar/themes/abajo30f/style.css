@@ -184,12 +184,8 @@ window#waybar.empty #window {
 
 #workspaces button.empty {
     color: #FFFFFF;
-    /*background: @button-color;
-    border-radius: 15px;
-    border: 1px solid @border-color;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;*/
     opacity:1.0;
+    background: rgba(0, 0, 0, 0);
 }
 
 #workspaces button:hover {

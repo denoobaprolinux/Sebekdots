@@ -149,6 +149,7 @@ window#waybar.empty #window {
 
     color: @button-hover;
     opacity:1.0;
+    background: rgba(0, 0, 0, 0);
 }
 
 tooltip {

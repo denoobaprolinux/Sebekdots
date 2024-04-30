@@ -38,15 +38,17 @@ window#waybar {
 #custom-scleft {
 
     color: @color10;
-    font-size: 28px;
+    font-size: 31px;
     background-color: alpha(@modules, 0.7);
+    
 }
 
 #custom-scright {
 
     color: @color10;
-    font-size: 28px;
+    font-size: 31px;
     background-color: alpha(@modules, 0.7);
+    
 }
 
 #custom-notification {
@@ -88,7 +90,7 @@ window#waybar {
     background-color: @border-color;
     font-size: 26px;
     color: #1793d1;
-    padding: 0px 6px 0px 15px;
+    padding: 0px 10px 0px 15px;
     opacity:1.0;
     border:0px solid @border-color;
     border-top-left-radius: 25px;
@@ -134,20 +136,21 @@ window#waybar {
 #window {
     
     background-color: alpha(@modules, 0.7);
-    font-size: 12px;
     padding: 0px 15px 0px 10px;
     opacity:1.0;
     border:0px solid @border-color;
     color:#FFFFFF;
+    border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+
 }
 
 window#waybar.empty #window {
     
     background-color: alpha(@modules, 0.7);
     border: 0px;
-    border-bottom-right-radius: 30px;
-    
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 
 }
 
@@ -195,6 +198,7 @@ window#waybar.empty #window {
 
     color: @button-hover;
     opacity:1.0;
+    background: rgba(0, 0, 0, 0);
 }
 
 tooltip {
@@ -214,10 +218,11 @@ tooltip label {
 }
 
 #pulseaudio {
-	color: @color7;
+    color: @color7;
     padding: 0px 10px 0px 15px;
     background-color: alpha(@modules, 0.7);
     font-size:12px;
+    border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
 #pulseaudio.muted {

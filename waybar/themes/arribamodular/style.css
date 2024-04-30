@@ -24,7 +24,7 @@ window#waybar {
 #custom-scleft {
 
     color: @color10;
-    font-size: 28px;
+    font-size: 31px;
     background-color: alpha(@modules, 0.7);
     
 }
@@ -32,20 +32,9 @@ window#waybar {
 #custom-scright {
 
     color: @color10;
-    font-size: 28px;
+    font-size: 31px;
     background-color: alpha(@modules, 0.7);
     
-}
-
-#custom-powermenu {
-
-    background-color: @border-color;
-    font-size: 20px;
-    color: red;
-    padding: 0px 25px 0px 6px;
-    opacity:1.0;
-    border-bottom-right-radius: 25px;
-
 }
 
 #custom-notification {
@@ -77,7 +66,6 @@ window#waybar {
     font-size: 20px;
     color: red;
     padding: 0px 25px 0px 6px;
-    
     opacity:1.0;
     border-bottom-right-radius: 25px;
     
@@ -88,9 +76,10 @@ window#waybar {
     background-color: @border-color;
     font-size: 26px;
     color: #1793d1;
-    padding: 0px 6px 0px 15px;
+    padding: 0px 10px 0px 15px;
     opacity:1.0;
     border-bottom-left-radius: 25px;
+    
 }
 
 #custom-updates {
@@ -138,14 +127,16 @@ window#waybar {
     border:0px solid @border-color;
     color:#FFFFFF;
     border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
 }
 
 window#waybar.empty #window {
     
     background-color: alpha(@modules, 0.7);
     border: 0px;
-    border-top-right-radius: 30px;
-    
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 
 }
 
@@ -190,6 +181,7 @@ window#waybar.empty #window {
 
     color: @button-hover;
     opacity:1.0;
+    background: rgba(0, 0, 0, 0);
 }
 
 tooltip {
@@ -212,6 +204,7 @@ tooltip label {
     background-color: alpha(@modules, 0.7);
     font-size:12px;
     border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 #pulseaudio.muted {
     color: red;

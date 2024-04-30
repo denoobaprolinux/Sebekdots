@@ -196,10 +196,8 @@ window#waybar.empty #window {
 #workspaces button:hover {
 
     color: @button-hover;
-    background: transparent;
-    /*border: 1px solid @border-color;
-    border-radius: 15px;*/
     opacity:1.0;
+    background: rgba(0, 0, 0, 0);
 }
 
 tooltip {
