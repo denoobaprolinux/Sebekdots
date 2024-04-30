@@ -168,6 +168,7 @@
 		"format": "{title} - {artist}",
 		"format-paused": "<i>{title} - {artist}</i>",
 		"interval": 1,
+		"title-len": 80,
 		"player-icons": {
 			"default": "",
 			"mpv": "🎵"
