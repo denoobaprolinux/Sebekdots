@@ -39,21 +39,9 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 ![swappy-20240424_015601](https://github.com/andrewsebek/Sebekdots/assets/121652305/ce21f516-5fc6-4c9e-a84b-5e28ecdff990)
 _Vista previa de hyprexpo_
 
-## Dependencias
+## Pasos para instalar Sebekdots 2.2
 
-**Van a copiar en una terminal los siguientes comandos:**
-
-### Con pacman:
-
-`sudo pacman -S waybar nwg-look nwg-menu swaync rofi swww grim swappy slurp network-manager-applet pacman-contrib trizen blueman kooha udiskie`
-
-### Con Yay (AUR helper):
-
-`yay -S hyprlock pywal` 
-
-Hyprlock ya está disponible en AUR, y deben instalar la versión normal de Pywal, no la de 16 colores
-
-Les aconsejo visitar el [repositorio de Hyprlock](https://github.com/hyprwm/hyprlock) por si necesitan la lista de dependencias para instalar este software (deberían instalarse junto a Hyprlock)
+Visita la Wiki
 
 # Fuente "Neuropolitical"
 
