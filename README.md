@@ -41,7 +41,7 @@ _Vista previa de hyprexpo_
 
 ## Pasos para instalar Sebekdots 2.2
 
-Visita la Wiki
+Visita la [Wiki](https://github.com/andrewsebek/Sebekdots.wiki.git)
 
 # Fuente "Neuropolitical"
 
