@@ -1,5 +1,5 @@
 {
-  "$schema": "/home/sebek/.config/sncarriba/configSchema.json",
+  "$schema": "$XDG_CONFIG_HOME/.config/sncarriba/configSchema.json",
   "positionX": "right",
   "positionY": "top",
   "control-center-margin-top": 0,
@@ -23,7 +23,7 @@
   "script-fail-notify": false,
  
   "widgets": [
-    "buttons-grid",
+    "menubar#label",
     "volume",
     "backlight",
     "mpris",
@@ -62,29 +62,37 @@
       "device": "acpi_video0",
       "min": 10
     },
-    "buttons-grid": {
-      "actions": [
-        {
-          "label": "󰐥",
-          "command": "poweroff"
-        },
-        {
-          "label": "󰜉",
-          "command": "reboot"
-        },
-        {
-          "label": "󰌾",
-          "command": "hyprlock"
-        },
-        {
-          "label": "󰍃",
-          "command": "hyprctl dispatch exit"
-        },
-        {
-          "label": "󰏥",
-          "command": "systemctl suspend"
-        },
-        {
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": "",
+        "position": "right",
+        "actions": [
+          {
+            "label": "  Apagar",
+            "command": "poweroff"
+          },
+          {
+            "label": "  Reiniciar",
+            "command": "reboot"
+          },
+          {
+            "label": "  Bloquear Pantalla",
+            "command": "hyprlock"
+          },
+          {
+            "label": "󰏥  Suspender",
+            "command": "systemctl suspend"
+          },
+          {
+            "label": "  Cerrar Sesión",
+            "command": "hyprctl dispatch exit"
+          }
+        ]
+      },   
+      "buttons#topbar-buttons": {
+        "position": "left",
+        "actions": [
+           {
           "label": "󰕾",
           "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         },
@@ -104,7 +112,8 @@
           "label": "",
           "command": "kooha"
         }
-      ]
+        ]
+      }
     }
   }
 }

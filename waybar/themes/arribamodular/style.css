@@ -127,7 +127,6 @@ window#waybar {
     border:0px solid @border-color;
     color:#FFFFFF;
     border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
 
 }
 
@@ -136,7 +135,6 @@ window#waybar.empty #window {
     background-color: alpha(@modules, 0.7);
     border: 0px;
     border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
 
 }
 
@@ -199,12 +197,11 @@ tooltip label {
 }
 
 #pulseaudio {
-	color: @color7;
+	color: @color8;
     padding: 0px 10px 0px 15px;
     background-color: alpha(@modules, 0.7);
     font-size:12px;
     border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
 }
 #pulseaudio.muted {
     color: red;
@@ -223,4 +220,25 @@ tooltip label {
 	color: #b58900;
 }
 
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-themeswitcher:hover,
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover,
+#pulseaudio:hover,
+#clock:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #58c1f5;
+    transition: all 0.3s ease-in-out;
+}
 

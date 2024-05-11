@@ -271,10 +271,10 @@
 }
 .widget-mpris-title {
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 .widget-mpris-subtitle {
-  font-size: 0.5rem;
+  font-size: 1.0rem;
 }
 
 /* Buttons widget */
@@ -353,11 +353,48 @@
   background-color: @noti-bg;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 0px 8px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
+
+.power-buttons{
+  background-color: @noti-bg;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.power-buttons>button {
+  background: transparent;
+  border: none;
+}
+
+.power-buttons>button:hover {
+  background: @noti-bg-hover;
+}
+
+.widget-menubar>box>.menu-button-bar>button {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.widget-menubar>box>.menu-button-bar>button:hover {
+  color: @color11;
+}
+
+.topbar-buttons>button {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.topbar-buttons>button:hover {
+  color: @color11;
+} 
 
 .widget-buttons-grid {
   font-size: 14px;

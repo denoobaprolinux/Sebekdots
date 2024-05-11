@@ -165,10 +165,10 @@
     },
 
     "mpris": {
-		"format": "{title} - {artist}",
-		"format-paused": "<i>{title} - {artist}</i>",
+		"format": "{title}",
+		"format-paused": "<i>{title}</i>",
 		"interval": 1,
-		"title-len": 80,
+		"title-len": 60,
 		"player-icons": {
 			"default": "",
 			"mpv": "🎵"
