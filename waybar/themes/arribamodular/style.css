@@ -100,6 +100,7 @@ window#waybar {
 
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-options,
 #tray
 {
     
@@ -225,6 +226,7 @@ tooltip label {
 #custom-updates:hover,
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
+#custom-options:hover,
 #custom-notification:hover,
 #custom-notification.none:hover,
 #custom-notification.dnd-none:hover,

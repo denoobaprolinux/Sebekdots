@@ -73,7 +73,6 @@ window#waybar {
     font-size:10px;
     padding: 0px 10px 0px 10px;
     background-color: alpha(@modules, 0.7);
-    
 }
 
 #clock {
@@ -88,6 +87,7 @@ window#waybar {
 
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-options,
 #tray  {
     
     color: aliceblue;
@@ -167,7 +167,7 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: @color8;
+    color: @color10;
     padding: 0px 10px 0px 15px;
     font-size:12px;
 }
@@ -197,6 +197,7 @@ tooltip label {
 
 #custom-updates:hover,
 #custom-wallchange:hover,
+#custom-options:hover,
 #custom-themeswitcher:hover,
 #custom-notification:hover,
 #custom-notification.none:hover,

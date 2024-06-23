@@ -1,0 +1,205 @@
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color transparente          rgba(0, 0, 0, 0);
+@define-color workspaces            @color10;
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: neuropolitical;
+    font-size: 12px;
+    background: @transparente;
+}
+
+#custom-launcher{
+    background-color: @workspaces;
+    color: #1793d1;
+    padding: 0px 20px 0px 15px;
+    font-size: 22px;
+}
+
+#custom-updates,
+#custom-themeswitcher,
+#custom-options,
+#custom-wallchange {
+
+    color: white;
+    font-size:12px;
+    padding: 0px 10px 0px 10px;
+    background-color: @workspaces;
+    
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: orange;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+    background-color: @workspaces;
+    
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: white;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+    background-color: @workspaces;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: red;
+    padding: 0px 20px 0px 10px;
+    opacity:1.0;
+    background-color: @workspaces;
+}
+
+#custom-lowerleft,
+#custom-lowerright,
+#custom-upperleft,
+#custom-upperright{
+    font-size: 22px;
+    color: @workspaces;
+    background-color: rgba(0,0,0,0);
+}
+
+#custom-infoarrow{
+    background-color: @workspaces;
+}
+
+window#waybar {
+    background-color: @transparente;
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.0;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+#window,
+#custom-space {
+    background: @workspaces;
+}
+
+#workspaces{
+    background: @workspaces;
+    opacity: 1.0;
+}
+
+#workspaces button {
+    
+    background-color:@workspaces;
+    padding: 3px 3px;
+    opacity: 1.0;
+    color: @color8;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active,
+#workspaces button.visible {
+    background-color: @workspaces;
+    color: orange;
+}
+
+#workspaces button.empty {
+    background-color: @workspaces;
+    color: #fff;
+}
+
+#workspaces button:hover {
+    background-color: @workspaces;
+    color: @color13;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#temperature.critical,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+    background-color: @workspaces;
+}
+
+#pulseaudio.muted {
+    background-color: @workspaces;
+    color: #2a5c45;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @color10;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:12px;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-themeswitcher:hover,
+#custom-options:hover,
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover,
+#pulseaudio:hover,
+#custom-infoarrow:hover,
+#mpris:hover,
+#mpris.paused:hover,
+#clock:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #58c1f5;
+    transition: all 0.3s ease-in-out;
+}
+

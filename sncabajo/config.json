@@ -23,10 +23,9 @@
   "script-fail-notify": false,
   
   "widgets": [
+    "notifications",
     "inhibitors",
     "title",
-    "dnd",
-    "notifications",
     "mpris",
     "volume",
     "backlight",
@@ -52,7 +51,8 @@
     },
     "mpris": {
       "image-size": 60,
-      "image-radius": 12
+      "image-radius": 12,
+      "blacklist":["playerctl"]
     },
      "volume": {
       "label": ""

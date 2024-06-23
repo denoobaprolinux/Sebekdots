@@ -64,14 +64,16 @@ echo "Wallpaper: $wallpaper"
 echo "$wallpaper" > "$cache_file"
 echo "* { current-image: url(\"$wallpaper\", height); }" > "$rasi_file"
 cp $wallpaper ~/.cache/current_wallpaper.jpg
-convert ~/.cache/current_wallpaper.jpg ~/.cache/current_wallpaper.png # instalar imagemagick para que esto funcione
+magick ~/.cache/current_wallpaper.jpg ~/.cache/current_wallpaper.png # instalar imagemagick para que esto funcione
+cp ~/.cache/current_wallpaper.png ~/.mozilla/firefox/7p9u4mig.default-release/chrome/newtab/wallpaper-dark1.png
 
 # ----------------------------------------------------- 
 # Matar Swaync y Waybar, y volver a cargar todo
 # ----------------------------------------------------- 
 
 ~/.config/waybar/launch.sh
-sleep 1
+sleep 2
+~/.config/hypr/hyprctl.sh
 
 # ----------------------------------------------------- 
 # Obtener nombre del wallpaper y mostrarlo con swww

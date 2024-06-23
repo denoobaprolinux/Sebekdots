@@ -88,6 +88,8 @@ window#waybar {
 
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-options,
+#custom-hyprconfig,
 #tray  {
     
     color: aliceblue;
@@ -167,7 +169,7 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: @color8;
+    color: @color10;
     padding: 0px 10px 0px 15px;
     font-size:12px;
 }
@@ -198,6 +200,7 @@ tooltip label {
 #custom-updates:hover,
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
+#custom-options:hover,
 #custom-notification:hover,
 #custom-notification.none:hover,
 #custom-notification.dnd-none:hover,

@@ -46,3 +46,6 @@ if [ "$choice" ]; then
     echo "${listThemes[$choice+1]}" > ~/.cache/.themestyle.sh
     ~/.config/waybar/reload.sh
 fi
+
+
+

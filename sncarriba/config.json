@@ -29,7 +29,6 @@
     "mpris",
     "inhibitors",
     "title",
-    "dnd",
     "notifications"
   ],
   "widget-config": {
@@ -52,7 +51,8 @@
     },
     "mpris": {
       "image-size": 60,
-      "image-radius": 12
+      "image-radius": 12,
+      "blacklist": ["playerctl"]
     },
      "volume": {
       "label": ""
