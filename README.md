@@ -1,36 +1,28 @@
 
-![swappy-20240424_015530](https://github.com/andrewsebek/Sebekdots/assets/121652305/bb865eeb-dc97-46ce-aa64-9b6ba5f590d0)
-_Apariencia general de Hyprland con Sebekdots 2.2-HE_
+![swappy-20240623_193732](https://github.com/andrewsebek/Sebekdots/assets/121652305/eda2cf0d-ae0c-469d-9120-4df2b8f02eab)
+_Apariencia general de Hyprland con Sebekdots 3-HE_
 
-# Sebekdots 2.2-HE (Hyprland Edition) - Viene de la versión 2.1.1
+# Sebekdots 3-HE (Hyprland Edition)
 
-He vuelto con una actualización en mis dotfiles, básicamente añadiendo par de funcionalidades: un centro de energía completo en Sway Notification Center, y Hyprexpo, un plugin desarrollado por Vaxry para mostrar todos los espacios de trabajo "at glance", similar a como muestra la información Gnome o Plasma (activado en mis dotfiles usando la tecla Super + A), aparte de una nueva fuente para Waybar, llamada "Neuropolitical". También ha sido mejorada la velocidad en las transiciones, en la apertura y cierre de los programas, los efectos visuales en general, añadido el efecto "dim" para la ventanas activas e inactivas (100% para las activas y 70% para las inactivas) y han sido eliminados los bordes coloridos... Realmente sólo cambié los parámetros en las líneas de código, y si aún los quieres, cambia esos parámetros en hypr.conf:
-
-- 43    border_size = 0 (estaba originalmente en 2)
-- 80    drop_shadow = no (originalmente en yes)
-
-Con esas dos modificaciones, vuelven las visuales del borde (colores rotativos basados en el wallpaper con el script de Pywal) y la luz neón detrás de cada ventana (también con el script de Pywal)
+He vuelto con una actualización en mis dotfiles, cambiando detalles y añadiendo funcionalidades: un nuevo botón de "Configuraciones de Hyprland", cambios en el Centro de Notificaciones, cambios en la estructura de código de configuración de Hyprland, lo mismo con Waybar, y dos nuevos temas, "Barras" Arriba/Abajo.
 
 ### Cambios específicos introducidos en V.2.2-HE
 
-- **Agregado nuevo tema, "Mínima" con sus variantes arriba/abajo**
-- Corrección del tema "Modular" (ambos): desaparecieron los píxeles muertos en esos temas
-- El **área de notificaciones** sigue a la barra: todos los temas "arriba" tienen las notificaciones *arriba* y de igual modo, con todos los temas "abajo" (notificaciones abajo)
-- El **Widget de Energía** del Centro de Notificaciones sigue el mismo patrón que el área de notificaciones, pegados a la barra siempre, no importa qué tema elijas
-- Colores unificados en el menú, las barras con gradientes negros, y el Centro de Notificaciones
-- Click derecho sobre el selector de wallpapers, genera un wallpaper al azar
+- **Agregado nuevo tema, "Barras" con sus variantes arriba/abajo**
+- El **área de notificaciones** ha sido reestructurada para mantener la coherencia visual en ambas variantes (Arriba/Abajo) 
+- El **botón de Configuración de Hyprland** que ejecuta Rofi, y genera un script que no sobreescribe la configuración por defecto de Hyprland, pero que es cargado en cada reinicio, manteniendo tus opciones elegidas.
 
-## Importante, MUY importante (ACTUALIZACIÓN)
+## Importante, MUY importante
 
 *YA NO NECESITAS USAR HYPRLAND-GIT*
 
-Actualmente "hyprexpo" es funcional en la rama estable de Hyprland. Si instalaste hyprland-git, para revertir el cambio sencillamente usa "sudo pacman -S hyprland" y vuelves a la versión estable, así nada más. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la primera línea de código de hyprland.conf:
+Sebekdots 3 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
 
 `exec-once = hyprpm reload -n`
 
-Asimismo, comenta o elimina la línea 145:
+Asimismo, comenta o elimina la línea 10 de keybindings.conf:
 
-`bind = $mainMod, A, hyprexpo:expo, toggle # puede ser: toggle (alternar entre mostrar/ocultar), off(deshabilitar) u on(habilitar)`
+`bind = $mainMod, TAB, hyprexpo:expo, toggle # puede ser: toggle (alternar entre mostrar/ocultar), off(deshabilitar) u on(habilitar)`
 
 Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plugins por Hyprland.
 
@@ -39,7 +31,7 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 ![swappy-20240424_015601](https://github.com/andrewsebek/Sebekdots/assets/121652305/ce21f516-5fc6-4c9e-a84b-5e28ecdff990)
 _Vista previa de hyprexpo_
 
-## Pasos para instalar Sebekdots 2.2
+## Pasos para instalar Sebekdots 3
 
 Visita la [Wiki](https://github.com/andrewsebek/Sebekdots/wiki)
 
