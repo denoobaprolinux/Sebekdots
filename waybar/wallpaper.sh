@@ -65,7 +65,6 @@ echo "$wallpaper" > "$cache_file"
 echo "* { current-image: url(\"$wallpaper\", height); }" > "$rasi_file"
 cp $wallpaper ~/.cache/current_wallpaper.jpg
 magick ~/.cache/current_wallpaper.jpg ~/.cache/current_wallpaper.png # instalar imagemagick para que esto funcione
-cp ~/.cache/current_wallpaper.png ~/.mozilla/firefox/7p9u4mig.default-release/chrome/newtab/wallpaper-dark1.png
 
 # ----------------------------------------------------- 
 # Matar Swaync y Waybar, y volver a cargar todo
