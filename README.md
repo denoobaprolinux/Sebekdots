@@ -18,7 +18,7 @@ _Selector de Wallpapers_
 Le he hecho una gran lavada de cara a mis dotfiles a través de Rofi, con los cambios que se ven en las capturas arriba:
 
 - El menú de configuraciones de Hyprland, con muchas más funcionalidades, comportamiento persistente, y adaptado al estilo de mis dotfiles
-- El menú de temas de Waybar, más amplio (permite la visualisación de 24 elementos a la vez)
+- El menú de temas de Waybar, más amplio (permite la visualización de 24 elementos a la vez)
 - El menú de selección de wallpapers, ampliado a 32 opciones
 
 Todos los menús de Rofi ahora participan de la paleta de colores generadas por los wallpapers, las barras de búsquedas distinguen mejor el ícono de lupa que aparece, y tienen una descripción en la misma ventana.
