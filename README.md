@@ -1,22 +1,35 @@
 
-![swappy-20240623_193732](https://github.com/andrewsebek/Sebekdots/assets/121652305/eda2cf0d-ae0c-469d-9120-4df2b8f02eab)
-_Apariencia general de Hyprland con Sebekdots 3-HE_
+![Escritorio](https://github.com/andrewsebek/Sebekdots/assets/121652305/3d39763c-5ccc-44d2-a0d5-2c2daba55915)
+_Apariencia general de Hyprland con Sebekdots 3.1-HE_
 
-# Sebekdots 3-HE (Hyprland Edition)
+![Configuraciones](https://github.com/andrewsebek/Sebekdots/assets/121652305/6feea2c4-d0af-4273-9ff2-4cf097539b84)
+_Nuevo Menú de Configuraciones_
 
-He vuelto con una actualización en mis dotfiles, cambiando detalles y añadiendo funcionalidades: un nuevo botón de "Configuraciones de Hyprland", cambios en el Centro de Notificaciones, cambios en la estructura de código de configuración de Hyprland, lo mismo con Waybar, y dos nuevos temas, "Barras" Arriba/Abajo.
+![Temas](https://github.com/andrewsebek/Sebekdots/assets/121652305/9e007541-6ba7-4c61-b1d2-0f08b91985e1)
+_Selector de Temas de Waybar_
 
-### Cambios específicos introducidos en V.2.2-HE
+![Wallpapers](https://github.com/andrewsebek/Sebekdots/assets/121652305/b57a4059-6c6a-4ea5-a688-31a3e16acebd)
+_Selector de Wallpapers_
 
-- **Agregado nuevo tema, "Barras" con sus variantes arriba/abajo**
-- El **área de notificaciones** ha sido reestructurada para mantener la coherencia visual en ambas variantes (Arriba/Abajo) 
-- El **botón de Configuración de Hyprland** que ejecuta Rofi, y genera un script que no sobreescribe la configuración por defecto de Hyprland, pero que es cargado en cada reinicio, manteniendo tus opciones elegidas.
+# Sebekdots 3.1-HE (Hyprland Edition)
+
+¡Nueva edición de Sebekdots para Hyprland!
+
+Le he hecho una gran lavada de cara a mis dotfiles a través de Rofi, con los cambios que se ven en las capturas arriba:
+
+- El menú de configuraciones de Hyprland, con muchas más funcionalidades, comportamiento persistente, y adaptado al estilo de mis dotfiles
+- El menú de temas de Waybar, más amplio (permite la visualisación de 24 elementos a la vez)
+- El menú de selección de wallpapers, ampliado a 32 opciones
+
+Todos los menús de Rofi ahora participan de la paleta de colores generadas por los wallpapers, las barras de búsquedas distinguen mejor el ícono de lupa que aparece, y tienen una descripción en la misma ventana.
+
+**El resto de las configuraciones permanecen iguales**
 
 ## Importante, MUY importante
 
 *YA NO NECESITAS USAR HYPRLAND-GIT*
 
-Sebekdots 3 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
+Sebekdots 3.1 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
 
 `exec-once = hyprpm reload -n`
 
