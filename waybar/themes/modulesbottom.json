@@ -145,6 +145,7 @@
             "discord": "Discord",
             "org.gnome.Software": "Tienda de Software",
             "org.gnome.Music": "Reproductor de Música",
+            "org.gnome.Epiphany": "Epiphany",
             "thunderbird": "Thunderbird",
             "org.telegram.desktop": "Telegram"
         },

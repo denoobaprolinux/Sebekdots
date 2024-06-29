@@ -1,28 +1,17 @@
-/*
-#  ____        __ _  
-# |  _ \ ___  / _(_) 
-# | |_) / _ \| |_| | 
-# |  _ < (_) |  _| | 
-# |_| \_\___/|_| |_| 
-#                    
-# by Stephan Raabe (2023) 
-# ----------------------------------------------------- 
-*/
-
-/* ---- Configuration ---- */
+/* ---- Configuración de Hyprland - Rofi ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "neuropolitical 10";
+    font:                       "Neuropolitical 8";
     show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";
     display-run:                "RUN";
     display-filebrowser:        "FILES";
     display-window:             "WINDOW";
-	drun-display-format:        "{name}";
-    hover-select:               true;
+	hover-select:               true;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
+    drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
     
 }
@@ -33,19 +22,19 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        900px;
+    width:                        600px;
     x-offset:                     0px;
-    y-offset:                     0px;
+    y-offset:                     35px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
     color:                        #FFFFFF;
-    border:                       3px;
-    border-color:                 #FFFFFF;
+    border:                       2px;
+    border-color:                 @color10;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     center;
-    anchor:                       center;
+    location:                     north;
+    anchor:                       north;
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;
@@ -59,8 +48,8 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    background-image:             @current-image;
-    children:                     ["imagebox","listbox"];
+    background-image:             transparent;
+    children:                     ["listbox"];
 }
 
 /* ---- Imagebox ---- */
@@ -76,7 +65,7 @@ listbox {
     spacing:                     20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 /* ---- Dummy ---- */
@@ -90,7 +79,7 @@ inputbar {
     text-color:                   @foreground;
     spacing:                      10px;
     padding:                      15px;
-    border-radius:                10px;
+    border-radius:                0px;
     border-color:                 @foreground;
     background-color:             @background;
     children:                     [ "textbox-prompt-colon", "entry" ];
@@ -99,7 +88,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                      true;
     expand:                       false;
-    str:                          "";
+    str:                          " ";
     background-color:             transparent;
     text-color:                   inherit;
 }
@@ -109,7 +98,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  "Search";
+    placeholder:                  "Configuraciones de Hyprland";
     placeholder-color:            inherit;
 }
 
@@ -138,8 +127,8 @@ button selected {
 /* ---- Listview ---- */
 listview {
     enabled:                      true;
-    columns:                      1;
-    lines:                        8;
+    columns:                      2;
+    lines:                        6;
     cycle:                        true;
     dynamic:                      true;
     scrollbar:                    false;
@@ -213,7 +202,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        32px;
+    size:                        60px;
     cursor:                      inherit;
 }
 

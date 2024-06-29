@@ -1,7 +1,7 @@
-/* ---- Configuration ---- */
+/* ---- Selector de Wallpapers - Rofi ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "Fira Sans Bold 10";
+    font:                       "Neuropolitical 8";
     show-icons:                 true;
 	hover-select:               true;
     me-select-entry:            "";
@@ -17,15 +17,15 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        761px;
+    width:                        1030px;
     x-offset:                     0px;
     y-offset:                     65px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
     color:                        #FFFFFF;
-    border:                       3px;
-    border-color:                 #FFFFFF;
+    border:                       2px;
+    border-color:                 @color10;
     cursor:                       "default";
     transparency:                 "real";
     location:                     north;
@@ -82,7 +82,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                      true;
     expand:                       false;
-    str:                          "";
+    str:                          " ";
     background-color:             transparent;
     text-color:                   inherit;
 }
@@ -92,7 +92,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  "Search";
+    placeholder:                  "Selector de Wallpapers";
     placeholder-color:            inherit;
 }
 
@@ -121,8 +121,8 @@ button selected {
 /* ---- Listview ---- */
 listview {
     enabled:                      true;
-    columns:                      6;
-    lines:                        3;
+    columns:                      8;
+    lines:                        4;
     cycle:                        true;
     dynamic:                      true;
     scrollbar:                    true;

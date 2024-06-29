@@ -36,7 +36,7 @@ done
 # Mostrar ventana de Rofi
 # ----------------------------------------------------- 
 listNames=${listNames::-2}
-choice=$(echo -e "$listNames" | rofi -dmenu -i -replace -config $HOME/.config/rofi/config-themes.rasi -no-show-icons -width 30 -p "Themes" -format i) 
+choice=$(echo -e "$listNames" | sort | rofi -dmenu -i -replace -config $HOME/.config/rofi/config-themes.rasi -no-show-icons -width 30 -p "Themes" -format i) 
 
 # ----------------------------------------------------- 
 # Elegir nuevo tema escribiendo la selección en ~/.cache/.themestyle.sh

@@ -1,29 +1,46 @@
 #!/bin/bash
 
-# Definir opciones de configuración y sus tipos de valores posibles
+#   ____             __ _                            _                       
+#  / ___|___  _ __  / _(_) __ _ _   _ _ __ __ _  ___(_) ___  _ __   ___  ___ 
+# | |   / _ \| '_ \| |_| |/ _` | | | | '__/ _` |/ __| |/ _ \| '_ \ / _ \/ __|
+# | |__| (_) | | | |  _| | (_| | |_| | | | (_| | (__| | (_) | | | |  __/\__ \
+#  \____\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\___|_|\___/|_| |_|\___||___/
+#                         |___/                                              
+#      _        _   _                  _                 _ 
+#   __| | ___  | | | |_   _ _ __  _ __| | __ _ _ __   __| |
+#  / _` |/ _ \ | |_| | | | | '_ \| '__| |/ _` | '_ \ / _` |
+# | (_| |  __/ |  _  | |_| | |_) | |  | | (_| | | | | (_| |
+#  \__,_|\___| |_| |_|\__, | .__/|_|  |_|\__,_|_| |_|\__,_|
+#                     |___/|_|                             
+
+# Opciones desplegadas en Rofi
+
 declare -A options=(
-    ["Configuración por defecto"]="reload"
-    ["Animaciones"]="true false"
-    ["Anchura de bordes de ventanas"]="numeric"
-    ["Gaps Internos"]="numeric"
-    ["Gaps Externos"]="numeric"
-    ["Efecto Blur"]="true false"
-    ["Smart Gaps (0/1/2)"]="numeric"
-    ["Efecto Neón"]="yes no"
-    ["Intensidad de Efecto Neón"]="numeric"
-    ["Esquinas"]="numeric"
+    ["1. Configuración por defecto"]="Aceptar Atrás"
+    ["2. Anchura de Bordes de Ventanas"]="numeric"
+    ["3. Gaps Internos"]="numeric"
+    ["4. Gaps Externos"]="numeric"
+    ["5. Smart Gaps (0/1/2)"]="numeric"
+    ["6. Efecto Blur"]="1.Encendido 2.Apagado 3.Atrás"
+    ["7. Efecto Neón"]="1.Encendido 2.Apagado 3.Atrás"
+    ["8. Efecto Neón - Intensidad"]="numeric"
+    ["9. Redimensionar Ventanas"]="1.Encendido 2.Apagado 3.Atrás"
+    ["10. Redimensionar Ventanas - Área"]="numeric"
+    ["11. Esquinas"]="numeric"
+    ["12. Animaciones"]="Estándar Rápidas Fluidas Máximas Apagadas"
 )
 
-# Ruta al script hyprctl.sh que se ejecutará al inicio
+# Creación/Actualización del script hyprctl.sh
+
 hyprctl_script=~/.config/hypr/hyprctl.sh
 
-# Crear hyprctl.sh si no existe y asegurarse de que es ejecutable
-if [ ! -f $hyprctl_script ]; then
-    echo "#!/bin/bash" > $hyprctl_script
-    chmod +x $hyprctl_script
+if [ ! -f "$hyprctl_script" ]; then
+    echo "#!/bin/bash" > "$hyprctl_script"
+    chmod +x "$hyprctl_script"
 fi
 
-# Función para agregar o reemplazar una línea en hyprctl.sh
+# Actualizar hyprctl.sh cada vez que haya un cambio
+
 update_hyprctl_script() {
     local key=$1
     local value=$2
@@ -31,72 +48,153 @@ update_hyprctl_script() {
     local pattern="^hyprctl keyword $key"
 
     if grep -q "$pattern" "$file"; then
-        # Reemplazar la línea existente
         sed -i "s|$pattern.*|hyprctl keyword $key $value|" "$file"
     else
-        # Añadir una nueva línea
         echo "hyprctl keyword $key $value" >> "$file"
     fi
 }
 
-# Mostrar el menú para seleccionar la opción
-selected_option=$(printf "%s\n" "${!options[@]}" | rofi -dmenu -i -replace -config $HOME/.config/rofi/config-themes.rasi -no-show-icons -width 30 "Seleccione opción de Hyprland:")
+# Seleccionar opciones en Rofi
 
-# Si se selecciona una opción, proceder
+selected_option=$(printf "%s\n" "${!options[@]}" | sort -n | rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-hypr.rasi" -no-show-icons -width 30 "Seleccione opción de Hyprland:")
+
 if [ -n "$selected_option" ]; then
     option_type=${options[$selected_option]}
     if [ "$option_type" == "numeric" ]; then
-        # Permitir la entrada de un valor numérico
-        selected_value=$(rofi -dmenu -i -replace -config $HOME/.config/rofi/config-themes.rasi -no-show-icons -width 30 "Introduzca valor para $selected_option:")
+        selected_value=$(rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-hypr.rasi" -no-show-icons -width 30 "Introduzca valor para $selected_option:")
     else
-        # Mostrar el menú para seleccionar el valor predefinido
-        selected_value=$(printf "%s\n" $option_type | rofi -dmenu -i -replace -config $HOME/.config/rofi/config-themes.rasi -no-show-icons -width 30 "Seleccione valor para $selected_option:")
+        selected_value=$(printf "%s\n" $option_type | sort | rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-hypr.rasi" -no-show-icons -width 30 "Seleccione valor para $selected_option:")
     fi
 
     if [ -n "$selected_value" ]; then
-        # Ejecutar hyprctl con el comando adecuado basado en la opción seleccionada
         case $selected_option in
-            "Animaciones")
-                hyprctl keyword animations:enabled $selected_value
-                update_hyprctl_script "animations:enabled" $selected_value $hyprctl_script
+             "1. Configuración por defecto")
+                case $selected_value in 
+                    "Aceptar")
+                        hyprctl reload
+                        echo "#!/bin/bash" > "$hyprctl_script"
+                        chmod +x "$hyprctl_script"
+                        cp ~/.config/hypr/config/animations/animations-default.conf ~/.config/hypr/config/animations.conf
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                esac
                 ;;
-            "Anchura de bordes de ventanas")
-                hyprctl keyword general:border_size $selected_value
-                update_hyprctl_script "general:border_size" $selected_value $hyprctl_script
+            "2. Anchura de Bordes de Ventanas")
+                hyprctl keyword general:border_size "$selected_value"
+                update_hyprctl_script "general:border_size" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
                 ;;
-            "Gaps Internos")
-                hyprctl keyword general:gaps_in $selected_value
-                update_hyprctl_script "general:gaps_in" $selected_value $hyprctl_script
+            "3. Gaps Internos")
+                hyprctl keyword general:gaps_in "$selected_value"
+                update_hyprctl_script "general:gaps_in" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
                 ;;
-            "Gaps Externos")
-                hyprctl keyword general:gaps_out $selected_value
-                update_hyprctl_script "general:gaps_out" $selected_value $hyprctl_script
+            "4. Gaps Externos")
+                hyprctl keyword general:gaps_out "$selected_value"
+                update_hyprctl_script "general:gaps_out" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
                 ;;
-            "Efecto Blur")
-                hyprctl keyword decoration:blur:enabled $selected_value
-                update_hyprctl_script "decoration:blur:enabled" $selected_value $hyprctl_script
+            "5. Smart Gaps (0/1/2)")
+                hyprctl keyword dwindle:no_gaps_when_only "$selected_value"
+                update_hyprctl_script "dwindle:no_gaps_when_only" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
                 ;;
-            "Smart Gaps (0/1/2)")
-                hyprctl keyword dwindle:no_gaps_when_only $selected_value
-                update_hyprctl_script "dwindle:no_gaps_when_only" $selected_value $hyprctl_script
+            "6. Efecto Blur")
+                case $selected_value in
+                    "1.Encendido")
+                        hyprctl keyword decoration:blur:enabled true
+                        update_hyprctl_script "decoration:blur:enabled" "true" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "2.Apagado")
+                        hyprctl keyword decoration:blur:enabled false
+                        update_hyprctl_script "decoration:blur:enabled" "false" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac
                 ;;
-            "Configuración por defecto")
-                hyprctl $selected_value
-                echo "#!/bin/bash" > $hyprctl_script
-                chmod +x $hyprctl_script
+            "7. Efecto Neón")
+                case $selected_value in
+                    "1.Encendido")
+                        hyprctl keyword decoration:drop_shadow true
+                        update_hyprctl_script "decoration:drop_shadow" "true" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "2.Apagado")
+                        hyprctl keyword decoration:drop_shadow false
+                        update_hyprctl_script "decoration:drop_shadow" "false" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac
                 ;;
-            "Efecto Neón")
-                hyprctl keyword decoration:drop_shadow $selected_value
-                update_hyprctl_script "decoration:drop_shadow" $selected_value $hyprctl_script
+            "8. Efecto Neón - Intensidad")
+                hyprctl keyword decoration:shadow_range "$selected_value"
+                update_hyprctl_script "decoration:shadow_range" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
                 ;;
-            "Esquinas")
-                hyprctl keyword decoration:rounding $selected_value
-                update_hyprctl_script "decoration:rounding" $selected_value $hyprctl_script
+            "9. Redimensionar Ventanas")
+                case $selected_value in
+                    "1.Encendido")
+                        hyprctl keyword general:resize_on_border true
+                        update_hyprctl_script "general:resize_on_border" "true" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "2.Apagado")
+                        hyprctl keyword general:resize_on_border false
+                        update_hyprctl_script "general:resize_on_border" "false" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac
                 ;;
-            "Intensidad de Efecto Neón")
-                hyprctl keyword decoration:shadow_range $selected_value
-                update_hyprctl_script "decoration:shadow_range" $selected_value $hyprctl_script
+            "10. Redimensionar Ventanas - Área")
+                hyprctl keyword general:extend_border_grab_area "$selected_value"
+                update_hyprctl_script "general:extend_border_grab_area" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;
+            "11. Esquinas")
+                hyprctl keyword decoration:rounding "$selected_value"
+                update_hyprctl_script "decoration:rounding" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;
+            "12. Animaciones")
+                case $selected_value in
+                    "Máximas")
+                        cp ~/.config/hypr/config/animations/animations-maximum.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "Rápidas")
+                        cp ~/.config/hypr/config/animations/animations-fast.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "Fluidas")
+                        cp ~/.config/hypr/config/animations/animations-fluid.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "Estándar")
+                        cp ~/.config/hypr/config/animations/animations-default.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "Apagadas")
+                        update_hyprctl_script "animations:enabled" "false" "$hyprctl_script"
+                        ;;
+                esac
+                ~/.config/waybar/hyproptions.sh
+                ;;        
         esac
-        notify-send "Configuración de Hyprland" "Actualizado: $selected_option = $selected_value"
+        
+        #notify-send "Configuración de Hyprland" "Actualizado: $selected_option = $selected_value"
+
     fi
+    ~/.config/hypr/hyprctl.sh
 fi
