@@ -29,7 +29,6 @@
 		"pulseaudio",
 		"clock",
 		"tray",
-		"custom/scleft",
 		"custom/notification"
 				
 	],
