@@ -11,16 +11,6 @@ _Selector de Temas de Waybar_
 ![Wallpapers](https://github.com/andrewsebek/Sebekdots/assets/121652305/b57a4059-6c6a-4ea5-a688-31a3e16acebd)
 _Selector de Wallpapers_
 
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('hyprsebek', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#00b9fe',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
-
 # Sebekdots 3.1-HE (Hyprland Edition)
 
 ¡Nueva edición de Sebekdots para Hyprland!
