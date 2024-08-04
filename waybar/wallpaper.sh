@@ -71,31 +71,6 @@ source "$HOME/.cache/wal/colors.sh"
 echo "Wallpaper: $wallpaper"
 
 # ----------------------------------------------------- 
-# Ejecutar el generador de colores en Starship
-# ----------------------------------------------------- 
-
-cp ~/.config/starship/starship.toml.bak ~/.config/starship.toml 
-
-# Ruta del archivo starship.toml
-starship_toml="$HOME/.config/starship.toml"
-
-# Reemplazar los colores en starship.toml
-sed -i -e "s/bg:color_orange/bg:$color1/g" \
-       -e "s/fg:color_orange/fg:$color1/g" \
-       -e "s/bg:color_yellow/bg:$color2/g" \
-       -e "s/fg:color_yellow/fg:$color2/g" \
-       -e "s/bg:color_aqua/bg:$color3/g" \
-       -e "s/fg:color_aqua/fg:$color3/g" \
-       -e "s/bg:color_blue/bg:$color4/g" \
-       -e "s/fg:color_blue/fg:$color4/g" \
-       -e "s/bg:color_bg3/bg:$color5/g" \
-       -e "s/fg:color_bg3/fg:$color5/g" \
-       -e "s/bg:color_bg1/bg:$color6/g" \
-       -e "s/fg:color_bg1/fg:$color6/g" \
-       -e "s/fg:color_fg0/fg:#FFFFFF/g" \
-       -e "s/\[\](color_orange)/\[\]($color1)/g" "$starship_toml"
-
-# ----------------------------------------------------- 
 # Escribir el wallpaper seleccionado al archivo .cache y generar current_wallpaper
 # ----------------------------------------------------- 
 
@@ -103,7 +78,6 @@ echo "$wallpaper" > "$cache_file"
 echo "* { current-image: url(\"$wallpaper\", height); }" > "$rasi_file"
 cp $wallpaper ~/.cache/current_wallpaper.jpg
 magick ~/.cache/current_wallpaper.jpg ~/.cache/current_wallpaper.png # instalar imagemagick para que esto funcione
-cp ~/.cache/current_wallpaper.png ~/.mozilla/firefox/7p9u4mig.default-release/chrome/newtab/wallpaper-dark1.png
 
 # ----------------------------------------------------- 
 # Matar Swaync y Waybar, y volver a cargar todo
