@@ -92,24 +92,24 @@ FILE=${3:-$(getTargetDirectory)/$(date -Ins).png}
 FILE_EDITOR=${3:-$(tmp_editor_directory)/$(date -Ins).png}
 
 if [ "$ACTION" != "save" ] && [ "$ACTION" != "copy" ] && [ "$ACTION" != "edit" ] && [ "$ACTION" != "copysave" ] && [ "$ACTION" != "check" ]; then
-  echo "Usage:"
+  echo "Uso:"
   echo "  grimblast [--notify] [--cursor] [--freeze] [--wait N] [--scale <scale>] (copy|save|copysave|edit) [active|screen|output|area] [FILE|-]"
   echo "  grimblast check"
   echo "  grimblast usage"
   echo ""
-  echo "Commands:"
-  echo "  copy: Copy the screenshot data into the clipboard."
-  echo "  save: Save the screenshot to a regular file or '-' to pipe to STDOUT."
-  echo "  copysave: Combine the previous 2 options."
-  echo "  edit: Open screenshot in the image editor of your choice (default is gimp). See man page for info."
-  echo "  check: Verify if required tools are installed and exit."
-  echo "  usage: Show this message and exit."
+  echo "Comandos:"
+  echo "  copy: Copia la captura de pantalla en el portapapeles."
+  echo "  save: Salva la captura de pantalla a un archivo o '-' para hacerle pipe a STDOUT."
+  echo "  copysave: Combina las dos opciones anteriores."
+  echo "  edit: Abre la captura de pantalla en un editor de imágenes (gimp por defecto)."
+  echo "  check: Verifica que las dependencias estén instaladas."
+  echo "  usage: Muestra este mensaje."
   echo ""
-  echo "Targets:"
-  echo "  active: Currently active window."
-  echo "  screen: All visible outputs."
-  echo "  output: Currently active output."
-  echo "  area: Manually select a region or window."
+  echo "Objetivos:"
+  echo "  active: Ventana activa."
+  echo "  screen: Toda la pantalla."
+  echo "  output: Salida actual."
+  echo "  area: Seleccionar manualmente el área."
   exit
 fi
 
@@ -184,7 +184,7 @@ wait() {
 }
 
 if [ "$ACTION" = "check" ]; then
-  echo "Checking if required tools are installed. If something is missing, install it to your system and make it available in PATH..."
+  echo "Revisando que todas las dependencias estén instaladas. Si no lo están, instala y haz que sean accesibles al PATH..."
   check grim
   check slurp
   check hyprctl
@@ -251,18 +251,18 @@ elif [ "$ACTION" = "save" ]; then
     notifyOk "$TITLE" "$MESSAGE" -i "$FILE"
     echo "$FILE"
   else
-    notifyError "Error taking screenshot with grim"
+    notifyError "EError tomando captura con grim"
   fi
 elif [ "$ACTION" = "edit" ]; then
   env_editor_confirm
   if takeScreenshot "$FILE_EDITOR" "$GEOM" "$OUTPUT"; then
     TITLE="Captura de Pantalla de $SUBJECT"
-    MESSAGE="Open screenshot in image editor"
+    MESSAGE="Abriendo imagen en editor"
     notifyOk "$TITLE" "$MESSAGE" -i "$FILE_EDITOR"
     $GRIMBLAST_EDITOR "$FILE_EDITOR"
     echo "$FILE_EDITOR"
   else
-    notifyError "Error taking screenshot"
+    notifyError "Error tomando captura"
   fi
 else
   if [ "$ACTION" = "copysave" ]; then
@@ -270,7 +270,7 @@ else
     notifyOk "Imagen Copiada al Portapapeles y Guardada en $FILE" -i "$FILE"
     echo "$FILE"
   else
-    notifyError "Error taking screenshot with grim"
+    notifyError "Error tomando captura con grim"
   fi
 fi
 
