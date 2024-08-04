@@ -1,17 +1,17 @@
-@define-color white      	#F2F2F2;
-@define-color black      	#000000;
-@define-color text       	#FFFFFF;
-@define-color lightgray  	#686868;
-@define-color darkgray   	#353535;
-@define-color red        	#b80404;
-@define-color teal		 	#017554;
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
 @define-color blue          #00236e;
 @define-color purple        #7e2979;
 @define-color aqua          #0094b2;
 
-@define-color transparent	rgba(0, 0, 0, 0.25);
-@define-color teal-trans	rgba(1, 117, 84, 0.5);
-@define-color cyan			rgba(53, 140, 169, 1);
+@define-color transparent   rgba(0, 0, 0, 0.25);
+@define-color teal-trans    rgba(1, 117, 84, 0.5);
+@define-color cyan          rgba(53, 140, 169, 1);
 
 @import '../../../../.cache/wal/colors-waybar.css';
 
@@ -22,15 +22,15 @@
 
 
 * {
-	font-size: 14px;
-	font-family: neuropolitical;	
+    font-size: 14px;
+    font-family: neuropolitical;    
 }
 
 window#waybar {
-	background: linear-gradient(0deg, @border-color, black);
-	/*background: rgba(1, 117, 84, 0.5);*/
-	/*background: @transparent;*/
-	border-bottom-right-radius: 25px;
+    background: linear-gradient(180deg, @border-color, black);
+    /*background: rgba(1, 117, 84, 0.5);*/
+    /*background: @transparent;*/
+    border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -46,7 +46,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:2px solid orange;
     
 }
 
@@ -59,7 +59,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
 }
 
 #custom-notification.dnd-none,
@@ -70,9 +70,9 @@ window#waybar {
     color: red;
     border-radius: 25px;
     padding: 0px 21px 0px 18px;
-    margin: 3px 3px 3px 3px;
+    margin: 1px 1px 1px 1px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:2px solid red;
     
 }
 
@@ -85,7 +85,7 @@ window#waybar {
     padding: 0px 22px 0px 15px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
 }
 
 #custom-updates {
@@ -244,10 +244,6 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
 #custom-options:hover,
-#custom-notification:hover,
-#custom-notification.none:hover,
-#custom-notification.dnd-none:hover,
-#custom-notification.dnd-inhibited-none:hover,
 #pulseaudio:hover,
 #clock:hover {
 
@@ -257,6 +253,39 @@ tooltip label {
 
 #custom-launcher:hover {
 
+    background-color: @background-module;
+    font-size: 24px;
     color: #58c1f5;
-    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    padding: 0px 22px 0px 15px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid @border-color;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: orange;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid @border-color;
+    
+}
+
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: orange;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid red;
 }

@@ -46,7 +46,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:2px solid orange;
     
 }
 
@@ -59,7 +59,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
 }
 
 #custom-notification.dnd-none,
@@ -70,9 +70,9 @@ window#waybar {
     color: red;
     border-radius: 25px;
     padding: 0px 21px 0px 18px;
-    margin: 3px 3px 3px 3px;
+    margin: 1px 1px 1px 1px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:2px solid red;
     
 }
 
@@ -85,7 +85,7 @@ window#waybar {
     padding: 0px 22px 0px 15px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:0px solid @border-color;
 }
 
 #custom-updates {
@@ -244,10 +244,6 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
 #custom-options:hover,
-#custom-notification:hover,
-#custom-notification.none:hover,
-#custom-notification.dnd-none:hover,
-#custom-notification.dnd-inhibited-none:hover,
 #pulseaudio:hover,
 #clock:hover {
 
@@ -257,7 +253,39 @@ tooltip label {
 
 #custom-launcher:hover {
 
+    background-color: @background-module;
+    font-size: 24px;
     color: #58c1f5;
-    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    padding: 0px 22px 0px 15px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid @border-color;
 }
 
+#custom-notification:hover,
+#custom-notification.none:hover {
+
+    background-color: @background-module;
+    font-size: 20px;
+    color: orange;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid @border-color;
+    
+}
+
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+     background-color: @background-module;
+    font-size: 20px;
+    color: orange;
+    border-radius: 25px;
+    padding: 0px 21px 0px 18px;
+    margin: 1px 1px 1px 1px;
+    opacity:1.0;
+    border:2px solid red;
+}
