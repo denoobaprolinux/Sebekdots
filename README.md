@@ -1,27 +1,22 @@
 
-![Escritorio](https://github.com/andrewsebek/Sebekdots/assets/121652305/3d39763c-5ccc-44d2-a0d5-2c2daba55915)
-_Apariencia general de Hyprland con Sebekdots 3.1-HE_
+https://github.com/user-attachments/assets/5d81d68a-4dc7-414b-a567-c820a06ce4ba
+Uploading 2024-08-03 20-49-01.mp4…
+_Vista previa de Sebekdots 3.2_
 
-![Configuraciones](https://github.com/andrewsebek/Sebekdots/assets/121652305/6feea2c4-d0af-4273-9ff2-4cf097539b84)
-_Nuevo Menú de Configuraciones_
-
-![Temas](https://github.com/andrewsebek/Sebekdots/assets/121652305/9e007541-6ba7-4c61-b1d2-0f08b91985e1)
-_Selector de Temas de Waybar_
-
-![Wallpapers](https://github.com/andrewsebek/Sebekdots/assets/121652305/b57a4059-6c6a-4ea5-a688-31a3e16acebd)
-_Selector de Wallpapers_
-
-# Sebekdots 3.1-HE (Hyprland Edition)
+# Sebekdots 3.2-HE (Hyprland Edition)
 
 ¡Nueva edición de Sebekdots para Hyprland!
 
-Le he hecho una gran lavada de cara a mis dotfiles a través de Rofi, con los cambios que se ven en las capturas arriba:
+Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
-- El menú de configuraciones de Hyprland, con muchas más funcionalidades, comportamiento persistente, y adaptado al estilo de mis dotfiles
-- El menú de temas de Waybar, más amplio (permite la visualización de 24 elementos a la vez)
-- El menú de selección de wallpapers, ampliado a 32 opciones
-
-Todos los menús de Rofi ahora participan de la paleta de colores generadas por los wallpapers, las barras de búsquedas distinguen mejor el ícono de lupa que aparece, y tienen una descripción en la misma ventana.
+- El menú de configuraciones de Hyprland: añadidas más opciones, para hacer un total de 16 + la configuración por defecto de Sebekdots.
+- **Grimblast** para captura de pantalla, junto con grim y slurp, con combinación de teclas Control + ImpPnt, para generar una notificación de captura de pantalla, guardada en la carpeta /home/user/Imágenes/Capturas (generadas por el script grimblast.sh)
+- Modificados todos los temas de Waybar **"Completa"** para eliminar las esquinas redondeadas (Ahora todos los temas son planos, para ser consistentes con la posición de las ventanas, y la posible selección de Smart Gaps por el usuario, estéticamente se ve mejor)
+- Nuevo modo **"Pestañas"**: ahora las ventanas pueden ser agrupadas en pestañas en un mismo espacio de trabajo con la combinación de teclas Super + Shift + T
+- Modo de **"pantalla completa"**: Puedes hacer que una ventana ocupe todo el espacio de trabajo de manera temporal, sin cerrar otra(s) ventana(s), solamente pulsando Super + D
+- Incorporación de **Indicadores en Pantalla (OSD - On Screen Display)**: Ahora, presionar NumLock/CapsLock/ScrollLock, subir/bajar volumen, y subir/bajar brillo de pantalla, generan una visualización en pantalla generada por **swayosd**
+- **Cambiada la combinación de teclas para recargar Waybar**: ahora es Super + Shift + R (más intuitivo)
+- **Agregada combinación de teclas para activar hyprctl.sh**: si por alguna razón hyprctl.sh no carga (cosa que no me ha pasado ni una sola vez), si presionas Super + Shift + H se carga el script y todas las opciones personalizadas elegidas por ti. Esto puede sucederte si modificas alguna línea de código de Hyprland (y por eso hice el script)
 
 **El resto de las configuraciones permanecen iguales**
 
@@ -29,9 +24,9 @@ Todos los menús de Rofi ahora participan de la paleta de colores generadas por 
 
 *YA NO NECESITAS USAR HYPRLAND-GIT*
 
-Sebekdots 3.1 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
+Sebekdots 3.2 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
 
-`exec-once = hyprpm reload -n`
+`exec-once = hyprpm reload`
 
 Asimismo, comenta o elimina la línea 10 de keybindings.conf:
 
@@ -44,7 +39,7 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 ![swappy-20240424_015601](https://github.com/andrewsebek/Sebekdots/assets/121652305/ce21f516-5fc6-4c9e-a84b-5e28ecdff990)
 _Vista previa de hyprexpo_
 
-## Pasos para instalar Sebekdots 3
+## Pasos para instalar Sebekdots 3.2
 
 Visita la [Wiki](https://github.com/andrewsebek/Sebekdots/wiki)
 
