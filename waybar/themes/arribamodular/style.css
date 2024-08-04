@@ -24,7 +24,7 @@ window#waybar {
 #custom-scleft {
 
     color: @color10;
-    font-size: 31px;
+    font-size: 34px;
     background-color: alpha(@modules, 0.7);
     
 }
@@ -32,7 +32,7 @@ window#waybar {
 #custom-scright {
 
     color: @color10;
-    font-size: 31px;
+    font-size: 34px;
     background-color: alpha(@modules, 0.7);
     
 }

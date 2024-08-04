@@ -90,6 +90,7 @@ window#waybar {
 #custom-wallchange,
 #custom-options,
 #custom-hyprconfig,
+#custom-swapags,
 #tray  {
     
     color: aliceblue;
@@ -201,6 +202,7 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
 #custom-options:hover,
+#custom-swapags:hover,
 #custom-notification:hover,
 #custom-notification.none:hover,
 #custom-notification.dnd-none:hover,

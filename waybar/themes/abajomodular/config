@@ -13,8 +13,8 @@
 		
 		"custom/launcher",
 		"custom/scright",
-		"custom/options",
 		"custom/updates",
+		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange",
 		"hyprland/window"

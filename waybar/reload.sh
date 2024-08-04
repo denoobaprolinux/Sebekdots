@@ -32,6 +32,8 @@ echo "Config: $config_file"
 echo "Style: $style_file"
 
 waybar -c ~/.config/waybar/themes${arrThemes[0]}/$config_file -s ~/.config/waybar/themes${arrThemes[1]}/$style_file &
+sleep 1
+~/.config/hypr/hyprctl.sh
 
 themestyle=$(cat ~/.cache/.themestyle.sh)
 

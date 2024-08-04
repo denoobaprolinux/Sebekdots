@@ -27,7 +27,12 @@ declare -A options=(
     ["9. Redimensionar Ventanas"]="1.Encendido 2.Apagado 3.Atrás"
     ["10. Redimensionar Ventanas - Área"]="numeric"
     ["11. Esquinas"]="numeric"
-    ["12. Animaciones"]="Estándar Rápidas Fluidas Máximas Apagadas"
+    ["12. Animaciones"]="1.Apagadas 2.Estándar 3.Desvanecer 4.Rápidas 5.Fluidas 6.Máximas"
+    ["13. Oscurecimiento"]="1.Encendido 2.Apagado 3.Atrás"
+    ["14. Oscurecimiento - Intensidad"]="numeric"
+    ["15. Opacidad (Ventana Activa)"]="numeric"
+    ["16. Opacidad (Ventana Inactiva)"]="numeric"
+    ["17. Efecto Rayos X"]="1.Encendido 2.Apagado 3.Atrás"
 )
 
 # Creación/Actualización del script hyprctl.sh
@@ -61,14 +66,14 @@ selected_option=$(printf "%s\n" "${!options[@]}" | sort -n | rofi -dmenu -i -rep
 if [ -n "$selected_option" ]; then
     option_type=${options[$selected_option]}
     if [ "$option_type" == "numeric" ]; then
-        selected_value=$(rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-hypr.rasi" -no-show-icons -width 30 "Introduzca valor para $selected_option:")
+        selected_value=$(rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-submenu.rasi" -no-show-icons -width 30 "Introduzca valor para $selected_option:")
     else
-        selected_value=$(printf "%s\n" $option_type | sort | rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-hypr.rasi" -no-show-icons -width 30 "Seleccione valor para $selected_option:")
+        selected_value=$(printf "%s\n" $option_type | sort | rofi -dmenu -i -replace -config "$HOME/.config/rofi/config-submenu.rasi" -no-show-icons -width 30 "Seleccione valor para $selected_option:")
     fi
 
     if [ -n "$selected_value" ]; then
         case $selected_option in
-             "1. Configuración por defecto")
+            "1. Configuración por defecto")
                 case $selected_value in 
                     "Aceptar")
                         hyprctl reload
@@ -169,28 +174,80 @@ if [ -n "$selected_option" ]; then
                 ;;
             "12. Animaciones")
                 case $selected_value in
-                    "Máximas")
-                        cp ~/.config/hypr/config/animations/animations-maximum.conf ~/.config/hypr/config/animations.conf
-                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                    "1.Apagadas")
+                        update_hyprctl_script "animations:enabled" "false" "$hyprctl_script"
                         ;;
-                    "Rápidas")
-                        cp ~/.config/hypr/config/animations/animations-fast.conf ~/.config/hypr/config/animations.conf
-                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
-                        ;;
-                    "Fluidas")
-                        cp ~/.config/hypr/config/animations/animations-fluid.conf ~/.config/hypr/config/animations.conf
-                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
-                        ;;
-                    "Estándar")
+                    "2.Estándar")
                         cp ~/.config/hypr/config/animations/animations-default.conf ~/.config/hypr/config/animations.conf
                         update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
                         ;;
-                    "Apagadas")
-                        update_hyprctl_script "animations:enabled" "false" "$hyprctl_script"
+                    "3.Desvanecer")
+                        cp ~/.config/hypr/config/animations/animations-fade.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "4.Rápidas")
+                        cp ~/.config/hypr/config/animations/animations-fast.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "5.Fluidas")
+                        cp ~/.config/hypr/config/animations/animations-fluid.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
+                        ;;
+                    "6.Máximas")
+                        cp ~/.config/hypr/config/animations/animations-maximum.conf ~/.config/hypr/config/animations.conf
+                        update_hyprctl_script "animations:enabled" "true" "$hyprctl_script"
                         ;;
                 esac
                 ~/.config/waybar/hyproptions.sh
-                ;;        
+                ;;
+            "13. Oscurecimiento")
+                case $selected_value in
+                    "1.Encendido")
+                        hyprctl keyword decoration:dim_inactive true
+                        update_hyprctl_script "decoration:dim_inactive" "true" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "2.Apagado")
+                        hyprctl keyword decoration:dim_inactive false
+                        update_hyprctl_script "decoration:dim_inactive" "false" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                        ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac
+                ;;
+            "14. Oscurecimiento - Intensidad")
+                hyprctl keyword decoration:dim_strength "$selected_value"
+                update_hyprctl_script decoration:dim_strength "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;
+            "15. Opacidad (Ventana Activa)")
+                hyprctl keyword decoration:active_opacity "$selected_value"
+                update_hyprctl_script decoration:active_opacity "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;
+            "16. Opacidad (Ventana Inactiva)")
+                hyprctl keyword decoration:inactive_opacity "$selected_value"
+                update_hyprctl_script decoration:inactive_opacity "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;  
+            "17. Efecto Rayos X")
+                case $selected_value in
+                    "1.Encendido")
+                        hyprctl keyword decoration:blur:xray true
+                        update_hyprctl_script "decoration:blur:xray" "true" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "2.Apagado")
+                        hyprctl keyword decoration:blur:xray false
+                        update_hyprctl_script "decoration:blur:xray" "false" "$hyprctl_script"
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac            
         esac
         
         #notify-send "Configuración de Hyprland" "Actualizado: $selected_option = $selected_value"

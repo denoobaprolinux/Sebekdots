@@ -27,6 +27,7 @@ fi
 # ----------------------------------------------------- 
 # Loading the configuration
 # ----------------------------------------------------- 
+
 config_file="config"
 style_file="style.css"
 
@@ -35,6 +36,7 @@ echo "Config: $config_file"
 echo "Style: $style_file"
 
 waybar -c ~/.config/waybar/themes${arrThemes[0]}/$config_file -s ~/.config/waybar/themes${arrThemes[1]}/$style_file &
+sleep 3 && ~/.config/hypr/hyprctl.sh
 
 themestyle=$(cat ~/.cache/.themestyle.sh)
 
