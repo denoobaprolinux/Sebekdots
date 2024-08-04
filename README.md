@@ -1,6 +1,4 @@
-
-https://github.com/user-attachments/assets/5d81d68a-4dc7-414b-a567-c820a06ce4ba
-Uploading 2024-08-03 20-49-01.mp4…
+https://github.com/user-attachments/assets/a0ab8358-18cc-4f76-a371-6769718c4e74
 _Vista previa de Sebekdots 3.2_
 
 # Sebekdots 3.2-HE (Hyprland Edition)
