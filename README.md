@@ -1,5 +1,5 @@
 
-[demo.webm](https://github.com/user-attachments/assets/723fc87f-f6b0-4c2a-9a12-8ef3c050cc46)
+<video src='[demo.webm](https://github.com/user-attachments/assets/723fc87f-f6b0-4c2a-9a12-8ef3c050cc46)' width=180/>
 _Vista previa de Sebekdots 3.2_
 
 # Sebekdots 3.2-HE (Hyprland Edition)
