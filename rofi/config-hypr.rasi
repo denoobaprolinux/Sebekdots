@@ -128,7 +128,7 @@ button selected {
 listview {
     enabled:                      true;
     columns:                      2;
-    lines:                        6;
+    lines:                        9;
     cycle:                        true;
     dynamic:                      true;
     scrollbar:                    false;

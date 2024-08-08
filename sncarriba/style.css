@@ -4,9 +4,9 @@
 
 @import '../../.cache/wal/colors-waybar.css';
 
-@define-color cc-bg               alpha(@color0, 0.5); /* Entire control center background color */
+@define-color cc-bg               alpha(@color0, 0.8); /* Entire control center background color */
 
-@define-color noti-border-color   alpha(@color10, 0.2); /* Border color for popup notifications */
+@define-color noti-border-color   alpha(@color10, 0.4); /* Border color for popup notifications */
 @define-color noti-bg             rgba(0, 0, 0, 0.4);   /* Background for popup notification */
 @define-color noti-bg-darker      rgba(0, 0, 0, 0.6);   /* Idk yet */
 @define-color noti-bg-hover       alpha(@color10, 0.7); /* Main color for popup notifications */
@@ -27,6 +27,7 @@
 
 .notification-row {
   outline: none;
+  margin: 3px -2px 3px 0px;
 }
 
 .notification-row:focus,
@@ -36,7 +37,7 @@
 
 .notification {
   border-radius: 12px;
-  margin: 6px 12px;
+  margin: 3px -2px 3px 0px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7),
     0 2px 6px 2px rgba(0, 0, 0, 0.3);
   padding: 0;
@@ -74,8 +75,8 @@
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
-  margin-top: 10px;
-  margin-right: 16px;
+  margin-top: 0px;
+  margin-right: -2px;
   box-shadow: none;
   border: none;
   min-width: 24px;
@@ -87,12 +88,14 @@
   background: @noti-close-bg-hover;
   transition: all 0.15s ease-in-out;
   border: none;
+  margin-top: 0px;
+  margin-right: -2px;
 }
 
 .notification-default-action,
 .notification-action {
-  padding: 4px;
   margin: 0;
+  padding: 0;
   box-shadow: none;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
@@ -194,6 +197,7 @@
 
 .control-center {
   background: @cc-bg;
+  border:2px solid @color10;
 }
 
 .control-center-list {

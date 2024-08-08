@@ -9,7 +9,7 @@ generate_thumbnail() {
     local wallpaper="$1"
     local thumbnail="$thumbs_dir/$(basename "$wallpaper").png"
     if [ ! -f "$thumbnail" ]; then
-        magick convert "$wallpaper" -thumbnail 200x200 "$thumbnail"
+        magick "$wallpaper" -thumbnail 200x200 "$thumbnail"
     fi
 }
 
@@ -69,6 +69,12 @@ esac
 # ----------------------------------------------------- 
 source "$HOME/.cache/wal/colors.sh"
 echo "Wallpaper: $wallpaper"
+
+# ----------------------------------------------------- 
+# Ejecutar el generador de colores en Starship
+# ----------------------------------------------------- 
+
+# cp ~/.config/starship/starship.toml.bak ~/.config/starship.toml 
 
 # ----------------------------------------------------- 
 # Escribir el wallpaper seleccionado al archivo .cache y generar current_wallpaper

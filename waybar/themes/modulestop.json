@@ -100,6 +100,7 @@
         "interval" : 86400, // once every day
         "tooltip": true,
         "on-click": "~/.config/waybar/menutop.sh",
+        "escape": true
     },
 
     "group/hardware": {
@@ -388,8 +389,7 @@
       "inhibited-notification": "󱞃",
       "inhibited-none": "󱞄 ",
       "dnd-inhibited-notification": "󱞃",
-      "dnd-inhibited-none": "󱞄"
-    },
+      "dnd-inhibited-none": "󱞄" },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",

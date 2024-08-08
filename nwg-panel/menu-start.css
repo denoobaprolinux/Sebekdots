@@ -8,6 +8,7 @@
 window {
     background: alpha(@color0, 0.8);
     border-radius: 15px;
+    border:2px solid @color10;
     color: #fff
 }
 

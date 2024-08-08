@@ -12,6 +12,7 @@
 @define-color transparent	rgba(0, 0, 0, 0.25);
 @define-color teal-trans	rgba(1, 117, 84, 0.5);
 @define-color cyan			rgba(53, 140, 169, 1);
+@define-color clear         rgba(0, 0, 0, 0);
 
 @import '../../../../.cache/wal/colors-waybar.css';
 
@@ -34,7 +35,7 @@ window#waybar {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    border:2px solid black;
+    
 }
 
 #custom-notification {
@@ -44,9 +45,10 @@ window#waybar {
     color: orange;
     border-radius: 25px;
     padding: 0px 21px 0px 18px;
-    margin: 1px 1px 1px 1px;
+    margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid orange;
+    border:3px solid orange;
+    transition: all 0.3s ease-in-out;
     
 }
 
@@ -59,7 +61,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:0px solid @border-color;
+    border:3px solid @clear;
 }
 
 #custom-notification.dnd-none,
@@ -70,9 +72,9 @@ window#waybar {
     color: red;
     border-radius: 25px;
     padding: 0px 21px 0px 18px;
-    margin: 1px 1px 1px 1px;
+    margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid red;
+    border:3px solid red;
     
 }
 
@@ -85,14 +87,15 @@ window#waybar {
     padding: 0px 22px 0px 15px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:0px solid @border-color;
+    border:3px solid @clear;
+    transition: all 0.3s ease-in-out;
 }
 
 #custom-updates {
 
     color: white;
     font-size:12px;
-    padding: 2px 10px 0px 10px;
+    padding: 0px 5px 0px 10px;
     background-color: alpha(@modules, 0.7);
     margin: 10px 0px 10px 0px;
 }
@@ -253,39 +256,18 @@ tooltip label {
 
 #custom-launcher:hover {
 
-    background-color: @background-module;
-    font-size: 24px;
     color: #58c1f5;
-    border-radius: 25px;
-    padding: 0px 22px 0px 15px;
-    margin: 1px 1px 1px 1px;
-    opacity:1.0;
-    border:2px solid @border-color;
+    transition: all 0.3s ease-in-out;
+    border:3px solid #58c1f5;
 }
 
 #custom-notification:hover,
-#custom-notification.none:hover {
-
-    background-color: @background-module;
-    font-size: 20px;
-    color: orange;
-    border-radius: 25px;
-    padding: 0px 21px 0px 18px;
-    margin: 1px 1px 1px 1px;
-    opacity:1.0;
-    border:2px solid @border-color;
-    
-}
-
+#custom-notification.none:hover,
 #custom-notification.dnd-none:hover,
 #custom-notification.dnd-inhibited-none:hover {
 
-     background-color: @background-module;
-    font-size: 20px;
     color: orange;
-    border-radius: 25px;
-    padding: 0px 21px 0px 18px;
-    margin: 1px 1px 1px 1px;
-    opacity:1.0;
-    border:2px solid red;
+    transition: all 0.3s ease-in-out;
+    border:3px solid orange;
+
 }

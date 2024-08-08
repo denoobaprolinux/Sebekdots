@@ -34,7 +34,7 @@ window#waybar {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    border:2px solid black;
+  
 }
 
 #custom-notification {
@@ -46,7 +46,8 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:3px solid orange;
+    transition: all 0.3s ease-in-out;
     
 }
 
@@ -59,7 +60,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:3px solid @border-color;
 }
 
 #custom-notification.dnd-none,
@@ -72,7 +73,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:3px solid red;
     
 }
 
@@ -85,14 +86,15 @@ window#waybar {
     padding: 0px 22px 0px 15px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:2px solid @border-color;
+    border:3px solid @border-color;
+    transition: all 0.3s ease-in-out;
 }
 
 #custom-updates {
 
     color: white;
     font-size:12px;
-    padding: 2px 10px 0px 10px;
+    padding: 0px 5px 0px 10px;
     background-color: alpha(@modules, 0.7);
     margin: 10px 0px 10px 0px;
 }
@@ -244,10 +246,6 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
 #custom-options:hover,
-#custom-notification:hover,
-#custom-notification.none:hover,
-#custom-notification.dnd-none:hover,
-#custom-notification.dnd-inhibited-none:hover,
 #pulseaudio:hover,
 #clock:hover {
 
@@ -259,5 +257,17 @@ tooltip label {
 
     color: #58c1f5;
     transition: all 0.3s ease-in-out;
+    border:3px solid #58c1f5;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+    border:3px solid orange;
+
 }
 
