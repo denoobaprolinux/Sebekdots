@@ -1,13 +1,18 @@
 <video src="https://github.com/user-attachments/assets/723fc87f-f6b0-4c2a-9a12-8ef3c050cc46"></video>
 _Vista previa de Sebekdots 3.2_
 
-# Sebekdots 3.2-HE (Hyprland Edition)
+![Screenshot_2024-08-07_21 49 02](https://github.com/user-attachments/assets/de47d9fb-12be-42fe-a9db-647a17799a29)
+_Sebekdots 3.3 con el menú y el centro de notificaciones abiertos_
+
+# Sebekdots 3.3-HE (Hyprland Edition)
 
 ¡Nueva edición de Sebekdots para Hyprland!
 
 Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
 - El menú de configuraciones de Hyprland: añadidas más opciones, para hacer un total de 16 + la configuración por defecto de Sebekdots.
+- Todos los temas que derivan de la barra "Clásica" tienen nuevos efectos "hover" en el menú de aplicaciones y en el Centro de Notificaciones
+- El Menú de Aplicaciones y el Centro de Notificaciones tienen ahora un borde de 2 pixeles de ancho para delimitarlo en contra del fondo 
 - **Grimblast.sh** para captura de pantalla (utilidad hecha con grim y slurp) con combinación de teclas Control + ImpPnt, para generar una notificación de captura de pantalla, guardada en la carpeta /home/user/Imágenes/Capturas (generadas por el script)
 - Modificados todos los temas de Waybar **"Completa"** para eliminar las esquinas redondeadas (Ahora todos los temas son planos, para ser consistentes con la posición de las ventanas, y la posible selección de Smart Gaps por el usuario, estéticamente se ve mejor)
 - Modificados todos los temas **"Clásico"**: Los visuales de los botones de menú y notificaciones han sido cambiados (ya no tienen borde, pero el borde aparece cuando pasas por encima de los botones con el mouse, y las notificaciones ahora son más llamativas en la barra, así mismo el estilo de la función "no molestar" es congruente con los cambios)
@@ -40,7 +45,7 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 ![swappy-20240424_015601](https://github.com/andrewsebek/Sebekdots/assets/121652305/ce21f516-5fc6-4c9e-a84b-5e28ecdff990)
 _Vista previa de hyprexpo_
 
-## Pasos para instalar Sebekdots 3.2
+## Pasos para instalar Sebekdots 3.3
 
 Visita la [Wiki](https://github.com/andrewsebek/Sebekdots/wiki)
 
