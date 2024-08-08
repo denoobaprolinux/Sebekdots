@@ -32,15 +32,15 @@ _isInstalledYay() {
 # ------------------------------------------------------
 
 while true; do
-    read -p "¿Quieres instalar las actualizaciones? (Yy/Nn): " yn
-    case $yn in
-        [Yy]* )
+    read -p "¿Quieres instalar las actualizaciones? (s/n): " sn
+    case $sn in
+        [s]* )
             echo ""
         break;;
-        [Nn]* ) 
+        [n]* ) 
             exit;
         break;;
-        * ) echo "Responde usando Y o N.";;
+        * ) echo "Responde usando s o n.";;
     esac
 done
 
