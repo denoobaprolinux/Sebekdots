@@ -52,7 +52,7 @@
     "mpris": {
       "image-size": 60,
       "image-radius": 12,
-      "blacklist":["playerctld"]
+      "blacklist":["playerctl"]
     },
      "volume": {
       "label": ""

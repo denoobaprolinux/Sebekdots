@@ -122,16 +122,32 @@
         ]
     },
 
-   "hyprland/workspaces" : {
+    //"hyprland/workspaces" : {
+    //    "on-click": "activate",
+    //    "active-only": false,
+    //    "all-outputs": true,
+    //    "format": "{icon}",
+    //    "format-icons": {
+    //        "urgent": "󰊠",
+    //        "active": "󰮯",
+    //        "default": "󰊠",
+    //        "empty": ""
+    //    },
+    //    "persistent-workspaces": {
+    //         "*": 10
+    //    }       
+    //},
+
+    "hyprland/workspaces" : {
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "{name}",
         "format-icons": {
-            "urgent": "󰊠",
-            "active": "󰮯",
-            "default": "󰊠",
-            "empty": ""
+            "urgent": "",
+            "active": "",
+            "default": "",
+            "empty": ""
         },
         "persistent-workspaces": {
              "*": 10

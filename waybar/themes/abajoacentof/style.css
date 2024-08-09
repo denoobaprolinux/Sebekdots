@@ -97,6 +97,7 @@ window#waybar {
     padding: 0px 5px 0px 10px;
     background-color: alpha(@modules, 0.7);
     margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
 }
 
 #clock {
@@ -106,6 +107,7 @@ window#waybar {
     padding: 0px 10px 0px 10px;
     background-color: alpha(@modules, 0.7);
     margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -117,6 +119,7 @@ window#waybar {
     
     color: aliceblue;
     padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
     
 }
 
@@ -127,6 +130,7 @@ window#waybar {
 
     font-size: 14px;
     padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
     
 }
 
@@ -160,8 +164,6 @@ window#waybar.empty #window {
     font-style: normal;
     opacity:0.8;
     font-size:16px;
-    color:#FFFFFF;
-    
 }
 
 #workspaces button {
@@ -175,11 +177,9 @@ window#waybar.empty #window {
     opacity:1.0;
 }
 
-#workspaces button.active,
-#workspaces button.visible {
-    color: orange;
-    /*border-radius: 15px;
-    border: 1px solid @border-color;*/
+#workspaces button.active {
+    color: #FFF;
+    background-color: @color10;
     /*min-width: 40px;*/
     transition: all 0.3s ease-in-out;
     opacity:1.0;
@@ -197,9 +197,9 @@ window#waybar.empty #window {
 
 #workspaces button:hover {
 
-    color: @button-hover;
+    color: orange;
     opacity:1.0;
-    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
 }
 
 tooltip {
@@ -270,4 +270,3 @@ tooltip label {
     border:3px solid orange;
 
 }
-

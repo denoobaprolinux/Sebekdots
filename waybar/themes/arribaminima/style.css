@@ -37,7 +37,8 @@ window#waybar {
 
     font-size: 20px;
     color: orange;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
     opacity:1.0;
     
 }
@@ -46,7 +47,8 @@ window#waybar {
 
     font-size: 20px;
     color: white;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
     opacity:1.0;
 }
 
@@ -55,7 +57,8 @@ window#waybar {
 
     font-size: 20px;
     color: red;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
     opacity:1.0;
 }
 
@@ -63,7 +66,8 @@ window#waybar {
 
     font-size: 25px;
     color: #1793d1;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 20px 0px 15px;
+    transition: all 0.3s ease-in-out;
     opacity:1.0;
 }
 
@@ -71,9 +75,9 @@ window#waybar {
 
     color: white;
     font-size:10px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 5px 0px 10px;
     background-color: alpha(@modules, 0.7);
-    
+    transition: all 0.3s ease-in-out;
 }
 
 #clock {
@@ -83,18 +87,18 @@ window#waybar {
     padding: 0px 10px 0px 10px;
     background-color: alpha(@modules, 0.7);
     margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
 }
 
 
 #custom-themeswitcher,
 #custom-wallchange,
 #custom-options,
-#custom-hyprconfig,
-#custom-swapags,
 #tray  {
     
     color: aliceblue;
     padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 #pulseaudio,
@@ -103,6 +107,7 @@ window#waybar {
 
     font-size: 11px;
     padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 #window  {
@@ -132,15 +137,15 @@ window#waybar.empty #window {
     border:0px;
     color: @color13;
     background-color: transparent;
-    transition: all 0.3s ease-in-out;
     opacity:1.0;
 }
 
-#workspaces button.active,
-#workspaces button.visible {
-    color: orange;
+#workspaces button.active {
+    color: #FFF;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
+    border-bottom: 2px solid @button-hover;
+    border-top: 2px solid @button-hover;
 }
 
 #workspaces button.empty {
@@ -150,9 +155,11 @@ window#waybar.empty #window {
 
 #workspaces button:hover {
 
-    color: @button-hover;
+    color: orange;
+    transition: all 0.3s ease-in-out;
     opacity:1.0;
-    background: rgba(0, 0, 0, 0);
+    border-bottom: 2px solid @button-hover;
+    border-top: 2px solid @button-hover;
 }
 
 tooltip {
@@ -200,13 +207,8 @@ tooltip label {
 
 #custom-updates:hover,
 #custom-wallchange:hover,
-#custom-themeswitcher:hover,
 #custom-options:hover,
-#custom-swapags:hover,
-#custom-notification:hover,
-#custom-notification.none:hover,
-#custom-notification.dnd-none:hover,
-#custom-notification.dnd-inhibited-none:hover,
+#custom-themeswitcher:hover,
 #pulseaudio:hover,
 #clock:hover,
 #mpris:hover,
@@ -219,5 +221,22 @@ tooltip label {
 #custom-launcher:hover {
 
     color: #58c1f5;
+    padding: 0px 20px 0px 15px;
     transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #58c1f5;
+    border-top: 2px solid #58c1f5;
+    border-radius: 25px;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: orange;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 25px;    
 }
