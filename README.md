@@ -24,6 +24,12 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 - **Cambiada la combinación de teclas para recargar Waybar**: ahora es Super + Shift + R (más intuitivo)
 - **Agregada combinación de teclas para activar hyprctl.sh**: si por alguna razón hyprctl.sh no carga (cosa que no me ha pasado ni una sola vez), si presionas Super + Shift + H se carga el script y todas las opciones personalizadas elegidas por ti. Esto puede sucederte si modificas alguna línea de código de Hyprland (y por eso hice el script)
 
+### Actualización 3.3.1
+
+- Los temas "Modular" han sido removidos. La razón: una geometría difícil de conciliar con mis dotfiles, además de ocupar muchísimo espacio en pantalla.
+- Cambiados los temás "Mínima", con nuevas animaciónes.
+- TODOS los temas ahora tienen transiciones suaves en el efecto "hover" en TODOS los botones.
+
 **El resto de las configuraciones permanecen iguales**
 
 ## Importante, MUY importante
