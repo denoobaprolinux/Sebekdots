@@ -37,7 +37,7 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
 *YA NO NECESITAS USAR HYPRLAND-GIT*
 
-Sebekdots 3.2 usa hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
+Desde Sebekdots 3.2 los dotfiles usan hyprexpo, y si no lo instalas, va a salir una tira roja con un mensaje de error que no desaparecerá hasta que edites hyprland.conf. Si no quieres usar hyprexpo (o ningún otro plugin), basta con que elimines o comentes la línea 20 del código de hyprland.conf:
 
 `exec-once = hyprpm reload`
 
