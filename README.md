@@ -29,6 +29,7 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 - Los temas "Modular" han sido removidos. La razón: una geometría difícil de conciliar con mis dotfiles, además de ocupar muchísimo espacio en pantalla.
 - Cambiados los temás "Mínima", con nuevas animaciónes.
 - TODOS los temas ahora tienen transiciones suaves en el efecto "hover" en TODOS los botones.
+- Swaync removido, para usar Swaync-git (la versión actualizada por Erik Reider, el creador del software) para corregir el error de los widgets de MPRIS duplicados en el Centro de Notificaciones (Temporal, cuando el cambio sea subido a la rama estable, lo revertiré)
 
 **El resto de las configuraciones permanecen iguales**
 
