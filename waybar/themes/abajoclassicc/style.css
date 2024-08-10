@@ -59,7 +59,7 @@ window#waybar {
     padding: 0px 21px 0px 18px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:3px solid @border-color;
+    border:3px solid @clear;
 }
 
 #custom-notification.dnd-none,
@@ -85,7 +85,7 @@ window#waybar {
     padding: 0px 22px 0px 15px;
     margin: 3px 3px 3px 3px;
     opacity:1.0;
-    border:3px solid @border-color;
+    border:3px solid @clear;
     transition: all 0.3s ease-in-out;
 }
 
