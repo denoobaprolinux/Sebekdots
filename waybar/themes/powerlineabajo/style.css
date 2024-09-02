@@ -1,0 +1,527 @@
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color bar-bg @color0;
+/* @define-color bar-bg rgba(0, 0, 0, 0.8); */
+
+@define-color main-bg #000;
+@define-color main-fg #cdd6f4;
+
+@define-color wb-act-bg @color4;
+@define-color wb-act-fg #FFF;
+/* @define-color wb-act-bg #a6adc8; */
+/* @define-color wb-act-fg #313244; */
+
+@define-color wb-hvr-bg #6c7086;
+@define-color wb-hvr-fg #000;
+/* @define-color wb-hvr-bg #f5c2e7; */
+/* @define-color wb-hvr-fg #313244; */
+
+
+* {
+    border: none;
+    font-family: "Neuropolitical";
+    font-size: 10px;
+    min-height: 0; 
+    padding: 0;
+    margin: 0;
+}
+
+/*@import "theme.css";*/
+
+window#waybar {
+    background: @bar-bg;
+    border: 2px solid black;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @color10;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+/* WORKSPACES */
+#workspaces {
+    
+    padding: 4px;
+    background: @workspaces;
+}
+
+/* WORKSPACE BUTTONS */
+#workspaces button {
+    box-shadow: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    padding: 0px;
+    margin: 0px;
+    color: @color8;
+    animation: ws_normal 0.3s ease-in-out 1;
+}
+#workspaces button.active {
+    
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+    color: orange;
+    background: rgba(0, 0, 0, 0.3);
+    animation: ws_active 20s ease-in-out 1;
+    
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    /*background: @button-color;
+    border-radius: 15px;
+    border: 1px solid @border-color;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;*/
+    opacity:1.0;
+}
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: orange;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+
+}
+
+/* SPACING */
+#custom-launcher,
+#workspaces,
+#window,
+#custom-cpuinfo
+#memory,
+#cpu,
+#clock.time,
+#clock.date,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power,
+#mpris,
+#custom-notifications,
+#custom-updates,
+#custom-wallchange,
+#custom-themeswitcher,
+#custom-options,
+#tray {
+    
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* COLORS */
+@define-color workspaces    @color2;
+@define-color powerline1    @color1;
+
+@define-color memory        @color2;
+@define-color cpu           #313244;
+
+@define-color arch          @color2;
+
+@define-color time          @color1;
+@define-color date          @color2;
+@define-color wifi          @color1;
+
+@define-color pulseaudio    @color3;
+@define-color tray          @color2;
+@define-color battery       #313244;
+@define-color power         @color0;
+
+/* MODULES */
+/* WINDOW ICON */
+
+#custom-launcher {
+    font-size: 15pt;
+    color: #1793d1;
+    background: @color0;
+    padding-left: 8px;
+    padding-right: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-right1 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @workspaces;
+    background: @color0;
+    margin: 0px;
+    padding-right: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#custom-right6 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @powerline1;
+    background: @workspaces;
+    margin: 0;
+    text-shadow: 2px 0px 2px rgba(0, 0, 0, 1);
+    padding-right: 3px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* WINDOW TITLE */
+#window {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    color: #fff;
+    
+}
+
+/* TEMPERATURE */
+#custom-paddc {
+    padding-right: 3px;
+}
+#custom-left2 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @memory;
+    background: @color0;
+    margin: 0;
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
+}
+
+/* MEMORY */
+
+#memory {
+    padding-left: 1px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @memory;
+}
+
+/* CPU */
+#custom-left4 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @time;
+    background: @memory;
+    text-shadow: -3px 0px 2px rgba(0, 0, 0, 1);
+    padding-left: 3px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#cpu {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @cpu;
+}
+#custom-leftin1 {
+    font-size: 16pt;
+    font-family: "Neuropolitical";
+    color: @powerline1;
+    padding: 0px;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#custom-themeswitcher,
+#custom-wallchange {
+
+    color: white;
+    font-size:12px;
+    padding: 0px 10px 0px 10px;
+    margin: 0;
+    background-color: @memory;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-updates {
+
+    color: aliceblue;
+    background-color: @memory;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-options  {
+    
+    color: aliceblue;
+    background-color: @memory;
+    padding: 0px 12px 0px 5px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+/* ARCH LOGO */
+#custom-left5 {
+    font-size: 16pt;
+    font-family: "Neuropolitical";
+    color: @arch;
+    background: @color0;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+     
+}
+
+#mpris {
+
+    background: @arch;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#custom-right2 {
+    font-size: 16pt;
+    font-family: "Neuropolitical";
+    color: @arch;
+    background: @color0;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* TIME */
+#custom-rightin1 {
+    font-size: 16pt;
+    font-family: "Neuropolitical";
+    color: @time;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#clock.time {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @time;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+/* DATE */
+#clock.date {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @time;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+#custom-right4 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @time;
+    background: @memory;
+    margin: 0;
+    text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+    padding-right: 2px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
+}
+
+/* CONNECTION */
+
+#custom-right5 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @memory;
+    background: @color0;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* MEDIA INFO */
+
+/* OUTPUT DEVICE */
+#custom-left6 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @pulseaudio;
+    background: @color0;    
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
+    padding-left: 3px;
+    margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#pulseaudio {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @pulseaudio;
+    padding-left: 2px;
+    padding-right: 4px;
+    margin: 0;
+    color: #fff;
+}
+
+#pulseaudio.muted {
+
+    color: red;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    font-size: 18px;
+}
+
+/* BRIGHTNESS */
+#custom-left7 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @tray;
+    background: @pulseaudio;
+    text-shadow: -3px 0px 2px rgba(0, 0, 0, 1);
+    margin: 0px;
+    padding-left: 2px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#tray {
+    
+    background: @tray;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* BATTERY */
+#custom-left8 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @time;
+    background: @tray;
+    text-shadow: -3px 0px 2px rgba(0, 0, 0, 1);
+    margin: 0px;
+    padding-left: 2px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#battery {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @battery;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* POWER BUTTON */
+#custom-leftin2 {
+    font-size: 15pt;
+    font-family: "Neuropolitical";
+    color: @workspaces;
+    background: @main-bg;
+    margin-bottom: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#custom-notification {
+
+    background: @bar-bg;
+    font-size: 18px;
+    color: orange;
+    /*border-radius: 20px;*/
+    padding: 0px 12px 0px 10px;
+    margin: 0;
+    opacity:1.0;
+    transition: all 0.3s ease-in-out;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    
+}
+
+#custom-notification.none {
+
+    background: @bar-bg;
+    font-size: 18px;
+    color: white;
+    /*border-radius: 20px;*/
+    padding: 0px 12px 0px 10px;
+    margin: 0;
+    opacity:1.0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    background: @bar-bg;
+    font-size: 18px;
+    color: red;
+    /*border-radius: 20px;*/
+    padding: 0px 12px 0px 10px;
+    margin: 0;
+    opacity:1.0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+        
+}
+#custom-paddr {
+    font-size: 15pt;
+    color: @main-bg;
+    margin-bottom: 0px;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-themeswitcher:hover,
+#custom-options:hover,
+#pulseaudio:hover,
+#mpris:hover,
+#clock:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #58c1f5;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #58c1f5;
+    border-top: 2px solid #58c1f5;
+    border-radius: 25px;
+    /*border:3px solid #58c1f5;*/
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 12px 0px 10px;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 25px;    
+    /*border:3px solid orange;*/
+}
+
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: red;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 12px 0px 10px;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 25px;  
+}

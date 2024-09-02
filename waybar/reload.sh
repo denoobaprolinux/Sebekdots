@@ -45,3 +45,4 @@ if [[ $themestyle == *abajo* ]]; then
     killall swaync
     swaync -c ~/.config/sncabajo/config.json -s ~/.config/sncabajo/style.css &
 fi
+

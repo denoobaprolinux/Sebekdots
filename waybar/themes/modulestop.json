@@ -6,49 +6,7 @@
 //                                                        |___/                  
 
 {
-    "custom/space": {
-        "format": " "
-    },
-
-    "custom/lowerleft":{
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/upperright":{
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/lowerright":{
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/upperleft":{
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/scleft": {
-        "format": "",
-        "tooltip": false
-
-    },
-
-    "custom/scright": {
-        "format": "",
-        "tooltip": false
-
-    },
-
-    "custom/swapags": {
-        "format": "󰯎",
-        "exec": "echo ; echo Cargar AGS",
-        "on-click": "~/.config/hypr/ags.sh", 
-        "interval": 86400, // once every day
-        "tooltip": true
-    },
+   
 
     "custom/infoarrow":{
         "format": " ",
@@ -150,7 +108,7 @@
             "empty": ""
         },
         "persistent-workspaces": {
-             "*": 10
+            "*": 10
         }       
     },
 
@@ -176,6 +134,7 @@
                 "tooltip": true,
                 "rewrite": {
             "firefox": "Mozilla Firefox",
+            "firefoxnightly": "Firefox Nightly",
             "Google-chrome": "Google Chrome",
             "sublime_text": "Sublime Text",
             "kitty": "Terminal",
@@ -189,7 +148,8 @@
             "org.gnome.Music": "Reproductor de Música",
             "org.gnome.Epiphany": "Epiphany",
             "thunderbird": "Thunderbird",
-            "org.telegram.desktop": "Telegram"
+            "org.telegram.desktop": "Telegram",
+            "org.kde.kate": "Kate"
         },
         "separate-outputs": true
     },

@@ -167,6 +167,7 @@
                 "tooltip": true,
                 "rewrite": {
             "firefox": "Mozilla Firefox",
+            "firefoxnightly": "Firefox Nightly",
             "Google-chrome": "Google Chrome",
             "sublime_text": "Sublime Text",
             "kitty": "Terminal",
@@ -180,7 +181,8 @@
             "org.gnome.Music": "Reproductor de Música",
             "org.gnome.Epiphany": "Epiphany",
             "thunderbird": "Thunderbird",
-            "org.telegram.desktop": "Telegram"
+            "org.telegram.desktop": "Telegram",
+            "org.kde.kate": "Kate"
         },
         "separate-outputs": true
     },
