@@ -4,6 +4,9 @@ _Vista previa de Sebekdots 3.2_
 ![Screenshot_2024-08-07_21 49 02](https://github.com/user-attachments/assets/de47d9fb-12be-42fe-a9db-647a17799a29)
 _Sebekdots 3.3 con el menú y el centro de notificaciones abiertos_
 
+![Hyprland_2024-09-01_23 20 23](https://github.com/user-attachments/assets/8c8f4b3b-b624-417b-a2bb-fcab5791d411)
+_Nuevos temas "Powerline" disponibles_
+
 # Sebekdots 3.3-HE (Hyprland Edition)
 
 ¡Nueva edición de Sebekdots para Hyprland!
@@ -30,6 +33,11 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 - Cambiados los temás "Mínima", con nuevas animaciónes.
 - TODOS los temas ahora tienen transiciones suaves en el efecto "hover" en TODOS los botones.
 - Swaync removido, para usar Swaync-git (la versión actualizada por Erik Reider, el creador del software) para corregir el error de los widgets de MPRIS duplicados en el Centro de Notificaciones (Temporal, cuando el cambio sea subido a la rama estable, lo revertiré)
+
+### Actualización 3.3.2
+
+- Tema nuevo para Waybar - "Powerline" (Arriba/Abajo)
+- El script de cambio de Wallpapers ahora permite tener GIFs como fondos de pantalla animados
 
 **El resto de las configuraciones permanecen iguales**
 
