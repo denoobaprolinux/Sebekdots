@@ -4,7 +4,7 @@ _Vista previa de Sebekdots 3.2_
 ![Screenshot_2024-08-07_21 49 02](https://github.com/user-attachments/assets/de47d9fb-12be-42fe-a9db-647a17799a29)
 _Sebekdots 3.3 con el menú y el centro de notificaciones abiertos_
 
-![Hyprland_2024-09-01_23 20 23](https://github.com/user-attachments/assets/8c8f4b3b-b624-417b-a2bb-fcab5791d411)
+![Hyprland_2024-09-02_13 34 11](https://github.com/user-attachments/assets/f4975d2e-58a0-44c9-af5d-d86788110d9a)
 _Nuevos temas "Powerline" disponibles_
 
 # Sebekdots 3.3-HE (Hyprland Edition)
