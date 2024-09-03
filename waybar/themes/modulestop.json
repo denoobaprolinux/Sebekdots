@@ -6,7 +6,82 @@
 //                                                        |___/                  
 
 {
-   
+    // LEFT arrows
+    "custom/left1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left2": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left3": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left4": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left5": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left6": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left7": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left8": {
+        "format": "",
+        "tooltip": false
+    },
+
+// RIGHT arrows
+    "custom/right1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right2": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right3": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right4": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right5": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/right6": {
+        "format": "",
+        "tooltip": false
+    },
+
+// LEFT inverse
+    "custom/leftin1": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/leftin2": {
+        "format": "",
+        "tooltip": false
+    },
+
+// RIGHT inverse
+    "custom/rightin1": {
+        "format": "",
+        "tooltip": false
+    },
 
     "custom/infoarrow":{
         "format": " ",
@@ -58,7 +133,6 @@
         "interval" : 86400, // once every day
         "tooltip": true,
         "on-click": "~/.config/waybar/menutop.sh",
-        "escape": true
     },
 
     "group/hardware": {
@@ -108,10 +182,10 @@
             "empty": ""
         },
         "persistent-workspaces": {
-            "*": 10
+             "*": 10
         }       
     },
-
+    
     "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -149,7 +223,8 @@
             "org.gnome.Epiphany": "Epiphany",
             "thunderbird": "Thunderbird",
             "org.telegram.desktop": "Telegram",
-            "org.kde.kate": "Kate"
+            "org.kde.kate": "Kate",
+            "org.kde.kdeconnect.app": "KDE Connect"
         },
         "separate-outputs": true
     },
@@ -158,7 +233,7 @@
         "format": "{title}",
         "format-paused": "<i>{title}</i>",
         "interval": 1,
-        "title-len": 60,
+        "title-len": 50,
         "player-icons": {
             "default": "",
             "mpv": "🎵"
@@ -281,25 +356,30 @@
         
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "acpi_video0", // Modifica esto con la información que aparezca con comando brightnessctl -l
+        "on-scroll-up": "brightnessctl s +1%",
+        "on-scroll-down": "brightnessctl s 1%-",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon} {capacity}%",
+        // "format-icons": ["", "", "", "", ""],
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-charging": "󱘖 {capacity}%",
+        "format-plugged": "󱘖 {capacity}%",
+        "tooltip-format": "{time}",
+        "interval": 1,
+        "min-length": 6,
+        "max-length": 6
     },
+
     "battery#bat2": {
         "bat": "BAT2"
     },
@@ -365,7 +445,8 @@
       "inhibited-notification": "󱞃",
       "inhibited-none": "󱞄 ",
       "dnd-inhibited-notification": "󱞃",
-      "dnd-inhibited-none": "󱞄" },
+      "dnd-inhibited-none": "󱞄"
+    },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",

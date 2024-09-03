@@ -399,6 +399,15 @@ tooltip label {
     margin: 0;
 }
 
+#backlight,
+#battery {
+    
+    background: @tray;
+    padding-right: 10px;
+    padding-left: 0px;
+    margin: 0;
+}
+
 /* BATTERY */
 #custom-left8 {
     font-size: 15pt;
