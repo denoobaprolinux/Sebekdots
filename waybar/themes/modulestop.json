@@ -25,7 +25,10 @@
     },
     "custom/left5": {
         "format": "",
-        "tooltip": false
+        "on-click": "playerctl previous",
+        "exec": "echo ; echo Anterior",
+        "interval" : 86400, // once every day
+        "tooltip": true
     },
     "custom/left6": {
         "format": "",
@@ -47,7 +50,10 @@
     },
     "custom/right2": {
         "format": "",
-        "tooltip": false
+        "on-click": "playerctl next",
+        "exec": "echo ; echo Siguiente",
+        "interval" : 86400, // once every day
+        "tooltip": true
     },
     "custom/right3": {
         "format": "",
@@ -312,7 +318,7 @@
     },
     
     "clock": {
-         "format": "{:%I:%M %p}",
+        "format": "{:%I:%M %p}",
         "format-alt": "{:%I:%M %p 󰃭 %d/%m/%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
