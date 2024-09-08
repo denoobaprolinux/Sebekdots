@@ -16,6 +16,7 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 - El script de cambio de Wallpapers ahora permite tener GIFs como fondos de pantalla animados (proveniente de la versión anterior)
 - Nuevo tema "Vertical": la barra tiene dos _revealers_ que muestran información cuando le pones el puntero del mouse encima a los iconos de audio y la flecha hacia arriba. Además, vuelve el tema Pac-Man para esta barra, por razones estéticas.
 - En todas las barras el script de actualizaciones ha recibido una gran mejora: cuenta actualizaciones pendientes y actualiza pacman/AUR (con yay)/flatpak/snap, y tiene código de colores de acuerdo a la cantidad de actualizaciones (color base, más verde/amarillo/rojo)
+- Los temas "Powerline" tienen control de audio: los extremos del módulo de audio son botones de "Anterior" y "Siguiente" cuando reproduces audio en cualquier reproductor, incluyendo YouTube.
 
 **El resto de las configuraciones permanecen iguales**
 
