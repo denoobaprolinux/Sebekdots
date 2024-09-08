@@ -1,0 +1,263 @@
+//  __  __           _       _            __        __          _                
+// |  \/  | ___   __| |_   _| | ___  ___  \ \      / /_ _ _   _| |__   __ _ _ __ 
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|  \ \ /\ / / _` | | | | '_ \ / _` | '__|
+// | |  | | (_) | (_| | |_| | | (_) \__ \   \ V  V / (_| | |_| | |_) | (_| | |   
+// |_|  |_|\___/ \__,_|\__,_|_|\___/|___/    \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
+//                                                        |___/                  
+
+{
+"custom/menu":{
+        "tooltip":false,
+        "format":"󰣇",
+        "on-click":"~/.config/waybar/menuleft.sh",
+    },
+
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "󰊠",
+            "active": "󰮯",
+            "default": "󰊠",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+             "*": 10
+        }       
+    },
+
+    "custom/trayicon":{
+        "format": "",
+        "tooltip": false,
+        },
+    "group/traybox":{
+        "tooltip": false,
+        "orientation": "vertical",
+        "drawer":{
+            "transition-left-to-right":false,
+            "children-class": "traycontainer",
+        },
+        "modules":[
+            "custom/trayicon",
+            "tray",
+            "custom/themeswitcher",
+            "custom/wallchange",
+            "custom/updates",
+            "custom/options"
+        ]
+    },
+   
+    "tray": {
+         "show-passive-items" : false,
+         "icon-size": 20,
+         "spacing": 0
+    },
+
+    "custom/themeswitcher": { 
+    "format": "󰟡",
+        "exec": "echo ; echo Cambiar Tema de Waybar",
+        "on-click": "~/.config/waybar/themes/themeswitcher.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+    "custom/wallchange": {
+        "format": "󰆊",
+        "exec": "echo ; echo Cambiar Wallpaper",
+        "on-click": "~/.config/waybar/wallpaper.sh select",
+        "on-click-right": "~/.config/waybar/wallpaper.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+
+    "custom/options": {
+        "format": "",
+        "exec": "echo ; echo Configuración de Hyprland",
+        "on-click": "~/.config/waybar/hyproptions.sh",
+        "interval": 86400, // once every day
+        "tooltip": true,
+    },
+
+    "custom/updates": {
+        "format": "{}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/.config/waybar/updates.sh",
+        "restart-interval": 60,
+        "on-click": "kitty -e ~/.config/waybar/installupdates.sh",
+        "tooltip": false
+    },
+
+
+    "clock": {
+        //"timezone": "Pongan aquí su timezone",
+        "interval": 60,
+        "format": "{:%I\n%M\n%p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+            "calendar": {
+                "mode"          : "month",
+                "on-scroll"     : 1,
+                "on-click-right": "mode",
+                "format": {
+                        "months":     "<span color='#77ceed'>{}</span>",
+                        "days":       "<span color='#77ceed'>{}</span>",
+                        "weeks":      "<span color='#02A2D3'>W{}</span>",
+                        "weekdays":   "<span color='#056D93'>{}</span>",
+                        "today":      "<span color='#019599'><b>{}</b></span>"
+                          }
+                }
+        },
+    "cpu": {
+        "format": "{usage}%\n ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}%\n "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "interval": 60,
+        "format": "{icon}",
+        "format-icons": [ "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"],
+        "format-charging": "󰂄",
+        "format-full":"󰁹",
+        "tooltip-format": "{capacity}%",
+        "max-length": 25
+    },
+        "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "group/pulse":{
+        "tooltip": false,
+        "orientation": "inherit",
+        "drawer":{
+            "children-class":"pulsecontainer",
+            "transition-left-to-right":false,
+            },
+        "modules":["pulseaudio#icon","pulseaudio#sound","pulseaudio/slider"]
+        },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "vertical"
+    },
+    "pulseaudio#sound": {
+        "format": "{volume}",
+        "format-bluetooth": "{volume}% {format_source}",
+        "format-bluetooth-muted": "off{format_source}",
+        "format-muted": "off{format_source}",
+        "format-source-muted": "!mic",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", "󰕾"]
+        },
+    },
+    
+    "pulseaudio#icon": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": "{icon}",
+        "format-muted": "󰝟{format_source}",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", "󰕾"]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right":"pavucontrol",
+    },
+    
+    "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+            "notification": "󰍡<span foreground='red'><sup></sup></span>",
+            "none": "󰍡",
+            "dnd-notification": "󱙍<span foreground='red'><sup></sup></span>",
+            "dnd-none": "󱙍",
+            "inhibited-notification": "󰍡<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "󰍡",
+            "dnd-inhibited-notification":"󱙍<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": "󱙍"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+    },
+    
+    "privacy": {
+        "orientation": "vertical",
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
+    "mpris": {
+        "rotate": 270,
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+            "player-icons": {
+                "default": "▶",
+                "mpv": "🎵",
+                "spotify": "",
+            },
+            "status-icons": {
+                "paused": "⏸"
+            },
+        "ignored-players": ["firefox"]
+    },
+    "image#icon":{
+        "path": "/home/traveler/icon.png",
+        "size": 32,
+        },
+}

@@ -122,15 +122,15 @@
     },
 
     "custom/updates": {
-        "format": "  {}",
-        "tooltip-format": "{}",
-        "escape": true,
-        "return-type": "json",       
-        "exec": "~/.config/waybar/updates.sh",
-        "restart-interval": 60,
-        "on-click": "kitty -e ~/.config/waybar/installupdates.sh",
-        "tooltip": false
-    },
+    "format": "  {}",
+    "tooltip-format": "Actualizaciones:\n{}",
+    "escape": true,
+    "return-type": "json",       
+    "exec": "~/.config/waybar/updates.sh",
+    "restart-interval": 3600,
+    "on-click": "kitty -e ~/.config/waybar/installupdates.sh",
+    "tooltip": true
+},
 
     "custom/launcher": {
         "format": "󰣇",

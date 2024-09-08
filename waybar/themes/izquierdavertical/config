@@ -1,0 +1,40 @@
+// -*- mode: json -*-
+
+{
+    "layer": "top",
+    "position": "left",
+    //"height": , // Altura de la barra (remuevan/comenten esta línea para autoajuste)
+    "spacing": 0, // Espacio entre módulos
+    "margin-left": 5, // Márgenes
+    "margin-right": 0,
+    "margin-top": 35,
+    "margin-bottom": 35,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+
+    "include": ["~/.config/waybar/themes/modulesvertical.json"],
+
+    // Mödulos
+
+    "modules-left": [
+	
+    	"custom/menu",
+		"hyprland/workspaces" 
+	
+    ],
+    
+    "modules-center": [ 
+	
+    	"clock"
+    ], 
+
+    "modules-right": [   
+		"group/traybox",
+		"group/pulse",
+		"battery",
+		//"custom/notification#count",
+		"custom/notification",
+	],
+}
+

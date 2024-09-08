@@ -15,6 +15,7 @@
 @define-color wb-hvr-fg #000;
 /* @define-color wb-hvr-bg #f5c2e7; */
 /* @define-color wb-hvr-fg #313244; */
+@define-color transparent   rgba(0,0,0,0);
 
 
 * {
@@ -147,6 +148,7 @@ tooltip label {
     padding-left: 8px;
     padding-right: 12px;
     transition: all 0.3s ease-in-out;
+    border: 2px solid @transparent;
 }
 
 #custom-right1 {
@@ -233,7 +235,7 @@ tooltip label {
 
     color: white;
     font-size:12px;
-    padding: 0px 12px 0px 12px;
+    padding: 0px 11px 0px 11px;
     margin: 0;
     background-color: @memory;
     transition: all 0.3s ease-in-out;
@@ -450,9 +452,7 @@ tooltip label {
     margin: 0;
     opacity:1.0;
     transition: all 0.3s ease-in-out;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    
+    border: 2px solid @transparent;    
 }
 
 #custom-notification.none {
@@ -464,9 +464,8 @@ tooltip label {
     padding: 0px 12px 0px 10px;
     margin: 0;
     opacity:1.0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    
+    border: 2px solid @transparent; 
+    transition: all 0.3s ease-in-out     
 }
 
 #custom-notification.dnd-none,
@@ -476,13 +475,13 @@ tooltip label {
     font-size: 18px;
     color: red;
     /*border-radius: 20px;*/
-    padding: 0px 12px 0px 10px;
+    padding: 0px 14px 0px 10px;
     margin: 0;
     opacity:1.0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-        
+    border: 2px solid @transparent; 
+    transition: all 0.3s ease-in-out        
 }
+
 #custom-paddr {
     font-size: 15pt;
     color: @main-bg;
@@ -517,10 +516,8 @@ tooltip label {
 
     color: #58c1f5;
     transition: all 0.3s ease-in-out;
-    border-bottom: 2px solid #58c1f5;
-    border-top: 2px solid #58c1f5;
+    border: 2px solid #58c1f5;
     border-radius: 25px;
-    /*border:3px solid #58c1f5;*/
 }
 
 #custom-notification:hover,
@@ -529,10 +526,8 @@ tooltip label {
     color: orange;
     transition: all 0.3s ease-in-out;
     padding: 0px 12px 0px 10px;
-    border-bottom: 2px solid orange;
-    border-top: 2px solid orange;
-    border-radius: 25px;    
-    /*border:3px solid orange;*/
+    border: 2px solid orange;
+    border-radius: 25px;     
 }
 
 #custom-notification.dnd-none:hover,
@@ -540,7 +535,7 @@ tooltip label {
 
     color: red;
     transition: all 0.3s ease-in-out;
-    padding: 0px 12px 0px 10px;
+    padding: 0px 14px 0px 10px;
     border-bottom: 2px solid orange;
     border-top: 2px solid orange;
     border-radius: 25px;  

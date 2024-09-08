@@ -45,4 +45,8 @@ if [[ $themestyle == *abajo* ]]; then
     killall swaync
     swaync -c ~/.config/sncabajo/config.json -s ~/.config/sncabajo/style.css &
 fi
+if [[ $themestyle == *izquierda* ]]; then
+    killall swaync
+    swaync -c ~/.config/sncizq/config.json -s ~/.config/sncizq/style.css &
+fi
 

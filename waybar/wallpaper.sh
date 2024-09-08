@@ -130,6 +130,7 @@ fi
 ~/.config/waybar/launch.sh
 sleep 1
 ~/.config/hypr/hyprctl.sh
+cp ~/.cache/wal/config ~/.config/cava/config
 
 # -----------------------------------------------------
 # Envía la notificación
