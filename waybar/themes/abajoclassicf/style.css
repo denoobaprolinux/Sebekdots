@@ -101,6 +101,22 @@ window#waybar {
     transition: all 0.3s ease-in-out;
 }
 
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: @color7; /* Blanco por defecto */
+}
+
 #clock {
 
     font-size:12px;
