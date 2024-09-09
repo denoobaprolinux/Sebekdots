@@ -186,7 +186,7 @@
         "format-muted": "󰝟{format_source}",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": ["", "", "󰕾"],
             "hands-free": "",
             "headset": "",
             "phone": "",
@@ -196,6 +196,7 @@
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right":"pavucontrol",
+        "class": "{state}"
     },
     
     "custom/notification": {
