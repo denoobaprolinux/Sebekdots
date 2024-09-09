@@ -32,8 +32,7 @@
     "modules-right": [   
 		"group/traybox",
 		"group/pulse",
-		"battery",
-		//"custom/notification#count",
+		//"battery",
 		"custom/notification",
 	],
 }
