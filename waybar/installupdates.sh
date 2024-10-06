@@ -34,7 +34,7 @@ _updateFlatpak() {
     updates_flatpak=0
     if command -v flatpak > /dev/null 2>&1; then
         updates_flatpak=$(flatpak update --appstream 2> /dev/null | grep -c 'Update:')
-        if [ "$updates_flatpak" -gt 0 ]; then
+        if [ "$updates_flatpak" -gt 0 ];then
             echo "Actualizaciones de Flatpak disponibles: $updates_flatpak"
             read -p "¿Quieres actualizar Flatpak? (s/n): " flatpak_confirm
             if [[ "$flatpak_confirm" =~ [sS] ]]; then
@@ -58,7 +58,7 @@ _updateSnap() {
     updates_snap=0
     if command -v snap > /dev/null 2>&1; then
         updates_snap=$(snap refresh --list 2> /dev/null | wc -l)
-        if [ "$updates_snap" -gt 0 ]; then
+        if [ "$updates_snap" -gt 0 ];then
             echo "Actualizaciones de Snap disponibles: $updates_snap"
             read -p "¿Quieres actualizar Snap? (s/n): " snap_confirm
             if [[ "$snap_confirm" =~ [sS] ]]; then
@@ -106,10 +106,10 @@ echo "-----------------------------------------------------"
 # Verifica actualizaciones con Pacman (repositorios principales)
 updates_pacman=$(checkupdates | wc -l)
 
-if [ "$updates_pacman" -gt 0 ]; then
+if [ "$updates_pacman" -gt 0 ];then
     echo "Actualizaciones de Pacman disponibles: $updates_pacman"
     read -p "¿Quieres actualizar Pacman? (s/n): " pacman_confirm
-    if [[ "$pacman_confirm" =~ [sS] ]]; then
+    if [[ "$pacman_confirm" =~ [sS] ]];then
         sudo pacman -Su
         updates_performed=true
         all_updates_skipped=false
@@ -121,10 +121,10 @@ fi
 # Verifica actualizaciones con Yay (repositorios AUR)
 updates_yay=$(yay -Qu --aur | wc -l)
 
-if [ "$updates_yay" -gt 0 ]; then
+if [ "$updates_yay" -gt 0 ];then
     echo "Actualizaciones de Yay disponibles: $updates_yay"
     read -p "¿Quieres actualizar Yay? (s/n): " yay_confirm
-    if [[ "$yay_confirm" =~ [sS] ]]; then
+    if [[ "$yay_confirm" =~ [sS] ]];then
         yay --aur -Syua
         updates_performed=true
         all_updates_skipped=false
@@ -146,32 +146,39 @@ updates_snap=$?
 # ------------------------------------------------------
 tooltip=""
 
-if [ "$updates_pacman" -gt 0 ]; then
+if [ "$updates_pacman" -gt 0 ];then
     tooltip+="Pacman/Yay: $updates_pacman actualizaciones\n"
 fi
 
-if [ "$updates_flatpak" -gt 0 ]; then
+if [ "$updates_flatpak" -gt 0 ];then
     tooltip+="Flatpak: $updates_flatpak actualizaciones\n"
 fi
 
-if [ "$updates_snap" -gt 0 ]; then
+if [ "$updates_snap" -gt 0 ];then
     tooltip+="Snap: $updates_snap actualizaciones\n"
 fi
 
 # Si no hay actualizaciones, poner un mensaje por defecto en el tooltip
-if [ -z "$tooltip" ]; then
+if [ -z "$tooltip" ];then
     tooltip="No hay actualizaciones pendientes."
 fi
 
 # ------------------------------------------------------
 # Verifica si no hubo actualizaciones
 # ------------------------------------------------------
-if [ "$updates_pacman" -eq 0 ] && [ "$updates_yay" -eq 0 ] && [ "$updates_flatpak" -eq 0 ] && [ "$updates_snap" -eq 0 ]; then
+if [ "$updates_pacman" -eq 0 ] && [ "$updates_yay" -eq 0 ] && [ "$updates_flatpak" -eq 0 ] && [ "$updates_snap" -eq 0 ];then
     notify-send "Centro de Actualizaciones:" "Nada que hacer"
-elif [ "$updates_performed" = true ]; then
+elif [ "$updates_performed" = true ];then
     total_updates=$(("$updates_pacman" + "$updates_yay" + "$updates_flatpak" + "$updates_snap"))
     notify-send "Centro de Actualizaciones:" "$total_updates actualizaciones instaladas"
 else
     notify-send "Centro de Actualizaciones:" "Actualización cancelada o interrumpida."
 fi
+
+# ------------------------------------------------------
+# # Recarga todo Waybar (rápido y sin interrupciones)
+# ------------------------------------------------------
+sleep 2
+~/.config/waybar/updates.sh
+pkill -SIGUSR2 waybar
 

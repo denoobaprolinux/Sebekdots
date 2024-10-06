@@ -1,0 +1,39 @@
+@import '../../.cache/wal/colors-waybar.css';
+@define-color main              alpha(@color0, 0.75);
+@define-color hover            alpha(@color10, 0.75);
+
+
+window {
+    background-color: @main;
+    color: #fff;
+}
+
+/* search entry */
+entry {
+    background-color: rgba (0, 0, 0, 0.2)
+}
+
+button, image {
+    background: none;
+    border: none
+}
+
+button:hover {
+    background-color: @hover;
+}
+
+/* in case you wanted to give category buttons a different look */
+#category-button {
+    margin: 0 10px 0 10px
+}
+
+#pinned-box {
+    padding-bottom: 5px;
+    border-bottom: 3px dotted @color10
+}
+
+#files-box {
+    padding: 5px;
+    border: 1px dotted gray;
+    border-radius: 15px;
+}

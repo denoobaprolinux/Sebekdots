@@ -1,0 +1,268 @@
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+@define-color transparent   rgba(0, 0, 0, 0.3);
+@define-color teal-trans    rgba(1, 117, 84, 0.5);
+@define-color cyan          rgba(53, 140, 169, 1);
+
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+
+* {
+    font-family: Neuropolitical;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1); 
+    font-size: 11px;
+}
+
+window#waybar {
+    /*background: linear-gradient(0deg, @border-color, black);*/
+    /*background: rgba(1, 117, 84, 0.5);*/
+    background: alpha(@color0, 0.7);
+        
+}
+
+#custom-notification{
+    margin:0;
+    padding: 0px 0px 0px 0px;
+    font-size:calc(18px * 1.2);
+    color: orange;
+}
+
+#custom-notification.none{
+    margin:0;
+    padding: 5px 7px 0px 0px;
+    font-size:calc(18px * 1.2);
+    color: white;    
+}
+
+#custom-notification.dnd {
+    margin:0;
+    padding: 5px 7px 0px 0px;
+    font-size:calc(18px * 1.2);
+    color: orange; 
+}
+
+#custom-notification.dnd-none {
+    margin:0;
+    padding: 5px 7px 0px 0px;
+    font-size:calc(18px * 1.2);
+    color: red; 
+}
+
+#custom-launcher{
+
+    font-size: 23px;
+    color: #1793d1;
+    padding: 0px 7px 0px 0px;
+    opacity:1.0;
+}
+
+#custom-updates {
+
+    color: white;
+    font-size:10px;
+    padding: 5px 2px 0px 2px;
+    background-color: alpha(@modules, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: white; /* Blanco por defecto */
+}
+
+#clock {
+
+    color: aliceblue;
+    padding: 5px 0px 0px 0px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tray *{
+    
+    padding: 10px 0px 0px 0px;
+}
+
+#custom-options  {
+    
+    color: white;
+    padding: 5px 5px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-themeswitcher {
+    color: white;
+    padding: 5px 3px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-wallchange {
+    color: white;
+    padding: 5px 3.5px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#window  {
+    
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+window#waybar.empty #window {
+    
+    background-color: transparent;
+    border: 0px;
+}
+
+#workspaces {
+   
+    padding: 5px 5px 5px 0px;
+    opacity: 1.0;
+}
+
+#workspaces button {
+    padding: 0px 0px 0px 0px;
+    border-radius: 15px;
+    border:0px;
+    color: @color13;
+    background-color: transparent;
+    opacity:1.0;
+}
+
+#workspaces button.active {
+    color: @color10;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.urgent {
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    color: orange;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+#pulseaudio {
+    color: @color10;
+    padding: 0px 0px 0px 0px;
+    font-size:12px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#battery {
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+}
+
+#battery.charging, #battery.plugged {
+    color: green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-options:hover,
+#custom-themeswitcher:hover,
+#pulseaudio:hover,
+#clock:hover,
+#mpris:hover,
+#mpris.paused:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #9fffff;
+    padding: 0px 7px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    transition: all 0.1s linear;
+    color: orange;
+}

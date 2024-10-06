@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # ----------------------------------------------------- 
-# Quit all running waybar instances
+# Cierra todas las instancias existentes de Waybar
 # ----------------------------------------------------- 
 killall waybar
 killall swaync
 sleep 0.2
 
 # ----------------------------------------------------- 
-# Get current theme information from .cache/.themestyle.sh
+# Obtiene información del tema actual de .cache/.themestyle.sh
 # ----------------------------------------------------- 
 if [ -f ~/.cache/.themestyle.sh ]; then
     themestyle=$(cat ~/.cache/.themestyle.sh)
@@ -25,18 +25,20 @@ if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
 fi
 
 # ----------------------------------------------------- 
-# Loading the configuration
+# Cargando la Configuración
 # ----------------------------------------------------- 
 
 config_file="config"
 style_file="style.css"
 
-# Check used files
+# Revisa archivos usados
 echo "Config: $config_file"
 echo "Style: $style_file"
 
 waybar -c ~/.config/waybar/themes${arrThemes[0]}/$config_file -s ~/.config/waybar/themes${arrThemes[1]}/$style_file &
 sleep 3 && ~/.config/hypr/hyprctl.sh
+
+# Funciones para determinar cuál configuración de Swaync se va a cargar
 
 themestyle=$(cat ~/.cache/.themestyle.sh)
 
@@ -51,4 +53,20 @@ fi
 if [[ $themestyle == *izquierda* ]]; then
     killall swaync
     swaync -c ~/.config/sncizq/config.json -s ~/.config/sncizq/style.css &
+fi
+if [[ $themestyle == *abajobisel* ]]; then
+    killall swaync
+    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
+fi
+if [[ $themestyle == *arribabisel* ]]; then
+    killall swaync
+    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
+fi
+if [[ $themestyle == *revealerarriba* ]]; then
+    killall swaync
+    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
+fi
+if [[ $themestyle == *revealerabajo* ]]; then
+    killall swaync
+    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
 fi

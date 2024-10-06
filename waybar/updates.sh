@@ -80,12 +80,11 @@ if [ "$updates_snap" -gt 0 ]; then
     tooltip+="Snap: $updates_snap actualizaciones\n"
 fi
 
-# -----------------------------------------------------
-# Salida en formato JSON para Waybar
-# -----------------------------------------------------
-
-if [ "$total_updates" -gt 0 ]; then
-    printf '{"text": "%s", "alt": "%s", "tooltip": "%s", "class": "%s"}' "$total_updates" "$total_updates" "$tooltip" "$css_class"
-else
-    printf '{"text": "0", "alt": "0", "tooltip": "Sin actualizaciones", "class": "white"}'
+if [ -z "$tooltip" ]; then
+    tooltip="No hay actualizaciones disponibles."
 fi
+
+# -----------------------------------------------------
+# Actualiza el ícono y tooltip en Waybar
+# -----------------------------------------------------
+echo "{\"text\": \"$total_updates\", \"tooltip\": \"$tooltip\", \"class\": \"$css_class\"}"

@@ -1,0 +1,43 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"height": 12,
+	"reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulestopcenter.json"],
+			
+	"modules-left": [
+		
+		"hyprland/workspaces",
+		"mpris"
+
+	],
+
+	"modules-center": [
+	
+		"custom/updates",
+		"custom/options",
+		"custom/separador",
+		"custom/launcher",
+		"clock",			
+		"custom/notification",
+		"custom/separador",
+		"custom/themeswitcher",
+		"custom/wallchange"
+	
+	],
+		
+	"modules-right": [
+	
+		"hyprland/window",
+		"pulseaudio",
+		"custom/separador",
+		"tray",
+		"custom/separador",
+		"hyprland/language",
+		"battery",
+				
+	]
+}

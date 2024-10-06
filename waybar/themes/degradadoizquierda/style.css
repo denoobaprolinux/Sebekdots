@@ -1,0 +1,304 @@
+@import '../../../../.cache/wal/colors-waybar.css';
+
+* {
+    font-family: Neuropolitical;
+	
+	margin:0;
+	min-height:0;
+	min-width:0;
+	padding:0;
+	border-color:transparent;
+	font-size: 11px;
+	border-radius: 20px;
+}
+
+window#waybar{
+	background-color:transparent;
+}
+
+window#waybar > box {
+    background-color: @color0;
+}
+
+.modules-center,.modules-right,.modules-left{
+	margin:0px 0px;
+	border-style:solid; 
+	background-color: transparent; 
+	background-clip: border-box;
+}
+
+.modules-left{
+	background: linear-gradient(180deg, @color10, @color0);
+	border-radius: 20px;
+	padding-top: 8px;
+}
+
+.modules-right {
+	background: linear-gradient(0deg, @color10, @color0);
+	border-left:0;
+	border-radius: 20px;
+	padding:0px 4px 8px 0px;
+}
+
+#custom-menu {
+	transition: 0.25s ease-in-out;
+	padding:0px 5px 0px 0px;
+	margin: 0px 4px 4px 2px; 
+	color:#1793d1;
+	font-size:calc(14px * 2);
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-menu:hover{
+	color:#9fffff;
+}
+
+#custom-options,
+#custom-updates,
+#custom-themeswitcher,
+#custom-wallchange {
+
+	font-size: 12.5px;
+	color: #fff;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+	transition: all 0.3s ease-in-out;
+}
+
+#custom-options  {
+    
+    padding:0px 1px 3px 0px;
+    margin: 0px;
+}
+
+#custom-themeswitcher,
+#custom-wallchange {
+
+    padding:0px 0px 8px 0px;
+    margin: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates {
+
+    padding:4px 0px 0px 4.5px;
+    margin: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: #fff; /* Blanco por defecto */
+}
+
+#group-traybox {
+	font-size: 10px;
+}
+
+#workspaces button * { /* Propiedades generales de los espacios de trabajo */
+	padding:0px 0px 0px 0px;
+	font-size: calc(6px * 2.4);
+}
+
+#workspaces button {
+	
+	padding: 0px 8px 0px 0px ;
+	background-color:transparent;
+	color: @color15; /* Color de todos los espacios de trabajo usados */
+	transition: 0.25s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #FFFFFF; 
+	padding:0px 8px 0px 0px;
+	transition: 0.25s ease-in-out;
+}
+
+#workspaces button.empty {
+	color: #FFFFFF;
+	padding: 0px 8px 0px 0px;
+	transition: 0.25s ease-in-out;
+}
+
+#workspaces button.urgent {
+	color: red;
+	transition: 0.25s ease-in-out;
+}
+
+
+#workspaces button:hover {
+  color: orange; /* Color de resaltado de los espacios de trabajo */
+}
+
+#image-icon:hover,
+#traybox:hover #custom-trayicon,
+#pulseaudio.sound:hover,
+#pulseaudio.icon:hover,
+#custom-notification.count:hover{
+    color: orange;
+}
+
+#custom-powermenu:hover{
+    color:#01cad6;
+}
+
+#custom-notification{
+	margin:0;
+	padding: 0px 0px 0px 8px;
+	font-size:calc(18px * 1.2);
+	color: orange;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-notification.none{
+	margin:0;
+	padding:0;
+	font-size:calc(18px * 1.2);
+	color: @color14;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-notification.dnd {
+	margin:0;
+	padding: 0px 0px 0px 8px;
+	font-size:calc(18px * 1.2);
+	color: red;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-notification.dnd-none {
+	margin:0;
+	padding: 0px 0px 0px 0px;
+	font-size:calc(18px * 1.2);
+	color: red;	
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-notification:hover {
+	transition: all 0.3s linear;
+	color: orange;
+}
+
+#traybox .traycontainer{
+	
+	border-radius:0;
+}
+
+#custom-powermenu{
+	color:#01d3ff
+}
+
+#pulseaudio.sound {
+	padding: 8px 0px 0px 6px;
+	color:@color15;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#custom-notification.icon,
+#custom-trayicon,
+#pulseaudio.icon,#custom-powermenu{
+	font-size: calc(10px * 2.2);
+}
+
+#pulseaudio.icon {
+	padding: 0px 0px 0px 0px;
+	color: @color15;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#tray *{;
+	margin: 2px 4px 8px 8px;
+	padding: 0px 0px 0px 0px;
+}
+
+#pulseaudio-slider slider {
+	color:white;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+#pulseaudio-slider highlight {
+	color:white;
+	min-width: 10px;
+    border-radius: 20px;
+    background-color: @color14;
+    padding: 0px 0px 0px 0px;
+}
+
+#clock {
+	/* background-color:#019599; */
+	font-weight:700;
+	margin:0 4px;
+	padding:4px 0;
+	border-radius:8px;
+    color: @color15;
+}
+
+#battery {
+	font-size: 18px;
+	color: @color14;
+	padding: 0px 0px 4px 6.5px ;
+	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+#battery.charging, #battery.plugged {
+    color: green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio.muted {
+	color: red;
+}
+
+tooltip {
+	font-family: Neuropolitical;
+    border-radius: 10px;
+    border: 2px solid @color10;
+    background-color: rgba(0, 0, 0, 1);
+    padding:12px;
+    margin:0px;
+    font-size:calc(6px * 1.4);
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-options:hover,
+#custom-themeswitcher:hover,
+#pulseaudio:hover,
+#clock:hover,
+#mpris:hover,
+#mpris.paused:hover,
+#custom-revealer-left:hover,
+#custom-revealer-right:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+

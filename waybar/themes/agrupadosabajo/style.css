@@ -1,0 +1,296 @@
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+@define-color transparent   rgba(0, 0, 0, 0.3);
+@define-color teal-trans    rgba(1, 117, 84, 0.5);
+@define-color cyan          rgba(53, 140, 169, 1);
+
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+
+* {
+    font-size: 11px;
+    font-family: neuropolitical;    
+}
+
+window#waybar {
+    /*background: linear-gradient(0deg, @border-color, black);*/
+    /*background: rgba(1, 117, 84, 0.5);*/
+    background: rgba(0, 0, 0, 0);
+        
+}
+
+.modules-left {
+    background: linear-gradient(180deg, @color0, black);
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.modules-right {
+    background: linear-gradient(180deg, @color0, black);
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: orange;
+    text-shadow: 1px 1px 2px orange;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+    
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px white;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: red;
+    text-shadow: 1px 1px 2px red;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-launcher{
+
+    font-size: 23px;
+    color: #1793d1;
+    text-shadow: 1px 1px 2px cadetblue;
+    padding: 0px 21px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+    border-bottom: 2px solid @transparent;
+    border-top: 2px solid @transparent;
+    border-radius: 20px;
+}
+
+#custom-updates {
+
+    color: white;
+    font-size:10px;
+    padding: 0px 5px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: @color7; /* Blanco por defecto */
+}
+
+#clock {
+
+    font-size:10px;
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tray  {
+    
+    color: aliceblue;
+    padding: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-themeswitcher,
+#custom-wallchange,
+#custom-options {
+    
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#memory,
+#cpu   {
+
+    font-size: 11px;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#window  {
+    
+    font-size: 12px;
+    padding: 0px 0px 0px 10px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+window#waybar.empty #window {
+    
+    background-color: transparent;
+    border: 0px;
+}
+
+#workspaces {
+   
+    padding: 0px 1px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+#workspaces button {
+    padding: 2px 2px;
+    border-radius: 15px;
+    border:0px;
+    color: @color13;
+    background-color: transparent;
+    opacity:1.0;
+}
+
+#workspaces button.active {
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    color: orange;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+#pulseaudio {
+    color: @color10;
+    padding: 0px 5px 0px 10px;
+    font-size:11.5px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+
+#mpris {
+    color: #fff;
+    background: linear-gradient(180deg, @color0, black);
+    border-radius: 20px;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 10px 0px 10px;
+    font-size: 10px;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#battery {
+    color: #fff;
+    padding: 0px 0px 0px 0px;
+    font-size: 11px;
+}
+#language {
+    color: white;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-options:hover,
+#custom-themeswitcher:hover,
+#pulseaudio:hover,
+#clock:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#mpris:hover,
+#mpris.paused:hover {
+
+    color: orange;
+    background: linear-gradient(180deg, @color10, black);
+    border-radius: 20px;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 10px 0px 10px;
+    font-size: 10px;
+}
+
+#custom-launcher:hover {
+
+    color: #58c1f5;
+    text-shadow: 1px 1px 2px cadetblue;
+    padding: 0px 21px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #58c1f5;
+    border-top: 2px solid #58c1f5;
+    border-radius: 20px;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: orange;
+    text-shadow: 1px 1px 2px orange;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 25px;
+}

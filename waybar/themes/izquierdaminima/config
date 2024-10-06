@@ -1,0 +1,73 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+    "position": "left",
+    "width": 31, // Altura de la barra (remuevan/comenten esta línea para autoajuste)
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulesvertical.json"],
+			
+	"modules-left": [
+		
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/updates",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange"
+
+	],
+		
+	"modules-right": [
+	
+		//"hyprland/window",
+		"mpris",	
+		"clock",
+		"pulseaudio",
+		"tray",
+		"battery",
+		"custom/notification"
+				
+	],
+
+	// Módulos únicos para Barras Mínimas
+
+    "mpris": {
+    	"rotate": 90,
+        "format": "{title}",
+        "format-paused": "<i>{title}</i>",
+        "interval": 1,
+        "title-len": 20,
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "play": "",
+            "previous": "󰒮",
+        },
+        // "ignored-players": ["firefox"]
+    },
+
+    "pulseaudio": {
+    	"justify": "center",
+        "format": "{volume}̣",
+        "format-bluetooth": "{icon} ",
+        "format-muted": " 󰖁 ",
+        "format-icons": {
+            "headphones": "",
+            "default": [
+                "",
+                "",
+                "󰕾",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+}

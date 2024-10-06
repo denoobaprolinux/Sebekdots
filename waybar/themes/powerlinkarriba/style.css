@@ -1,0 +1,355 @@
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+@define-color transparent   rgba(0, 0, 0, 0.3);
+@define-color teal-trans    rgba(1, 117, 84, 0.5);
+@define-color cyan          rgba(53, 140, 169, 1);
+
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+
+* {
+    font-size: 10px;
+    font-family: neuropolitical;
+    border-radius: 0px;    
+}
+
+window#waybar {
+    /*background: linear-gradient(0deg, @border-color, black);*/
+    /*background: rgba(1, 117, 84, 0.5);*/
+    background: @color10;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 24px solid @color0;
+}
+
+.modules-left {
+    
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.modules-right {
+    
+    border-radius: 20px;
+}
+
+#custom-notification,
+#custom-notification.none,
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    background: @color10;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#custom-revealer-left {
+    font-size: 26px;
+    padding: 0px 0px 0px 0px;
+    color: @color10;
+    background: @color0;
+}
+
+#custom-left1 {
+    font-size: 26px;
+    padding: 0px 0px 0px 0px;
+    color: @color0;
+    background: rgba(0, 0, 0, 0);
+}
+
+#custom-revealer-right {
+    font-size: 26px;
+    padding: 0px 0px 0px 0px;
+    color: @color10;
+    background: @color0;
+}
+
+#custom-right1 {
+    font-size: 26px;
+    padding: 0px 0px 0px 0px;
+    color: @color0;
+    background: rgba(0, 0, 0, 0);
+}
+
+#custom-left2 {
+    font-size: 26px;
+    padding: 0px 0px 0px 0px;
+    color: @color0;
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: orange;
+    padding: 0px 20px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);    
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: white;
+    padding: 0px 20px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: red;
+    padding: 0px 20px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-launcher{
+
+    font-size: 23px;
+    color: #1793d1;
+    background: @color10;
+    padding: 0px 15px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#custom-updates {
+
+    font-size:10px;
+    padding: 0px 2.5px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: @color7; /* Blanco por defecto */
+}
+
+#clock {
+
+    font-size:10.5px;
+    color: aliceblue;
+    padding: 0px 10px 0px 5px;
+    margin: 0px 0px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tray  {
+    font-size: 10px;
+    color: aliceblue;
+    padding: 0px 0px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-themeswitcher,
+#custom-wallchange,
+#custom-options {
+    
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#memory,
+#cpu   {
+
+    font-size: 10px;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#window  {
+    
+    padding: 0px 5px 0px 0px;
+    color:#FFFFFF;
+}
+
+#workspaces {
+   
+    padding: 0px 0px 0px 0px;
+    opacity: 1;
+    color:#FFFFFF;
+    background: @color0;
+}
+
+#workspaces button {
+    padding: 2px 2px;
+    border:0px;
+    color: @color15;
+    opacity:1.0;
+}
+
+#workspaces button.active {
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button.urgent {
+    color: red;
+    transition: 0.25s ease-in-out;
+}
+
+#workspaces button:hover {
+
+    background: rgba(0, 0, 0, 0);
+    color: orange;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+#pulseaudio {
+    color: @color10;
+    padding: 0px 0px 0px 10px;
+    font-size:11.5px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+
+#mpris {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    padding: 0px 0px 0px 10px;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#battery {
+    color: #fff;
+    padding: 1px 0px 0px 0px;
+    font-size: 10.5px;
+}
+#language {
+    color: white;
+    padding: 0px 10px 0px 0px;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-options:hover,
+#custom-themeswitcher:hover,
+#pulseaudio:hover,
+#clock:hover,
+#mpris:hover,
+#mpris.paused:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #9fffff;
+    padding: 0px 15px 0px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: orange;
+    padding: 0px 20px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    background: @color10;
+}
+
+/* Color de fondo de los módulos */
+
+#mpris,
+#pulseaudio,
+#custom-updates,
+#custom-options,
+#custom-themeswitcher,
+#custom-wallchange,
+#window,
+window#waybar.empty #window ,
+#clock,
+#tray,
+#language,
+#battery {
+
+    background: @color0;
+}
+
+/* Sombras de cada elemento de la barra */
+
+#custom-launcher,
+#workspaces button,
+#workspaces button.active,
+#workspaces button.empty,
+#custom-updates.white,
+#custom-updates.green,
+#custom-updates.yellow,
+#custom-updates.red,
+#custom-options,
+#custom-themeswitcher,
+#custom-wallchange,
+#mpris,
+#window,
+#pulseaudio,
+#clock,
+#battery,
+#custom-notification,
+#custom-notification.none,
+#custom-notification.dnd {
+
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}

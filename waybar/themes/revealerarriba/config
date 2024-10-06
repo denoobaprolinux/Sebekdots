@@ -1,0 +1,51 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"fixed-center": true,
+	"margin-top": 5,
+	"margin-left": 350,
+	"margin-right": 350,
+	"height": 12,
+	"reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulestopcenter.json"],
+			
+	"modules-left": [
+		
+		"custom/launcher",
+		"group/left"
+	],
+
+	"modules-center": [
+	
+		"hyprland/workspaces"
+	
+	],
+		
+	"modules-right": [
+	
+		"group/right",
+		"custom/notification"
+				
+	],
+
+	// Módulos exclusivos para barra Revealer
+
+	"hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+             "*": 10
+        }       
+    },
+}

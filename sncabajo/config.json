@@ -59,7 +59,7 @@
     },
     "backlight": {
       "label": "󰃟",
-      "device": "acpi_video0",
+      "device": "intel_backlight",
       "min": 10
     },
     "menubar#label": {

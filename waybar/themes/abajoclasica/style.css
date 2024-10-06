@@ -1,0 +1,276 @@
+@import '../../../../.cache/wal/colors-waybar.css';
+
+@define-color background-module     @transparent;
+@define-color border-color          @color10;
+@define-color button-color          @color12;
+@define-color button-hover          @color11;
+
+* {
+    font-size: 10.5px;
+    font-family: neuropolitical;    
+}
+
+window#waybar {
+    background: linear-gradient(180deg, @color10, black);
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top: 1px solid @color0;        
+}
+
+.modules-left {
+    background: linear-gradient(180deg, @color10, black);
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top: 3px solid @color0;
+}
+
+.modules-right {
+    background: linear-gradient(180deg, @color10, black);
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top: 3px solid @color0;
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: orange;
+    padding: 0px 24px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+    
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: white;
+    padding: 0px 24px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: red;
+    padding: 0px 24px 0px 10px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-launcher{
+
+    font-size: 23px;
+    color: #1793d1;
+    padding: 0px 15px 0px 20px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#custom-updates {
+
+    color: white;
+    font-size:10px;
+    padding: 0px 5px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-updates.green {
+    color: #00ff00; /* Verde para pocas actualizaciones */
+}
+
+#custom-updates.yellow {
+    color: #ffff00; /* Amarillo para algunas actualizaciones */
+}
+
+#custom-updates.red {
+    color: #ff0000; /* Rojo para muchas actualizaciones */
+}
+
+#custom-updates.white {
+    color: white; /* Blanco por defecto */
+}
+
+#clock {
+
+    font-size:11px;
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    background-color: alpha(@modules, 0.7);
+    margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-wallchange {
+    padding: 0px 18px 0px 10px;
+}
+
+#custom-themeswitcher,
+#custom-options  {
+    
+    color: white;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#tray {
+    padding: 0px 0px 0px 5px;
+}
+
+#pulseaudio,
+#memory,
+#cpu   {
+
+    font-size: 11px;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#window  {
+    
+    padding: 0px 0px 0px 20px;
+    color:#FFFFFF;
+}
+
+window#waybar.empty #window {
+    
+    background-color: transparent;
+    border: 0px;
+}
+
+#workspaces {
+   
+    padding: 0px 1px;
+    opacity:0.8;
+    color:#FFFFFF;
+}
+
+#workspaces button {
+    padding: 3px 3px;
+    border-radius: 15px;
+    border:0px;
+    color: @color13;
+    background-color: transparent;
+    opacity:1.0;
+}
+
+#workspaces button.active {
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button.urgent {
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    color: orange;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+tooltip {
+    border-radius: 10px;
+    border: 2px solid @border-color;
+    background-color: black;
+    opacity:0.8;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: white;
+    font-size:10px;
+}
+
+#pulseaudio {
+    color: @color10;
+    padding: 0px 10px 0px 15px;
+    font-size:12px;
+}
+#pulseaudio.muted {
+    color: red;
+    font-size:16px;
+}
+
+#mpris.paused {
+    color: @color10;
+}
+
+#battery {
+    color: #fff;
+    padding: 0px 0px 0px 0px;
+    font-size: 11px;
+}
+#language {
+    color: white;
+    padding-right: 5px;
+}
+
+/* Color de resaltado de los elementos de Waybar */
+
+#custom-updates:hover,
+#custom-wallchange:hover,
+#custom-options:hover,
+#custom-themeswitcher:hover,
+#pulseaudio:hover,
+#clock:hover,
+#mpris:hover,
+#mpris.paused:hover {
+
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-launcher:hover {
+
+    color: #9fffff;
+    padding: 0px 15px 0px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-notification:hover,
+#custom-notification.none:hover,
+#custom-notification.dnd-none:hover,
+#custom-notification.dnd-inhibited-none:hover {
+
+    color: orange;
+    padding: 0px 24px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sombras de cada elemento de la barra */
+
+#custom-launcher,
+#workspaces button,
+#workspaces button.active,
+#workspaces button.empty,
+#custom-updates.white,
+#custom-updates.green,
+#custom-updates.yellow,
+#custom-updates.red,
+#custom-options,
+#custom-themeswitcher,
+#custom-wallchange,
+#mpris,
+#window,
+#pulseaudio,
+#clock,
+#battery,
+#custom-notification,
+#custom-notification.none,
+#custom-notification.dnd {
+
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}

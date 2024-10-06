@@ -1,11 +1,11 @@
 {
   "$schema": "$XDG_CONFIG_HOME/.config/sncabajo/configSchema.json",
-  "positionX": "bottom",
+  "positionX": "left",
   "positionY": "bottom",
   "control-center-margin-top": 35,
   "control-center-margin-bottom": 35,
   "control-center-margin-right": 936,
-  "control-center-margin-left": 0,
+  "control-center-margin-left": 5,
   "notification-icon-size": 48,
   "notification-body-image-height": 160,
   "notification-body-image-width": 90,
@@ -59,7 +59,7 @@
     },
     "backlight": {
       "label": "󰃟",
-      "device": "acpi_video0",
+      "device": "intel_backlight",
       "min": 10
     },
     "menubar#label": {

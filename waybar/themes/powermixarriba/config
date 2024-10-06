@@ -1,0 +1,58 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"margin-top": 5,
+	"margin-left": 5,
+	"margin-right": 5,
+	"height": 12,
+	"reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulestop.json"],
+			
+	"modules-left": [
+		
+		"custom/launcher",
+		"custom/revealer-left",
+		"custom/rightin1",
+		"mpris",	
+		"pulseaudio",
+		"custom/updates",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange"
+
+	],
+
+	"modules-center": [
+	
+		"hyprland/workspaces"
+	
+	],
+		
+	"modules-right": [
+	
+      "hyprland/window",
+      "clock",
+      "tray",
+      "battery",
+      "hyprland/language",
+      "custom/leftin1",
+		"custom/revealer-right",
+		"custom/notification"
+				
+	],
+
+	// Elementos únicos de la barra
+
+	"custom/revealer-left": {
+        "format": "",
+        "tooltip": false
+      },
+
+     "custom/revealer-right": {
+        "format": "",
+        "tooltip": false
+     	}
+}

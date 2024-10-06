@@ -24,16 +24,13 @@
     font-size: 10px;
     min-height: 0; 
     padding: 0;
-    margin: 0;
+    margin: -2px 0px -2px 0px;
 }
 
 /*@import "theme.css";*/
 
 window#waybar {
     background: @bar-bg;
-    border: 2px solid black;
-    margin-left: 2px;
-    margin-right: 2px;
 }
 
 tooltip {
@@ -142,17 +139,17 @@ tooltip label {
 /* WINDOW ICON */
 
 #custom-launcher {
-    font-size: 15pt;
+    font-size: 18pt;
     color: #1793d1;
     background: @color0;
-    padding-left: 8px;
-    padding-right: 12px;
+    padding-left: 9px;
+    padding-right: 16px;
     transition: all 0.3s ease-in-out;
     border: 2px solid @transparent;
 }
 
 #custom-right1 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @workspaces;
     background: @color0;
@@ -163,7 +160,7 @@ tooltip label {
 }
 
 #custom-right6 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @powerline1;
     background: @workspaces;
@@ -186,7 +183,7 @@ tooltip label {
     padding-right: 3px;
 }
 #custom-left2 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @memory;
     background: @color0;
@@ -206,7 +203,7 @@ tooltip label {
 
 /* CPU */
 #custom-left4 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @time;
     background: @memory;
@@ -221,13 +218,11 @@ tooltip label {
     background: @cpu;
 }
 #custom-leftin1 {
-    font-size: 16pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @powerline1;
-    padding: 0px;
-    margin: 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 #custom-themeswitcher,
@@ -278,7 +273,7 @@ tooltip label {
 
 /* ARCH LOGO */
 #custom-left5 {
-    font-size: 10pt;
+    font-size: 12pt;
     font-family: "Neuropolitical";
     color: @arch;
     background: @color0;
@@ -302,7 +297,7 @@ tooltip label {
 }
 
 #custom-right2 {
-    font-size: 10pt;
+    font-size: 12pt;
     font-family: "Neuropolitical";
     color: @arch;
     background: @color0;
@@ -315,7 +310,7 @@ tooltip label {
 
 /* TIME */
 #custom-rightin1 {
-    font-size: 16pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @time;
     margin: 0;
@@ -342,7 +337,7 @@ tooltip label {
     color: #fff;
 }
 #custom-right4 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @time;
     background: @memory;
@@ -356,7 +351,7 @@ tooltip label {
 /* CONNECTION */
 
 #custom-right5 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @memory;
     background: @color0;
@@ -371,7 +366,7 @@ tooltip label {
 
 /* OUTPUT DEVICE */
 #custom-left6 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @pulseaudio;
     background: @color0;    
@@ -399,13 +394,13 @@ tooltip label {
 
 /* BRIGHTNESS */
 #custom-left7 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @tray;
     background: @pulseaudio;
     text-shadow: -3px 0px 2px rgba(0, 0, 0, 1);
     margin: 0px;
-    padding-left: 2px;
+    padding-left: 6px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -413,7 +408,7 @@ tooltip label {
 #tray {
     
     background: @tray;
-    padding-right: 10px;
+    padding-right: 0px;
     padding-left: 10px;
     margin: 0;
 }
@@ -429,7 +424,7 @@ tooltip label {
 
 /* BATTERY */
 #custom-left8 {
-    font-size: 15pt;
+    font-size: 18pt;
     font-family: "Neuropolitical";
     color: @time;
     background: @tray;
@@ -442,7 +437,16 @@ tooltip label {
 
 #battery {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @battery;
+    background: @tray;
+    padding: 0px 0px 0px 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#language {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @tray;
+    padding: 0px 10px 0px 0px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -464,7 +468,7 @@ tooltip label {
     font-size: 18px;
     color: orange;
     /*border-radius: 20px;*/
-    padding: 0px 12px 0px 10px;
+    padding: 0px 14px 0px 10px;
     margin: 0;
     opacity:1.0;
     transition: all 0.3s ease-in-out;
@@ -477,7 +481,7 @@ tooltip label {
     font-size: 18px;
     color: white;
     /*border-radius: 20px;*/
-    padding: 0px 12px 0px 10px;
+    padding: 0px 14px 0px 10px;
     margin: 0;
     opacity:1.0;
     border: 2px solid @transparent; 
@@ -522,15 +526,15 @@ tooltip label {
 #custom-left5:hover,
 #custom-right2:hover {
 
-    font-size: 20px;
+    font-size: 16px;
     background: @color0;
-    color: @pulseaudio;
+    color: @color14;
     transition: all 0.3s ease-in-out;
 }
 
 #custom-launcher:hover {
 
-    color: #58c1f5;
+    color: #9fffff;
     transition: all 0.3s ease-in-out;
     border: 2px solid #58c1f5;
     border-radius: 25px;
@@ -541,7 +545,7 @@ tooltip label {
 
     color: orange;
     transition: all 0.3s ease-in-out;
-    padding: 0px 12px 0px 10px;
+    padding: 0px 14px 0px 10px;
     border: 2px solid orange;
     border-radius: 25px;     
 }

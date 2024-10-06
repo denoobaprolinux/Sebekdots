@@ -6,21 +6,33 @@
 //                                                        |___/                  
 
 {
-"custom/menu":{
+    "custom/menu": {
+        "justify": "center",
         "tooltip":false,
-        "format":"󰣇",
-        "on-click":"~/.config/waybar/menuleft.sh",
+        "format": "󰣇",
+        "on-click":"nwg-drawer",
+    },
+
+    "custom/launcher": {
+        "justify": "center",
+        "format": "󰣇",
+        "exec": "echo ; echo Aplicaciones",
+        "icon-size": 20,
+        "interval" : 86400, // once every day
+        "tooltip": true,
+        "on-click": "nwg-drawer",
     },
 
     "hyprland/workspaces" : {
+        "justify": "center",
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "urgent": "󰊠",
-            "active": "󰮯",
-            "default": "󰊠",
+            "urgent": "",
+            "active": "",
+            "default": "",
             "empty": ""
         },
         "persistent-workspaces": {
@@ -36,6 +48,7 @@
         "tooltip": false,
         "orientation": "vertical",
         "drawer":{
+            "transition-duration": 200,
             "transition-left-to-right":false,
             "children-class": "traycontainer",
         },
@@ -50,9 +63,9 @@
     },
    
     "tray": {
-         "show-passive-items" : false,
-         "icon-size": 20,
-         "spacing": 0
+        "show-passive-items" : false,
+        "icon-size": 17,
+        "spacing": 0
     },
 
     "custom/themeswitcher": { 
@@ -82,18 +95,19 @@
 
     "custom/updates": {
         "format": "{}",
-        "tooltip-format": "{}",
+        "tooltip-format": "Actualizaciones:\n{}",
         "escape": true,
         "return-type": "json",
         "exec": "~/.config/waybar/updates.sh",
         "restart-interval": 60,
         "on-click": "kitty -e ~/.config/waybar/installupdates.sh",
-        "tooltip": false
+        "tooltip": true
     },
 
 
     "clock": {
         //"timezone": "Pongan aquí su timezone",
+        "justify": "center",
         "interval": 60,
         "format": "{:%I\n%M\n%p}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -106,8 +120,8 @@
                         "days":       "<span color='#77ceed'>{}</span>",
                         "weeks":      "<span color='#02A2D3'>W{}</span>",
                         "weekdays":   "<span color='#056D93'>{}</span>",
-                        "today":      "<span color='#019599'><b>{}</b></span>"
-                          }
+                        "today":      "<span color='#ff0000'><b>{}</b></span>"
+                        }
                 }
         },
     "cpu": {
@@ -131,7 +145,8 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-        "interval": 60,
+        "justify": "center",
+        "interval": 1,
         "format": "{icon}",
         "format-icons": [ "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"],
         "format-charging": "󰂄",
@@ -149,15 +164,18 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "group/pulse":{
+        "justify": "center",
         "tooltip": false,
         "orientation": "inherit",
         "drawer":{
+            "transition-duration": 200,
             "children-class":"pulsecontainer",
             "transition-left-to-right":false,
             },
         "modules":["pulseaudio#icon","pulseaudio#sound","pulseaudio/slider"]
         },
     "pulseaudio/slider": {
+        "justify": "center",
         "min": 0,
         "max": 100,
         "orientation": "vertical"
@@ -165,8 +183,8 @@
     "pulseaudio#sound": {
         "format": "{volume}",
         "format-bluetooth": "{volume}% {format_source}",
-        "format-bluetooth-muted": "off{format_source}",
-        "format-muted": "off{format_source}",
+        "format-bluetooth-muted": "off",
+        "format-muted": "off",
         "format-source-muted": "!mic",
         "format-icons": {
             "headphone": "",
@@ -183,7 +201,7 @@
         "format": "{icon}",
         "format-bluetooth": "{icon}",
         "format-bluetooth-muted": "{icon}",
-        "format-muted": "󰝟{format_source}",
+        "format-muted": "󰝟",
         "format-source-muted": "",
         "format-icons": {
             "headphone": ["", "", "󰕾"],
@@ -200,9 +218,10 @@
     },
     
     "custom/notification": {
-    "tooltip": true,
-    "format": "{icon}",
-    "format-icons": {
+        "justify": "center",
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
             "notification": "󰍡<span foreground='red'><sup></sup></span>",
             "none": "󰍡",
             "dnd-notification": "󱙍<span foreground='red'><sup></sup></span>",
