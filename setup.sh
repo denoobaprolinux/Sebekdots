@@ -75,7 +75,7 @@ mkdir -p /home/$USER/Imágenes/Wallpapers/Set
 
 # Paso 9: Descomprimir fuentes y colocarlas en la carpeta correcta
 unzip neuropolitical.zip -d /home/$USER/.local/share/fonts/
-unzip Iosevka.zip -d /home/$USER/.local/share/fonts/
+unzip Monofur.zip -d /home/$USER/.local/share/fonts/
 unzip fast_hand.zip -d /home/$USER/.local/share/fonts/
 
 # Paso 10: Instalar fuentes
