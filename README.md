@@ -8,7 +8,7 @@ _Algunos temas de Sebekdots 3.5 y tema de menú de Aplicaciones_
 
 Demo completo [en este enlace](https://www.youtube.com/watch?v=K7w-nsaZU3w)
 
-¡Nueva edición de Sebekdots para Hyprland!
+## ¡Nueva edición de Sebekdots para Hyprland!
 
 Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
