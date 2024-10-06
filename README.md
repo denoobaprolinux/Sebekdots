@@ -1,24 +1,35 @@
-# Sebekdots 3.4 Hyprland Edition
+# Sebekdots 3.5 Hyprland Edition
 
-![Hyprland_2024-09-08_17 26 54](https://github.com/user-attachments/assets/466e8bad-f700-418c-aeb8-a96b450d9420)
-![Hyprland_2024-09-08_17 26 45](https://github.com/user-attachments/assets/5eb85dcf-14ab-4a7f-b14c-ae168c6045bc)
-![Hyprland_2024-09-08_17 26 37](https://github.com/user-attachments/assets/816e1bd9-f171-4fe2-af76-5575e0de73d2)
-_Nuevo tema "Vertical"_
+[demo1.webm](https://github.com/user-attachments/assets/dcb778a6-06b4-44c8-92b6-f2d66c413887)
+_Menú de Configuraciones de Hyprland y Comportamiento de Ventanas Agrupadas_
 
-![Hyprland_2024-09-02_13 34 11](https://github.com/user-attachments/assets/f4975d2e-58a0-44c9-af5d-d86788110d9a)
-_Nuevos temas "Powerline" disponibles_
+[demo2.webm](https://github.com/user-attachments/assets/010e4e65-e4f2-488a-bc21-66ab596f6635)
+_Algunos temas de Sebekdots 3.5 y tema de menú de Aplicaciones_
+
+Demo completo [en este enlace](https://www.youtube.com/watch?v=K7w-nsaZU3w)
 
 ¡Nueva edición de Sebekdots para Hyprland!
 
 Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
-- Los temas "Powerline" (Arriba/Abajo) tienen un nuevo efecto hover en el menú y en el centro de notificaciones
-- El script de cambio de Wallpapers ahora permite tener GIFs como fondos de pantalla animados (proveniente de la versión anterior)
-- Nuevo tema "Vertical": la barra tiene dos _revealers_ que muestran información cuando le pones el puntero del mouse encima a los iconos de audio y la flecha hacia arriba. Además, vuelve el tema Pac-Man para esta barra, por razones estéticas.
-- En todas las barras el script de actualizaciones ha recibido una gran mejora: cuenta actualizaciones pendientes y actualiza pacman/AUR (con yay)/flatpak/snap, y tiene código de colores de acuerdo a la cantidad de actualizaciones (color base, más verde/amarillo/rojo)
-- Los temas "Powerline" tienen control de audio: los extremos del módulo de audio son botones de "Anterior" y "Siguiente" cuando reproduces audio en cualquier reproductor, incluyendo YouTube.
+1. Las ventanas pueden moverse con el teclado
+2. Mejorada la característica de las pestañas, ahora las barras de pestañas activas son indicadores luminosos, y participan del esquema de colores del sistema
+3. Ahora se puede agregar una ventana a un grupo de pestañas sólo arrastrando la ventana al grupo de pestañas, pero también puede hacerse con keybindings **(Control + Súper + flechas del teclado)**
+4. Añadida la característica "volver a espacio de trabajo anterior" con **Alt + Tab** 
+5. Las barras ahora participan del efecto Blur: si tienes una barra con transparencia o traslucidez, y activas el efecto Blur en las opciones de Hyprland, la barra también se difumina. Eso ofrece un look and feel adicional a las barras (de manera involuntaria se han creado nuevos temas con esa característica)
+6. Eliminada la barra vertical de la actualización anterior: estaba muy descuidada y tosca. En su lugar, se han agregado dos barras verticales, "Degradado" y "Mínima", ambas a la izquierda.
+7. Selección aleatoria de wallpapers con **Súper + W.** 
+8. Todos los temas clásicos han sido retirados. Sólo se conserva un tema clásico, pero ha sido cambiado/reimaginado.
+9. Ahora hay un archivo en las configuraciones de Hyprland llamado custom.conf para que puedan poner allí sus configuraciones personales. En la actualización, el archivo va vacío (Sólo con unas instrucciones)
+10. Mejorado el script de actualizaciones: detecta si en el sistema están instalados Yay, Flatpak y Snap (Yay sí o sí debe estar instalado para que funcionen los dotfiles) y pide confirmación en cada paso, puedes elegir no actualizar elementos por separado. También, el script envía notificaciones con relación a lo que hace, bien sea la cancelación del proceso por el usuario, o la actualización de los elementos.
+11. El módulo de actualizaciones en Waybar se reinicia inmediatamente se termina de ejecutar, de tal manera que vuelve a cero tan pronto se acaba la ejecución del script.
+12. Las barras ahora pueden aparecer y desaparecer de la pantalla para permitir una experiencia de pantalla completa. Sólo presiona **Súper + B** y activas/desactivas la barra.
+13. Presionando **Súper + A**, aparece una ayuda en pantalla con todos los keybindings (este archivo fue mejorado con respecto al demo)
+14. Agregado un efecto "minimizar" con **Súper + S**, que involucra el espacio de trabajo especial: no vas a ver las ventanas allí, sólo se van a almacenar, y aparecen nuevamente en donde desees. Sólo se puede hacer con una sola ventana.
+15. He incluido en este repositorio todas las fuentes necesarias, de tal manera que ya no necesitas descargarlas. Solamente con clonar el repositorio y seguir los pasos de la Wiki, podrás hacer la instalación.
+16. Si presionas los dos botones de shift al mismo tiempo, cambiarás la distribución del teclado a inglés de Estados Unidos (útil para los que tengan computadoras con distribución del teclado en inglés), y cada barra tiene un indicador del idioma elegido al lado del centro de notificaciones (ESP/ENG). Por defecto, la primera distribución es español latinoamericano.
 
-**El resto de las configuraciones permanecen iguales**
+**Próximamente, pondré a disposición de la comunidad un programa para instalar/actualizar los dotfiles.**
 
 ## Importante, MUY importante
 
@@ -39,7 +50,7 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 ![swappy-20240424_015601](https://github.com/andrewsebek/Sebekdots/assets/121652305/ce21f516-5fc6-4c9e-a84b-5e28ecdff990)
 _Vista previa de hyprexpo_
 
-## Pasos para instalar Sebekdots 3.4
+## Pasos para instalar Sebekdots
 
 Visita la [Wiki](https://github.com/andrewsebek/Sebekdots/wiki)
 
