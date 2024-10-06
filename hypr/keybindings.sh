@@ -49,7 +49,7 @@ GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
 "  + Q" "Cerrar Ventana Activa" "Opciones de Hyprland" \
 "  + M" "Cerrar Hyprland" "Opciones de Hyprland" \
 "  + H" "Recargar Personalizaciones de Hyprland" "Script hyprctl.sh" \
-"  + Shift + H" "Recargar Personalizaciones de Hyprland" "Script hyprctl.sh" \
+"  + Shift + H" "Configuraciones de Hyprland" "Script hyprctl.sh" \
 "  + SHIFT + R" "Recargar Waybar" "Script reload.sh" \
 "  + Shift + Q" "Cargar Barra Waybar por Defecto" "Barra Clásica/Abajo" \
 "  + E" "Abre Explorador de Archivos" "Nautilus" \
