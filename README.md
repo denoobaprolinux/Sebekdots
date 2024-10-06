@@ -56,7 +56,7 @@ Y con esto, ya no deberías tener activa la función hyprexpo ni la carga de plu
 **Instrucciones acerca de cómo habilitar el repositorio de plugins y hyprexpo [en este video](https://youtu.be/JLkzIY-xrjg?si=PtNIM7v-lKrw5rzc)**
 
 
-![Hyprland_2024-10-06_06 43 47](https://github.com/user-attachments/assets/ab4ad509-8a38-4c0d-a068-659325369337)
+![Hyprland_2024-10-06_06 51 43](https://github.com/user-attachments/assets/bc970e03-21a4-4867-a93b-01cae57104c4)
 _Vista previa de hyprexpo_
 
 ## Pasos para instalar Sebekdots
