@@ -216,14 +216,19 @@ tooltip label {
     font-size: 16px;
 }
 
+#battery.warning {
+    color: yellow;
+    background: none;
+}
+
 #battery.charging, #battery.plugged {
     color: green;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background: none;
+        color: white;
     }
 }
 

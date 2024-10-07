@@ -152,7 +152,12 @@
         "format-charging": "󰂄",
         "format-full":"󰁹",
         "tooltip-format": "{capacity}%",
-        "max-length": 25
+        "max-length": 25,
+        "states": {
+            "good": 95,
+            "warning": 20,
+            "critical": 15
+        },
     },
         "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface

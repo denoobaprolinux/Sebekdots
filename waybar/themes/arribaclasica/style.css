@@ -219,6 +219,26 @@ tooltip label {
     padding: 0px 0px 0px 0px;
     font-size: 11px;
 }
+#battery.charging, #battery.plugged {
+    color: green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #disk {
     color: #b58900;
 }
