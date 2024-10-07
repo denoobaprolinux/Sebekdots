@@ -60,7 +60,7 @@ GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
 "  + B" "Esconder/Mostrar Waybar" "Waybar" \
 "  + L" "Bloquear Pantalla" "Hyprlock" \
 "  + V" "Ventana Flotante" "Ventana Seleccionada" \
-"  + T" "Una Ventana Ocupa Pantalla Completa" "Activar/Desactivar" \
+"  + D" "Una Ventana Ocupa Pantalla Completa" "Activar/Desactivar" \
 "  + P" "Pseudo Dwindle" "Opciones de Hyprland" \
 "  + J" "Alternar Ventanas Horizontal/Vertical" "Dos Ventanas" \
 "  + Shift + T" "Activar/Desactivar Modo Pestañas" "Opciones de Hyprland" \
