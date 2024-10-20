@@ -1,4 +1,4 @@
-# Sebekdots 3.5 Hyprland Edition
+# Sebekdots 3.5.1 Hyprland Edition
 
 ![Hyprland_2024-10-04_22 37 04](https://github.com/user-attachments/assets/e4a9b4e6-5977-4d52-8d97-0a269abfb666)
 _Nuevo Tema "Powerlink"_
@@ -36,6 +36,7 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 16. Agregado un efecto "minimizar" con **Súper + S**, que involucra el espacio de trabajo especial: no vas a ver las ventanas allí, sólo se van a almacenar, y aparecen nuevamente en donde desees. Sólo se puede hacer con una sola ventana.
 17. He incluido en este repositorio todas las fuentes necesarias, de tal manera que ya no necesitas descargarlas. Solamente con clonar el repositorio y seguir los pasos de la Wiki, podrás hacer la instalación.
 18. Si presionas los dos botones de shift al mismo tiempo, cambiarás la distribución del teclado a inglés de Estados Unidos (útil para los que tengan computadoras con distribución del teclado en inglés), y cada barra tiene un indicador del idioma elegido al lado del centro de notificaciones (ESP/ENG). Por defecto, la primera distribución es español latinoamericano.
+19. Actualización 3.5.1: Nuevo botón en todas las barras, **portapapeles**. Es el front-end de Cliphist, así que ahora tienes acceso a un portapapeles funcional.
 
 **Próximamente, pondré a disposición de la comunidad un programa para instalar/actualizar los dotfiles.**
 
