@@ -73,7 +73,7 @@ window#waybar {
 
     color: white;
     font-size:10px;
-    padding: 0px 5px 0px 10px;
+    padding: 2.5px 5px 0px 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -108,6 +108,7 @@ window#waybar {
 }
 
 #custom-themeswitcher,
+#custom-clipboard,
 #custom-options  {
     
     color: white;
@@ -247,6 +248,7 @@ tooltip label {
 /* Color de resaltado de los elementos de Waybar */
 
 #custom-updates:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
@@ -286,6 +288,7 @@ tooltip label {
 #custom-updates.green,
 #custom-updates.yellow,
 #custom-updates.red,
+#custom-clipboard,
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,

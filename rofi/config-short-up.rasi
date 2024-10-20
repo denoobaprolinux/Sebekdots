@@ -25,7 +25,7 @@ window {
     width:                        170px;
     height:                       90px;
     x-offset:                     85px;
-    y-offset:                     -5px;
+    y-offset:                     5px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
@@ -34,8 +34,8 @@ window {
     border-color:                 @color10;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     southwest;
-    anchor:                       southwest;
+    location:                     northwest;
+    anchor:                       northwest;
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;

@@ -34,6 +34,7 @@
         "custom/wallchange",
         "custom/themeswitcher",
         "custom/options",
+        "custom/clipboard",
         "custom/updates",
 		"group/pulse",
 		"battery",

@@ -54,6 +54,7 @@ window#waybar > box {
 }
 
 #custom-options,
+#custom-clipboard,
 #custom-updates,
 #custom-themeswitcher,
 #custom-wallchange {
@@ -68,6 +69,13 @@ window#waybar > box {
     
     padding:0px 1px 3px 0px;
     margin: 0px;
+}
+
+#custom-clipboard {
+	
+	padding: 4px 0px 4px 2px;
+    margin: 0px;
+    transition: all 0.3s ease-in-out;
 }
 
 #custom-themeswitcher,

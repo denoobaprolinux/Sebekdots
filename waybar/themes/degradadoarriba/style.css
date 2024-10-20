@@ -129,6 +129,13 @@ window#waybar {
     transition: all 0.3s ease-in-out;
 }
 
+#custom-clipboard {
+    font-size: 11px;
+    color: white;
+    padding: 0px 10px 0px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
 #memory,
 #cpu   {
 
@@ -262,6 +269,7 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
+#custom-clipboard:hover,
 #pulseaudio:hover,
 #clock:hover,
 #mpris:hover,
@@ -307,6 +315,7 @@ tooltip label {
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-clipboard,
 #mpris,
 #window,
 #pulseaudio,

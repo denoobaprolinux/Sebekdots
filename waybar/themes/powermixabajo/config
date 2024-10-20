@@ -19,6 +19,7 @@
 		"mpris",	
 		"pulseaudio",
 		"custom/updates",
+		"custom/clipboard",
 		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange"
@@ -37,6 +38,7 @@
       "clock",
       "tray",
       "battery",
+      "custom/battery_notify",
       "hyprland/language",
       "custom/leftin1",
 		"custom/revealer-right",

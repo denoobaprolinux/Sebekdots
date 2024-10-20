@@ -111,6 +111,7 @@ window#waybar {
 }
 
 #custom-themeswitcher,
+#custom-clipboard,
 #custom-wallchange,
 #custom-options  {
     
@@ -239,11 +240,13 @@ tooltip label {
 
 #language {
     color: white;
+    font-size: 10.5px;
 }
 
 /* Color de resaltado de los elementos de Waybar */
 
 #custom-updates:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,

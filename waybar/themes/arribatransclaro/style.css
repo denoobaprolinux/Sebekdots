@@ -111,6 +111,7 @@ window#waybar {
 #custom-themeswitcher,
 #custom-wallchange,
 #custom-options,
+#custom-clipboard,
 #tray  {
     
     color: aliceblue;
@@ -238,6 +239,7 @@ tooltip label {
 
 #language {
     color: white;
+    font-size: 10.5px;
 }
 
 /* Color de resaltado de los elementos de Waybar */
@@ -246,6 +248,7 @@ tooltip label {
 #custom-updates.green:hover,
 #custom-updates.yellow:hover,
 #custom-updates.red:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
@@ -289,6 +292,7 @@ tooltip label {
 #custom-updates.green,
 #custom-updates.yellow,
 #custom-updates.red,
+#custom-clipboard,
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,

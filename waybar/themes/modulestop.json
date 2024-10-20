@@ -135,6 +135,16 @@
         "on-click": "~/.config/waybar/menutop.sh",
     },
 
+    "custom/clipboard":{
+        "format": "󰅎",
+        "exec": "echo ; echo Portapapeles",
+        "escape": true,
+        "on-click": "~/.config/waybar/cliphist-up.sh *",  // abrir portapapeles
+        "on-click-right": "~/.config/waybar/cliphist-up.sh w",  // borrar portapapeles
+        "interval": 86400, // once every day
+        "tooltip": true,
+    },
+
     "custom/revealer-left": {
         "format": "󰶻 ",
         "exec": "echo ; echo Elementos de Hyprland",
@@ -254,7 +264,8 @@
                 "org.kde.kate": "Kate",
                 "org.kde.kdeconnect.app": "KDE Connect",
                 "org.kde.kdenlive": "Kdenlive",
-                "org.manjaro.pamac.manager": "Pamac"
+                "org.manjaro.pamac.manager": "Pamac",
+                "zen-alpha": "Zen Browser"
                 },
         "separate-outputs": true
     },

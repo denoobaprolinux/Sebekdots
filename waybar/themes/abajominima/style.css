@@ -76,7 +76,7 @@ window#waybar {
 
     color: white;
     font-size:10px;
-    padding: 0px 5px 0px 10px;
+    padding: 0px 5px 0px 15px;
     background-color: alpha(@modules, 0.7);
     transition: all 0.3s ease-in-out;
 }
@@ -111,6 +111,7 @@ window#waybar {
 }
 
 #custom-themeswitcher,
+#custom-clipboard,
 #custom-wallchange,
 #custom-options  {
     
@@ -239,11 +240,13 @@ tooltip label {
 
 #language {
     color: white;
+    font-size: 10.5px;
 }
 
 /* Color de resaltado de los elementos de Waybar */
 
 #custom-updates:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,

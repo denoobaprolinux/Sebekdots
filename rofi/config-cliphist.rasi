@@ -1,25 +1,14 @@
-/*
-#  ____        __ _  
-# |  _ \ ___  / _(_) 
-# | |_) / _ \| |_| | 
-# |  _ < (_) |  _| | 
-# |_| \_\___/|_| |_| 
-#                    
-# by Stephan Raabe (2023) 
-# ----------------------------------------------------- 
-*/
-
-/* ---- Configuration ---- */
+/* ---- Temas de Waybar - Rofi ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "Fira Sans Bold 10";
-    show-icons:                 false;
+    font:                       "Neuropolitical 8";
+    show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";
     display-run:                "RUN";
     display-filebrowser:        "FILES";
     display-window:             "WINDOW";
-	hover-select:               true;
+    hover-select:               true;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     drun-display-format:        "{name}";
@@ -34,18 +23,18 @@ configuration {
 /* ---- Window ---- */
 window {
     width:                        400px;
-    x-offset:                     -14px;
-    y-offset:                     65px;
+    x-offset:                     5px;
+    y-offset:                     -5px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
     color:                        #FFFFFF;
-    border:                       3px;
-    border-color:                 #FFFFFF;
+    border:                       2px;
+    border-color:                 @color10;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     northeast;
-    anchor:                       northeast;
+    location:                     southwest;
+    anchor:                       southwest;
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;
@@ -59,7 +48,7 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    background-image:             @current-image;
+    background-image:             transparent;
     children:                     ["listbox"];
 }
 
@@ -99,7 +88,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                      true;
     expand:                       false;
-    str:                          "";
+    str:                          " ";
     background-color:             transparent;
     text-color:                   inherit;
 }
@@ -109,7 +98,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  "Search";
+    placeholder:                  "Buscar en el Portapapeles";
     placeholder-color:            inherit;
 }
 

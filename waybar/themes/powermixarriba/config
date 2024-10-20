@@ -19,6 +19,7 @@
 		"mpris",	
 		"pulseaudio",
 		"custom/updates",
+		"custom/clipboard",
 		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange"

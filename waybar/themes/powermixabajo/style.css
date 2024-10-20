@@ -47,6 +47,7 @@ window#waybar {
 #mpris,
 #pulseaudio,
 #custom-updates,
+#custom-clipboard,
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,
@@ -190,11 +191,18 @@ window#waybar.empty #window ,
     border-bottom-right-radius: 20px;
 }
 
+#custom-clipboard {
+    font-size: 11px;
+    color: white;
+    padding: 0px 10px 0px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
 #custom-themeswitcher,
 #custom-wallchange,
 #custom-options {
     
-    color: aliceblue;
+    color: white;
     padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -328,6 +336,7 @@ tooltip label {
 
 #custom-updates:hover,
 #custom-wallchange:hover,
+#custom-clipboard:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
 #pulseaudio:hover,
@@ -370,6 +379,7 @@ tooltip label {
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-clipboard,
 #mpris,
 #window,
 #pulseaudio,

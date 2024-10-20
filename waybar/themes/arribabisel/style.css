@@ -31,7 +31,6 @@ window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
     background: alpha(@color10, 0.5);
-    border-top: 2px solid @color0;
 }
 
 .modules-left {
@@ -152,7 +151,7 @@ window#waybar {
 }
 
 #custom-themeswitcher {
-    padding: 0px 15px 0px 25px;
+    padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -161,6 +160,13 @@ window#waybar {
     
     color: aliceblue;
     padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-clipboard {
+    
+    color: white;
+    padding: 0px 10px 0px 15px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -304,6 +310,7 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
+#custom-clipboard:hover,
 #pulseaudio:hover,
 #clock:hover,
 #mpris:hover,

@@ -13,6 +13,7 @@
 		"custom/launcher",
 		"hyprland/workspaces",
 		"custom/updates",
+		"custom/clipboard",
 		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange"

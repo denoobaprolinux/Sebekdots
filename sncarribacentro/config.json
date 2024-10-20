@@ -2,7 +2,7 @@
   "$schema": "$XDG_CONFIG_HOME/.config/sncarribacentro/configSchema.json",
   "positionX": "center",
   "positionY": "top",
-  "control-center-margin-top": 0,
+  "control-center-margin-top": 5,
   "control-center-margin-bottom": 0,
   "control-center-margin-right": 0,
   "control-center-margin-left": 0,

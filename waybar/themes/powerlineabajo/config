@@ -26,6 +26,7 @@
 	"modules-center": [
                        
         "custom/left2",
+        "custom/clipboard",
         "custom/themeswitcher",     // Cambio de Tema de Waybar
         "custom/wallchange",        // Cambio de Wallpaper
                        

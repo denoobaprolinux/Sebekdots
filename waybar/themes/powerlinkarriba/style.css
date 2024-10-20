@@ -30,12 +30,12 @@
 window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
-    background: @color10;
+    background: @color0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-top: 24px solid @color0;
+    border-bottom: 6px solid @color10;
 }
 
 .modules-left {
@@ -181,6 +181,13 @@ window#waybar {
     transition: all 0.3s ease-in-out;
 }
 
+#custom-clipboard {
+    font-size: 11px;
+    color: white;
+    padding: 0px 10px 0px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
 #memory,
 #cpu   {
 
@@ -310,6 +317,7 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
+#custom-clipboard:hover,
 #pulseaudio:hover,
 #clock:hover,
 #mpris:hover,
@@ -345,6 +353,7 @@ tooltip label {
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-clipboard,
 #window,
 window#waybar.empty #window ,
 #clock,
@@ -368,6 +377,7 @@ window#waybar.empty #window ,
 #custom-options,
 #custom-themeswitcher,
 #custom-wallchange,
+#custom-clipboard,
 #mpris,
 #window,
 #pulseaudio,

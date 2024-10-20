@@ -22,10 +22,9 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        170px;
-    height:                       90px;
-    x-offset:                     85px;
-    y-offset:                     -5px;
+    width:                        400px;
+    x-offset:                     5px;
+    y-offset:                     5px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
@@ -34,8 +33,8 @@ window {
     border-color:                 @color10;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     southwest;
-    anchor:                       southwest;
+    location:                     northwest;
+    anchor:                       northwest;
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;
@@ -66,7 +65,7 @@ listbox {
     spacing:                     20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 /* ---- Dummy ---- */
@@ -89,7 +88,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                      true;
     expand:                       false;
-    str:                          "";
+    str:                          " ";
     background-color:             transparent;
     text-color:                   inherit;
 }
@@ -99,7 +98,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  "Search";
+    placeholder:                  "Buscar en el Portapapeles";
     placeholder-color:            inherit;
 }
 
@@ -129,7 +128,7 @@ button selected {
 listview {
     enabled:                      true;
     columns:                      1;
-    lines:                        2;
+    lines:                        8;
     cycle:                        true;
     dynamic:                      true;
     scrollbar:                    false;

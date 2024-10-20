@@ -16,6 +16,7 @@
 		"custom/launcher",
 		"hyprland/workspaces",
 		"custom/updates",
+		"custom/clipboard",
 		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange"
@@ -47,8 +48,8 @@
         "format": "{title}\n<small>{artist}</small>",
         "format-paused": "{title}\n<small>{artist}</small>",
         "interval": 1,
-        "title-len": 60,
-        "artist-len": 60,
+        "title-len": 55,
+        "artist-len": 55,
         "player-icons": {
             "default": "",
             "mpv": "🎵"

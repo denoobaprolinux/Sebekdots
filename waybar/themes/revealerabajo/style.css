@@ -129,7 +129,8 @@ window#waybar {
 
 #custom-themeswitcher,
 #custom-wallchange,
-#custom-options {
+#custom-options,
+#custom-clipboard {
     
     color: aliceblue;
     padding: 0px 10px 0px 10px;
@@ -265,6 +266,7 @@ tooltip label {
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
+#custom-clipboard:hover,
 #pulseaudio:hover,
 #clock:hover,
 #mpris:hover,

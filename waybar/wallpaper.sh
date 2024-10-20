@@ -131,6 +131,7 @@ fi
 sleep 1
 ~/.config/hypr/hyprctl.sh
 cp ~/.cache/wal/config ~/.config/cava/config
+pywalfox update
 
 # -----------------------------------------------------
 # Envía la notificación

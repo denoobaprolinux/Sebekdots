@@ -4,6 +4,7 @@
 // | |  | | (_) | (_| | |_| | | (_) \__ \   \ V  V / (_| | |_| | |_) | (_| | |   
 // |_|  |_|\___/ \__,_|\__,_|_|\___/|___/    \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
 //                                                        |___/                  
+                    
 
 {
     "custom/menu": {
@@ -21,6 +22,16 @@
         "interval" : 86400, // once every day
         "tooltip": true,
         "on-click": "nwg-drawer",
+    },
+
+    "custom/clipboard":{
+        "format": "󰅎",
+        "exec": "echo ; echo Portapapeles",
+        "escape": true,
+        "on-click": "~/.config/waybar/cliphist.sh *",  // abrir portapapeles
+        "on-click-right": "~/.config/waybar/cliphist.sh w",  // borrar portapapeles
+        "interval": 86400, // once every day
+        "tooltip": true,
     },
 
     "hyprland/workspaces" : {

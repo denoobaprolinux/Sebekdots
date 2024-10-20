@@ -101,6 +101,7 @@ tooltip label {
 #pulseaudio,
 #backlight,
 #battery,
+#custom-clipboard,
 #custom-power,
 #mpris,
 #custom-notifications,
@@ -226,11 +227,12 @@ tooltip label {
 }
 
 #custom-themeswitcher,
+#custom-clipboard,
 #custom-wallchange {
 
     color: white;
     font-size:12px;
-    padding: 0px 11px 0px 11px;
+    padding: 0px 8px 0px 8px;
     margin: 0;
     background-color: @memory;
     transition: all 0.3s ease-in-out;
@@ -538,6 +540,7 @@ tooltip label {
 #custom-updates:hover,
 #custom-wallchange:hover,
 #custom-themeswitcher:hover,
+#custom-clipboard:hover,
 #custom-options:hover,
 #pulseaudio:hover,
 #mpris:hover,

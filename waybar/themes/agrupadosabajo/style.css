@@ -141,6 +141,13 @@ window#waybar {
     transition: all 0.3s ease-in-out;
 }
 
+#custom-clipboard {
+    font-size: 11px;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
 #memory,
 #cpu   {
 
@@ -274,6 +281,7 @@ tooltip label {
 /* Color de resaltado de los elementos de Waybar */
 
 #custom-updates:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,
@@ -288,7 +296,7 @@ tooltip label {
 #mpris.paused:hover {
 
     color: orange;
-    background: linear-gradient(180deg, @color10, black);
+    background: linear-gradient(0deg, black, @color10);
     border-radius: 20px;
     border: 2px solid black;
     transition: all 0.3s ease-in-out;

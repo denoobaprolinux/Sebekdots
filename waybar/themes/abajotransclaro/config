@@ -13,6 +13,7 @@
 		"custom/launcher",
 		"hyprland/workspaces",
 		"custom/updates",
+		"custom/clipboard",
 		"custom/options",
 		"custom/themeswitcher",
 		"custom/wallchange"
@@ -40,13 +41,14 @@
 	// Módulos únicos para Barras Mínimas
 
     "mpris": {
-        "format": "{title}",
-        "format-paused": "<i>{title}</i>",
+        "format": "{player_icon}  {title}",
+        "format-paused": "{player_icon}  {title}",
         "interval": 1,
-        "title-len": 45,
+        "title-len": 55,
         "player-icons": {
-            "default": "",
-            "mpv": "🎵"
+            "default": "󰎆",
+            "mpv": "🎵",
+            "spotify": ""
         },
         "status-icons": {
             "paused": "",
@@ -56,4 +58,4 @@
         // "ignored-players": ["firefox"]
     }
 }
-
+}

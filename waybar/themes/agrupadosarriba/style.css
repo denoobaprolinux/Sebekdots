@@ -80,8 +80,8 @@ window#waybar {
 #custom-launcher{
 
     font-size: 23px;
-    text-shadow: 1px 1px 2px cadetblue;
     color: #1793d1;
+    text-shadow: 1px 1px 2px cadetblue;
     padding: 0px 21px 0px 15px;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
@@ -137,6 +137,13 @@ window#waybar {
 #custom-options {
     
     color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-clipboard {
+    font-size: 11px;
+    color: white;
     padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -224,7 +231,7 @@ tooltip label {
 
 #mpris {
     color: #fff;
-    background: linear-gradient(0deg, @color0, black);
+    background: linear-gradient(180deg, @color0, black);
     border-radius: 20px;
     border: 2px solid black;
     transition: all 0.3s ease-in-out;
@@ -274,6 +281,7 @@ tooltip label {
 /* Color de resaltado de los elementos de Waybar */
 
 #custom-updates:hover,
+#custom-clipboard:hover,
 #custom-wallchange:hover,
 #custom-options:hover,
 #custom-themeswitcher:hover,

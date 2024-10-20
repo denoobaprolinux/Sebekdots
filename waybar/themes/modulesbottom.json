@@ -144,6 +144,16 @@
         "on-click": "~/.config/waybar/menubottom.sh",
     },
 
+    "custom/clipboard":{
+        "format": "󰅎",
+        "exec": "echo ; echo Portapapeles",
+        "escape": true,
+        "on-click": "~/.config/waybar/cliphist.sh *",  // abrir portapapeles
+        "on-click-right": "~/.config/waybar/cliphist.sh w",  // borrar portapapeles
+        "interval": 86400, // once every day
+        "tooltip": true,
+    },
+
     "group/hardware": {
         "orientation": "inherit",
         "drawer": {
@@ -235,7 +245,8 @@
                 "org.kde.kate": "Kate",
                 "org.kde.kdeconnect.app": "KDE Connect",
                 "org.kde.kdenlive": "Kdenlive",
-                "org.manjaro.pamac.manager": "Pamac"
+                "org.manjaro.pamac.manager": "Pamac",
+                "zen-alpha": "Zen Browser"
                 },
         "separate-outputs": true
     },
@@ -252,8 +263,8 @@
         "format": "{title}\n<small>{artist}</small>",
         "format-paused": "{title}\n<small>{artist}</small>",
         "interval": 1,
-        "title-len": 40,
-        "artist-len": 40,
+        "title-len": 35,
+        "artist-len": 35,
         "player-icons": {
             "default": "",
             "mpv": "🎵"
@@ -403,6 +414,13 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
+
+    "custom/battery_notify": {
+        "exec": "~/.config/waybar/batterylevel.sh",
+        "interval": 1,
+        "return-type": "none"
+    },
+
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
