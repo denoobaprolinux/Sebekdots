@@ -20,19 +20,20 @@ declare -A options=(
     ["2. Anchura de Bordes de Ventanas"]="numeric"
     ["3. Gaps Internos"]="numeric"
     ["4. Gaps Externos"]="numeric"
-    ["5. Smart Gaps (0/1/2)"]="numeric"
+    ["5. Smart Gaps"]="1.Encendido 2.Apagado 3.Atrás"
     ["6. Efecto Blur"]="1.Encendido 2.Apagado 3.Atrás"
     ["7. Efecto Neón"]="1.Encendido 2.Apagado 3.Atrás"
-    ["8. Efecto Neón - Intensidad"]="numeric"
-    ["9. Redimensionar Ventanas"]="1.Encendido 2.Apagado 3.Atrás"
-    ["10. Redimensionar Ventanas - Área"]="numeric"
-    ["11. Esquinas"]="numeric"
-    ["12. Animaciones"]="1.Apagadas 2.Estándar 3.Desvanecer 4.Rápidas 5.Fluidas 6.Máximas"
-    ["13. Oscurecimiento"]="1.Encendido 2.Apagado 3.Atrás"
-    ["14. Oscurecimiento - Intensidad"]="numeric"
-    ["15. Opacidad (Ventana Activa)"]="numeric"
-    ["16. Opacidad (Ventana Inactiva)"]="numeric"
-    ["17. Efecto Rayos X"]="1.Encendido 2.Apagado 3.Atrás"
+    ["8. Efecto Neón - Rango"]="numeric"
+    ["9. Efecto Neón - Intensidad"]="numeric"
+    ["10. Redimensionar Ventanas"]="1.Encendido 2.Apagado 3.Atrás"
+    ["11. Redimensionar Ventanas - Área"]="numeric"
+    ["12. Esquinas"]="numeric"
+    ["13. Animaciones"]="1.Apagadas 2.Estándar 3.Desvanecer 4.Rápidas 5.Fluidas 6.Máximas"
+    ["14. Oscurecimiento"]="1.Encendido 2.Apagado 3.Atrás"
+    ["15. Oscurecimiento - Intensidad"]="numeric"
+    ["16. Opacidad (Ventana Activa)"]="numeric"
+    ["17. Opacidad (Ventana Inactiva)"]="numeric"
+    ["18. Efecto Rayos X"]="1.Encendido 2.Apagado 3.Atrás"
 )
 
 # Creación/Actualización del script hyprctl.sh
@@ -101,10 +102,20 @@ if [ -n "$selected_option" ]; then
                 update_hyprctl_script "general:gaps_out" "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "5. Smart Gaps (0/1/2)")
-                hyprctl keyword dwindle:no_gaps_when_only "$selected_value"
-                update_hyprctl_script "dwindle:no_gaps_when_only" "$selected_value" "$hyprctl_script"
-                ~/.config/waybar/hyproptions.sh
+            "5. Smart Gaps")
+                case $selected_value in
+                    "1.Encendido")
+                        cp ~/.config/hypr/config/gaps/gaps_on.conf ~/.config/hypr/config/gaps.conf
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "2.Apagado")
+                        cp ~/.config/hypr/config/gaps/gaps_off.conf ~/.config/hypr/config/gaps.conf
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                    "3.Atrás")
+                        ~/.config/waybar/hyproptions.sh
+                    ;;
+                esac
                 ;;
             "6. Efecto Blur")
                 case $selected_value in
@@ -127,12 +138,12 @@ if [ -n "$selected_option" ]; then
                 case $selected_value in
                     "1.Encendido")
                         hyprctl keyword decoration:drop_shadow true
-                        update_hyprctl_script "decoration:drop_shadow" "true" "$hyprctl_script"
+                        update_hyprctl_script "decoration:shadow:enabled" "true" "$hyprctl_script"
                         ~/.config/waybar/hyproptions.sh
                         ;;
                     "2.Apagado")
                         hyprctl keyword decoration:drop_shadow false
-                        update_hyprctl_script "decoration:drop_shadow" "false" "$hyprctl_script"
+                        update_hyprctl_script "decoration:shadow:enabled" "false" "$hyprctl_script"
                         ~/.config/waybar/hyproptions.sh
                         ;;
                     "3.Atrás")
@@ -140,12 +151,17 @@ if [ -n "$selected_option" ]; then
                     ;;
                 esac
                 ;;
-            "8. Efecto Neón - Intensidad")
+            "8. Efecto Neón - Rango")
                 hyprctl keyword decoration:shadow_range "$selected_value"
-                update_hyprctl_script "decoration:shadow_range" "$selected_value" "$hyprctl_script"
+                update_hyprctl_script "decoration:shadow:range" "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "9. Redimensionar Ventanas")
+            "9. Efecto Neón - Intensidad")
+                hyprctl keyword decoration:shadow_range "$selected_value"
+                update_hyprctl_script "decoration:shadow:render_power" "$selected_value" "$hyprctl_script"
+                ~/.config/waybar/hyproptions.sh
+                ;;
+            "10. Redimensionar Ventanas")
                 case $selected_value in
                     "1.Encendido")
                         hyprctl keyword general:resize_on_border true
@@ -162,17 +178,17 @@ if [ -n "$selected_option" ]; then
                     ;;
                 esac
                 ;;
-            "10. Redimensionar Ventanas - Área")
+            "11. Redimensionar Ventanas - Área")
                 hyprctl keyword general:extend_border_grab_area "$selected_value"
                 update_hyprctl_script "general:extend_border_grab_area" "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "11. Esquinas")
+            "12. Esquinas")
                 hyprctl keyword decoration:rounding "$selected_value"
                 update_hyprctl_script "decoration:rounding" "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "12. Animaciones")
+            "13. Animaciones")
                 case $selected_value in
                     "1.Apagadas")
                         update_hyprctl_script "animations:enabled" "false" "$hyprctl_script"
@@ -200,7 +216,7 @@ if [ -n "$selected_option" ]; then
                 esac
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "13. Oscurecimiento")
+            "14. Oscurecimiento")
                 case $selected_value in
                     "1.Encendido")
                         hyprctl keyword decoration:dim_inactive true
@@ -217,22 +233,22 @@ if [ -n "$selected_option" ]; then
                     ;;
                 esac
                 ;;
-            "14. Oscurecimiento - Intensidad")
+            "15. Oscurecimiento - Intensidad")
                 hyprctl keyword decoration:dim_strength "$selected_value"
                 update_hyprctl_script decoration:dim_strength "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "15. Opacidad (Ventana Activa)")
+            "16. Opacidad (Ventana Activa)")
                 hyprctl keyword decoration:active_opacity "$selected_value"
                 update_hyprctl_script decoration:active_opacity "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;
-            "16. Opacidad (Ventana Inactiva)")
+            "17. Opacidad (Ventana Inactiva)")
                 hyprctl keyword decoration:inactive_opacity "$selected_value"
                 update_hyprctl_script decoration:inactive_opacity "$selected_value" "$hyprctl_script"
                 ~/.config/waybar/hyproptions.sh
                 ;;  
-            "17. Efecto Rayos X")
+            "18. Efecto Rayos X")
                 case $selected_value in
                     "1.Encendido")
                         hyprctl keyword decoration:blur:xray true
