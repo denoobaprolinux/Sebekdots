@@ -218,7 +218,7 @@ tooltip label {
 }
 
 #battery.charging, #battery.plugged {
-    color: green;
+    color: #00FF00;
 }
 
 @keyframes blink {

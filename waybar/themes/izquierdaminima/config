@@ -4,6 +4,9 @@
 	"layer": "top",
     "position": "left",
     "width": 31, // Altura de la barra (remuevan/comenten esta línea para autoajuste)
+    "margin-left": 5,
+    "margin-top": 5,
+    "margin-bottom": 5,
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
 

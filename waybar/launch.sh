@@ -4,7 +4,6 @@
 # Cierra todas las instancias existentes de Waybar
 # ----------------------------------------------------- 
 killall waybar
-killall swaync
 sleep 0.2
 
 # ----------------------------------------------------- 

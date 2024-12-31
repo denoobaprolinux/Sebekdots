@@ -1,0 +1,61 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "bottom",
+	"height": 12,
+	"reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulesbottom.json"],
+			
+	"modules-left": [
+		
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/updates",
+		"custom/clipboard",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange"
+
+	],
+
+	"modules-center": [
+	
+		"mpris"	
+	
+	],
+		
+	"modules-right": [
+	
+		"hyprland/window",
+		"pulseaudio",
+		"clock",
+		"tray",
+		"battery",
+		"hyprland/language",
+		"custom/notification"
+				
+	],
+
+	// Módulos únicos para Barras Mínimas
+
+    "mpris": {
+        "format": "{player_icon}  {title}",
+        "format-paused": "{player_icon}  {title}",
+        "interval": 1,
+        "title-len": 55,
+        "player-icons": {
+            "default": "󰎆",
+            "mpv": "🎵",
+            "spotify": ""
+        },
+        "status-icons": {
+            "paused": "",
+            "play": "",
+            "previous": "󰒮",
+        },
+        // "ignored-players": ["firefox"]
+    }
+}
+}

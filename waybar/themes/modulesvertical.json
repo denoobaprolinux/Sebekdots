@@ -28,8 +28,7 @@
         "format": "󰅎",
         "exec": "echo ; echo Portapapeles",
         "escape": true,
-        "on-click": "~/.config/waybar/cliphist.sh *",  // abrir portapapeles
-        "on-click-right": "~/.config/waybar/cliphist.sh w",  // borrar portapapeles
+        "on-click": "nwg-clipman",  // abrir portapapeles
         "interval": 86400, // once every day
         "tooltip": true,
     },
@@ -88,10 +87,10 @@
     },
 
     "custom/wallchange": {
-        "format": "󰆊",
+        "format": "󰆊 ",
         "exec": "echo ; echo Cambiar Wallpaper",
-        "on-click": "~/.config/waybar/wallpaper.sh select",
-        "on-click-right": "~/.config/waybar/wallpaper.sh",
+       "on-click": "waypaper",
+        "on-click-right": "waypaper --random",
         "interval" : 86400, // once every day
         "tooltip": true
     },

@@ -78,8 +78,14 @@ window#waybar > box {
     transition: all 0.3s ease-in-out;
 }
 
-#custom-themeswitcher,
 #custom-wallchange {
+
+	padding:0px 0px 8px 6px;
+    margin: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-themeswitcher {
 
     padding:0px 0px 8px 0px;
     margin: 0px;
@@ -120,6 +126,8 @@ window#waybar > box {
 
 #workspaces button {
 	
+	/* CON ESTE EDITAS LOS ESPACIOS CON CONTENIDO */
+	/* ORDEN DEL PADDING: ARRIBA/DERECHA/ABAJO/IZQUIERDA  */
 	padding: 0px 8px 0px 0px ;
 	background-color:transparent;
 	color: @color15; /* Color de todos los espacios de trabajo usados */
@@ -127,13 +135,19 @@ window#waybar > box {
 }
 
 #workspaces button.active {
+
+	/* CON ESTE EDITAS TU POSICIÓN ACTUAL */
     color: #FFFFFF; 
+	/* ORDEN DEL PADDING: ARRIBA/DERECHA/ABAJO/IZQUIERDA  */	
 	padding:0px 8px 0px 0px;
 	transition: 0.25s ease-in-out;
 }
 
 #workspaces button.empty {
+
+	/* CON ESTE EDITAS LOS ESPACIOS VACÍOS */
 	color: #FFFFFF;
+	/* ORDEN DEL PADDING: ARRIBA/DERECHA/ABAJO/IZQUIERDA  */
 	padding: 0px 8px 0px 0px;
 	transition: 0.25s ease-in-out;
 }
@@ -265,7 +279,7 @@ window#waybar > box {
 }
 
 #battery.charging, #battery.plugged {
-    color: green;
+    color: #00FF00;
 }
 
 @keyframes blink {

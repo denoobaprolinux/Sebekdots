@@ -31,6 +31,7 @@ window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
     background: alpha(@color0, 0.7);
+    border-radius: 10px;
         
 }
 
@@ -131,7 +132,7 @@ window#waybar {
 
 #custom-wallchange {
     color: white;
-    padding: 5px 3.5px 0px 0px;
+    padding: 5px 3.5px 0px 8px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -158,6 +159,7 @@ window#waybar.empty #window {
 
 #workspaces button {
     padding: 0px 0px 0px 0px;
+    margin: -3px 0px -3px 0px;
     border-radius: 15px;
     border:0px;
     color: @color13;
@@ -229,7 +231,7 @@ tooltip label {
 }
 
 #battery.charging, #battery.plugged {
-    color: green;
+    color: #00FF00;
 }
 
 @keyframes blink {

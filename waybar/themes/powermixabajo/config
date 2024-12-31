@@ -51,10 +51,29 @@
 	"custom/revealer-left": {
       "format": "",
       "tooltip": false
-      },
+    },
 
      "custom/revealer-right": {
         "format": "",
         "tooltip": false
-     	}
+    },
+
+	"mpris": {
+        "justify": "center",
+        "format": "{title}\n<small>{artist}</small>",
+        "format-paused": "{title}\n<small>{artist}</small>",
+        "interval": 1,
+        "title-len": 35,
+        "artist-len": 35,
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "previous": "󰒮"
+        },
+        "on-click": "~/.config/eww/widgets/left-down/mediaplayer.sh"
+    }
 }

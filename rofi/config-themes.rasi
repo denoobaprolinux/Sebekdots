@@ -1,4 +1,4 @@
-/* ---- Temas de Waybar - Rofi ---- */
+/* ---- Waybar Theme Selector - Rofi ---- */
 configuration {
     modi:                       "drun,run";
     font:                       "Neuropolitical 8";
@@ -98,7 +98,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  " Temas de Waybar";
+    placeholder:                  " Waybar Themes";
     placeholder-color:            inherit;
 }
 

@@ -167,12 +167,12 @@ fi
 # Verifica si no hubo actualizaciones
 # ------------------------------------------------------
 if [ "$updates_pacman" -eq 0 ] && [ "$updates_yay" -eq 0 ] && [ "$updates_flatpak" -eq 0 ] && [ "$updates_snap" -eq 0 ];then
-    notify-send "Centro de Actualizaciones:" "Nada que hacer"
+    notify-send --transient "Centro de Actualizaciones:" "Nada que hacer"
 elif [ "$updates_performed" = true ];then
     total_updates=$(("$updates_pacman" + "$updates_yay" + "$updates_flatpak" + "$updates_snap"))
-    notify-send "Centro de Actualizaciones:" "$total_updates actualizaciones instaladas"
+    notify-send --transient "Centro de Actualizaciones:" "$total_updates actualizaciones instaladas"
 else
-    notify-send "Centro de Actualizaciones:" "Actualización cancelada o interrumpida."
+    notify-send --transient "Centro de Actualizaciones:" "Actualización cancelada o interrumpida."
 fi
 
 # ------------------------------------------------------

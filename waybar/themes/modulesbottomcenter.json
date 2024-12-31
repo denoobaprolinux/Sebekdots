@@ -112,8 +112,8 @@
     "custom/wallchange": {
         "format": "󰆊 ",
         "exec": "echo ; echo Cambiar Wallpaper",
-        "on-click": "~/.config/waybar/wallpaper.sh select",
-        "on-click-right": "~/.config/waybar/wallpaper.sh",
+        "on-click": "waypaper",
+        "on-click-right": "waypaper --random",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -150,8 +150,7 @@
         "format": "󰅎",
         "exec": "echo ; echo Portapapeles",
         "escape": true,
-        "on-click": "~/.config/waybar/cliphist-center-d.sh *",  // abrir portapapeles
-        "on-click-right": "~/.config/waybar/cliphist-center-d.sh w",  // borrar portapapeles
+        "on-click": "nwg-clipman",  // abrir portapapeles
         "interval": 86400, // once every day
         "tooltip": true,
     },
@@ -278,7 +277,10 @@
                 "org.kde.kdeconnect.app": "KDE Connect",
                 "org.kde.kdenlive": "Kdenlive",
                 "org.manjaro.pamac.manager": "Pamac",
-                "zen-alpha": "Zen Browser"
+                "zen-beta": "Zen Browser",
+                "sebekdots.settings": "Configuraciones de Hyprland",
+                "code-oss": "VSCode",
+                "sebekos.mpris.down": ""
                 },
         "separate-outputs": true
     },
@@ -290,13 +292,13 @@
     "keyboard-name": "at-translated-set-2-keyboard"
     },
 
-     "mpris": {
+    "mpris": {
         "justify": "center",
         "format": "{title}\n<small>{artist}</small>",
         "format-paused": "{title}\n<small>{artist}</small>",
         "interval": 1,
-        "title-len": 30,
-        "artist-len": 30,
+        "title-len": 35,
+        "artist-len": 35,
         "player-icons": {
             "default": "",
             "mpv": "🎵"
@@ -304,9 +306,9 @@
         "status-icons": {
             "paused": "",
             "playing": "",
-            "previous": "󰒮",
+            "previous": "󰒮"
         },
-        // "ignored-players": ["firefox"]
+        "on-click": "~/.config/eww/widgets/center-down/mediaplayer.sh"
     },
 
     "keyboard-state": {

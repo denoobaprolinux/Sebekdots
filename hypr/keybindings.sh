@@ -50,22 +50,22 @@ GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
 "  + M" "Cerrar Hyprland" "Opciones de Hyprland" \
 "  + H" "Recargar Personalizaciones de Hyprland" "Script hyprctl.sh" \
 "  + Shift + H" "Configuraciones de Hyprland" "Script hyprctl.sh" \
-"  + SHIFT + R" "Recargar Waybar" "Script reload.sh" \
+"  + Shift + R" "Recargar Waybar" "Script reload.sh" \
 "  + Shift + Q" "Cargar Barra Waybar por Defecto" "Barra Clásica/Abajo" \
 "  + E" "Abre Explorador de Archivos" "Nautilus" \
 "  + F" "Ejecutar Navegador Web" "Firefox" \
 "  + N" "Abre el Centro de Notificaciones" "Sway Notification Center" \
-"  + W" "Elegir Wallpaper Aleatorio" "Script wallpaper.sh random" \
+"  + Shift + W" "Abrir Waypaper" "Waypaper" \
+"  + W" "Elegir Wallpaper Aleatorio" "Waypaper --random" \
 "  + Shift + B" "Seleccionar Tema de Waybar" "Script themeswitcher.sh" \
 "  + B" "Esconder/Mostrar Waybar" "Waybar" \
 "  + L" "Bloquear Pantalla" "Hyprlock" \
 "  + V" "Ventana Flotante" "Ventana Seleccionada" \
-"  + D" "Una Ventana Ocupa Pantalla Completa" "Activar/Desactivar" \
+"  + T" "Una Ventana Ocupa Pantalla Completa" "Activar/Desactivar" \
 "  + P" "Pseudo Dwindle" "Opciones de Hyprland" \
 "  + J" "Alternar Ventanas Horizontal/Vertical" "Dos Ventanas" \
 "  + Shift + T" "Activar/Desactivar Modo Pestañas" "Opciones de Hyprland" \
 "  + TAB" "Abrir Vista General de Espacios de Trabajo" "Hyprexpo" \
-"ALT + TAB" "Volver al Espacio de Trabajo anterior" "Opciones de Hyprland" \
 "  + S" "'Minimiza' y 'Maximiza' Ventana Activa" "Espacio de Trabajo Especial" \
 "PrintScreen" "Captura de Pantalla" "grim + swappy" \
 "  + PrintScreen" "Área de Captura de Pantalla" "grim + slurp + swappy" \

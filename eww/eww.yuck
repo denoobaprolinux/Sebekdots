@@ -1,0 +1,11 @@
+(include "./widgets/left-up/eww.yuck")
+(include "./widgets/left-down/eww.yuck")
+(include "./widgets/center-up/eww.yuck")
+(include "./widgets/center-down/eww.yuck")
+
+;; Actualizaciones dinámicas
+(defpoll music_status :interval "1s" "playerctl status")
+(deflisten title :interval "1s" "playerctl --follow metadata --format {{title}}")
+(deflisten artist :interval "1s" "playerctl --follow metadata --format {{artist}}")
+(deflisten album :interval "1s" "playerctl --follow metadata --format {{album}}")
+(deflisten art :interval "1s" "playerctl metadata mpris:artUrl")

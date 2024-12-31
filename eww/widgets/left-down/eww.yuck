@@ -1,0 +1,89 @@
+;; Definir la ventana del widget
+(defwindow audio-widget-left-down
+  :monitor 0
+  :focusable false
+  :stacking "fg"
+  :geometry (geometry :x "84"
+                      :y "5"
+                      :width "250"
+                      :height "250"
+                      :anchor "bottom left")
+  ;; Box principal para controlar la disposición
+    (box
+      :orientation "v"
+      :hexpand true
+      :vexpand true
+      ;; Carátula del álbum que ocupa todo el widget (en el fondo)
+      (box
+        :style "background-image: url('${art}'); background-size: cover; background-position: center; border-radius: 15px;"
+        :class "cover-art"
+        :hexpand true
+        :vexpand true
+        :height "250"   ;; Aseguramos que cubra todo el widget
+        :width "250"    ;; Ocupa todo el ancho
+        ;; Capa oscurecida encima de la imagen
+      (box
+        :style "background-color: rgba(0, 0, 0, 0.5); border-radius: 15px;"  ;; Color negro con transparencia
+        :class "overlay"
+        :hexpand true
+        :vexpand true
+        :height "250"   
+        :width "250"    
+        ;; Box con los elementos sobre la carátula
+        (box :orientation "vertical"
+             :class "audio-widget-left-down"
+             :spacing 0
+             :style "border-radius: 15px"
+             :halign "center"
+             :valign "center"
+             :hexpand true
+             :vexpand true
+             ;; Contenedor con desplazamiento para el título
+             (scroll
+              :orientation "v"
+              :height "60" ;; Espacio máximo permitido para el título
+              :width "200"
+              :class "title-scroll"
+              (box :orientation "v"
+                   :halign "center"
+                   :valign "end"
+                   (label :text title
+                          :class "content"
+                          :wrap "true"
+                          :justify "center")))
+             ;; Artista y Álbum en un solo box
+             (box :orientation "v"
+                  :class "artist-album-box"
+                  :halign "center"
+                  :valign "end"
+                  :spacing 5
+                  :hexpand false
+                  :vexpand false
+                  ;; Artista
+                  (label :text artist
+                         :class "content"
+                         :halign "center"
+                         :valign "center")
+                  ;; Álbum (debajo del artista)
+                  (label :text album
+                         :class "content"
+                         :halign "center"
+                         :valign "center"))
+            ;; Controles (fijos en el fondo)
+             (box :orientation "h"
+                  :spacing 20
+                  :halign "center"
+                  :valign "end"
+                  :style "width: 100%;"
+                  (button :class "previous-button"
+                          :onclick "playerctl previous"
+                          :tooltip "Anterior"
+                          (label :text ""))
+                  (button :class "pause-button ${music_status == 'Playing' ? 'playing' : 'paused'}"
+                          :onclick "playerctl play-pause"
+                          :tooltip "Reproducir/Pausa"
+                          "${music_status == 'Playing' ? '' : ''}")
+                  (button :class "next-button"
+                          :onclick "playerctl next"
+                          :tooltip "Siguiente"
+                          (label :text ""))))))))

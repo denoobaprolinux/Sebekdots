@@ -1,0 +1,51 @@
+@import '../../.cache/wal/colors.scss';
+
+* {
+    font-family: 'neuropolitical';
+    margin: 0px;
+    padding: 0px;
+    all: unset;
+}
+
+.container {
+    .audio-widget,
+    .cover-art,
+    .overlay {
+        border-radius: 2em;
+    }
+}
+
+.title,
+.artist,
+.album {
+    text-shadow: 1px 0px 4px $color10; 
+}
+
+/* Botones */
+
+.previous-button,
+.next-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 0px 5px 0px 0px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 0px 4px $color0;
+}
+
+.pause-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 0px 0px 0px 3px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 0px 4px $color0;
+}
+  
+  button:hover {
+    transition: all 0.3s ease-in-out; 
+    color: orange;  /* Color al pasar el mouse */
+    text-shadow: 1px 0px 4px rgb(206, 8, 8);
+  }
