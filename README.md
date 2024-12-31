@@ -1,16 +1,23 @@
-# Sebekdots 3.5.1 Hyprland Edition
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/hyprsebek?country.x=TT&locale.x=en_US)
 
-![Hyprland_2024-10-04_22 37 04](https://github.com/user-attachments/assets/e4a9b4e6-5977-4d52-8d97-0a269abfb666)
-_Nuevo Tema "Powerlink"_
+¡Si te gusta este proyecto, considera donar!
 
-![Hyprland_2024-10-05_20 53 50](https://github.com/user-attachments/assets/62cf2641-f4e9-43cb-a4d0-bffd28d6ea03)
-_Nuevo Tema "Powermix" y lista completa de temas para Waybar_
+Sería de muchísima utilidad para seguir desarrollando software
 
-[demo1.webm](https://github.com/user-attachments/assets/dcb778a6-06b4-44c8-92b6-f2d66c413887)
-_Menú de Configuraciones de Hyprland y Comportamiento de Ventanas Agrupadas_
+Gracias ;)
 
-[demo2.webm](https://github.com/user-attachments/assets/010e4e65-e4f2-488a-bc21-66ab596f6635)
-_Algunos temas de Sebekdots 3.5 y tema de menú de Aplicaciones_
+**Sebek**
+
+# ¡Sebekdots 3.6-RC1 ya está aquí!
+
+![Hyprland_2024-12-31_04 25 49](https://github.com/user-attachments/assets/0169a992-291a-4129-a1a4-a2b95537babc)
+_Widget de Audio_
+
+![Hyprland_2024-12-31_04 26 05](https://github.com/user-attachments/assets/714a1357-4f23-404c-b706-e93a2bb5ed8c)
+_Waypaper como interfaz para cambiar wallpapers_
+
+![Hyprland_2024-12-31_04 26 30](https://github.com/user-attachments/assets/dc6f5b18-488d-43ee-9ff8-28783643e757)
+_Nuevo GUI para el Portapapeles, nwg-clipman_
 
 Demo completo [en este enlace](https://www.youtube.com/watch?v=K7w-nsaZU3w)
 
@@ -18,27 +25,13 @@ Demo completo [en este enlace](https://www.youtube.com/watch?v=K7w-nsaZU3w)
 
 Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
-1. Las ventanas pueden moverse con el teclado
-2. Mejorada la característica de las pestañas, ahora las barras de pestañas activas son indicadores luminosos, y participan del esquema de colores del sistema
-3. Ahora se puede agregar una ventana a un grupo de pestañas sólo arrastrando la ventana al grupo de pestañas, pero también puede hacerse con keybindings **(Control + Súper + flechas del teclado)**
-4. Añadida la característica "volver a espacio de trabajo anterior" con **Alt + Tab** 
-5. Las barras ahora participan del efecto Blur: si tienes una barra con transparencia o traslucidez, y activas el efecto Blur en las opciones de Hyprland, la barra también se difumina. Eso ofrece un look and feel adicional a las barras (de manera involuntaria se han creado nuevos temas con esa característica)
-6. Eliminada la barra vertical de la actualización anterior: estaba muy descuidada y tosca. En su lugar, se han agregado dos barras verticales, "Degradado" y "Mínima", ambas a la izquierda.
-7. Selección aleatoria de wallpapers con **Súper + W.**
-8. El script de selección de wallpapers ha sido mejorado para admitir wallpapers animados. Esta mejora viene desde la versión anterior.
-9. Todos los temas clásicos han sido retirados. Sólo se conserva un tema clásico, pero ha sido cambiado/reimaginado. Asimismo, los temas "Mínima" han sido mejorados, lo mismo que los temas "Powerline".
-10. Han sido agregados nuevos temas: **"Powermix", "Powerlink", "Degradado", "Revealer", y "Transparente" (este último en variantes claro/oscuro)** 
-11. Ahora hay un archivo en las configuraciones de Hyprland llamado custom.conf para que puedan poner allí sus configuraciones personales. En la actualización, el archivo va vacío (Sólo con unas instrucciones)
-12. Mejorado el script de actualizaciones: detecta si en el sistema están instalados Yay, Flatpak y Snap (Yay sí o sí debe estar instalado para que funcionen los dotfiles) y pide confirmación en cada paso, puedes elegir no actualizar elementos por separado. También, el script envía notificaciones con relación a lo que hace, bien sea la cancelación del proceso por el usuario, o la actualización de los elementos.
-13. El módulo de actualizaciones en Waybar se reinicia inmediatamente se termina de ejecutar, de tal manera que vuelve a cero tan pronto se acaba la ejecución del script.
-14. Las barras ahora pueden aparecer y desaparecer de la pantalla para permitir una experiencia de pantalla completa. Sólo presiona **Súper + B** y activas/desactivas la barra.
-15. Presionando **Súper + A**, aparece una ayuda en pantalla con todos los keybindings (este archivo fue mejorado con respecto al demo)
-16. Agregado un efecto "minimizar" con **Súper + S**, que involucra el espacio de trabajo especial: no vas a ver las ventanas allí, sólo se van a almacenar, y aparecen nuevamente en donde desees. Sólo se puede hacer con una sola ventana.
-17. He incluido en este repositorio todas las fuentes necesarias, de tal manera que ya no necesitas descargarlas. Solamente con clonar el repositorio y seguir los pasos de la Wiki, podrás hacer la instalación.
-18. Si presionas los dos botones de shift al mismo tiempo, cambiarás la distribución del teclado a inglés de Estados Unidos (útil para los que tengan computadoras con distribución del teclado en inglés), y cada barra tiene un indicador del idioma elegido al lado del centro de notificaciones (ESP/ENG). Por defecto, la primera distribución es español latinoamericano.
-19. Actualización 3.5.1: Nuevo botón en todas las barras, **portapapeles**. Es el front-end de Cliphist, así que ahora tienes acceso a un portapapeles funcional.
+1. Widget de audio disponible para todas las barras horizontales (No hay necesidad de colocarlo en las verticales, porque hay acceso a un widget de audio en el Centro de Notificaciones)
 
-**Próximamente, pondré a disposición de la comunidad un programa para instalar/actualizar los dotfiles.**
+2. Waypaper ahora es el nuevo software para gestionar wallpapers, pudiendo seleccionar entre swww y hyprpaper. La configuración para hyprpaper está provista en esta actualización
+
+3. Nwg-clipman es el nuevo frontend para manejo del portapapeles.
+
+4. Desaparecen de la configuración una cantidad importante de scripts y el funcionamiento de otros tantos ha sido simplificado para corregir errores y redundancias.
 
 ## Importante, MUY importante
 
