@@ -1,4 +1,4 @@
-/* ---- Hyprland Configuration Menu - Rofi ---- */
+/* ---- Menú de Configuraciones de Hyprland - Rofi ---- */
 configuration {
     modi:                       "drun,run";
     font:                       "Neuropolitical 8";
@@ -98,7 +98,7 @@ entry {
     background-color:             transparent;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  " Hyprland Configuration Menu";
+    placeholder:                  " Configuraciones de Hyprland";
     placeholder-color:            inherit;
 }
 
