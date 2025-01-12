@@ -13,7 +13,6 @@ configuration {
 
 /* ---- Load pywal colors (custom wal template) ---- */
 @import "~/.cache/wal/colors-rofi-pywal"
-@import "~/.cache/current_wallpaper.rasi"
 
 /* ---- Window ---- */
 window {
