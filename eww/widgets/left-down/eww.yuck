@@ -9,6 +9,8 @@
                       :height "250"
                       :anchor "bottom left")
   ;; Box principal para controlar la disposición
+    (eventbox
+    :onhoverlost "eww close audio-widget-left-down"
     (box
       :orientation "v"
       :hexpand true
@@ -86,4 +88,4 @@
                   (button :class "next-button"
                           :onclick "playerctl next"
                           :tooltip "Siguiente"
-                          (label :text ""))))))))
+                          (label :text "")))))))))
