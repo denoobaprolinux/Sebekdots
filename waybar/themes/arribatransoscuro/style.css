@@ -13,7 +13,7 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wal/colors-waybar.css';
+@import '../../../../.cache/wallust/colors-waybar.css';
 
 @define-color background-module     @transparent;
 @define-color border-color          @color10;
@@ -311,5 +311,5 @@ tooltip label {
 #custom-notification.none,
 #custom-notification.dnd {
 
-    text-shadow: 1px -1px 2px @color10;
+    text-shadow: 1px -1px 2px @color0;
 }

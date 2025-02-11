@@ -69,8 +69,8 @@
                   ;; Álbum (debajo del artista)
                   (label :text album
                          :class "content"
-                         :halign "center"
-                         :valign "center"))
+                         :wrap "true"
+                         :justify "center"))
             ;; Controles (fijos en el fondo)
              (box :orientation "h"
                   :spacing 20

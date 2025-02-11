@@ -17,7 +17,8 @@ configuration {
 }
 
 /* ---- Load pywal colors (custom wal template) ---- */
-@import "~/.cache/wal/colors-rofi-pywal"
+@import "~/.cache/wallust/colors-rofi.rasi"
+@import "~/.cache/current_wallpaper.rasi"
 
 /* ---- Window ---- */
 window {
@@ -29,7 +30,7 @@ window {
     margin:                       0px; 
     color:                        #FFFFFF;
     border:                       2px;
-    border-color:                 @color10;
+    border-color:                 @selected;
     cursor:                       "default";
     transparency:                 "real";
     location:                     north;
@@ -119,7 +120,7 @@ button {
 }
 
 button selected {
-    background-color:             @color11;
+    background-color:             @background;
     text-color:                   @foreground;
 }
 
@@ -169,8 +170,9 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:            @color11;
-    text-color:                  @foreground;
+    background-color:            @background;
+    text-color:                  @selected;
+    border-color:                @selected;
 }
 
 element selected.urgent {

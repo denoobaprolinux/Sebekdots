@@ -94,6 +94,32 @@
         "tooltip": false
     },
 
+    // TRIANGULOS
+
+    "custom/edgeleft": {
+        "justify": "center",
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/edgeright": {
+        "justify": "center",
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/lowerleft": {
+        "justify": "center",
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/lowerright": {
+        "justify": "center",
+        "format": "",
+        "tooltip": false
+    },
+
     "custom/infoarrow":{
         "format": " ",
         "exec": "echo ; echo Información/Temas",
@@ -112,8 +138,7 @@
     "custom/wallchange": {
         "format": "󰆊 ",
         "exec": "echo ; echo Cambiar Wallpaper",
-        "on-click": "waypaper",
-        "on-click-right": "waypaper --random",
+        "on-click": "waytrogen -e ~/.config/waybar/waytrogen.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -213,7 +238,7 @@
             "urgent": "󰊠",
             "active": "󰮯",
             "default": "󰊠",
-            "empty": ""
+            "empty": " "
         },
         "persistent-workspaces": {
              "*": 10
@@ -280,7 +305,7 @@
                 "zen-beta": "Zen Browser",
                 "sebekdots.settings": "Configuraciones de Hyprland",
                 "code-oss": "VSCode",
-                "sebekos.mpris.up": ""
+                "org.Waytrogen.Waytrogen": "Waytrogen"
                 },
         "separate-outputs": true
     },
@@ -297,8 +322,8 @@
         "format": "{title}\n<small>{artist}</small>",
         "format-paused": "{title}\n<small>{artist}</small>",
         "interval": 1,
-        "title-len": 35,
-        "artist-len": 35,
+        "title-len": 30,
+        "artist-len": 30,
         "player-icons": {
             "default": "",
             "mpv": "🎵"

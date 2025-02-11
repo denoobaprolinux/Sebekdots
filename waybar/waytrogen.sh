@@ -1,19 +1,39 @@
 #!/bin/bash
 
-# Obtener el wallpaper seleccionado como argumento de Waypaper
-wallpaper="$1"
+# -----------------------------------------------------
+# Limpiar archivos JSON de ~/.cache/wallust
+# -----------------------------------------------------
+# rm -f ~/.cache/wallust/*.json
 
 # -----------------------------------------------------
-# Aplicar esquema de colores con Pywal
+# Obtener información del wallpaper seleccionado de Waytrogen
 # -----------------------------------------------------
-wal -q -i "$wallpaper"
-source "$HOME/.cache/wal/colors.sh"
+wallpaper_info=$(waytrogen --list-current-wallpapers 2>/dev/null)
+
+# Verificar si el comando se ejecutó correctamente
+if [ $? -ne 0 ]; then
+  echo "Error: No se pudo ejecutar 'waytrogen -l'."
+  exit 1
+fi
+
+# Extraer la ruta del wallpaper usando jq
+wallpaper=$(echo "$wallpaper_info" | jq -r '.[0].path')
+
+# Verificar si se obtuvo la ruta
+if [ -z "$wallpaper" ] || [ "$wallpaper" == "null" ]; then
+  echo "Error: No se pudo extraer la ruta del wallpaper."
+  exit 1
+fi
+
+# -----------------------------------------------------
+# Aplicar esquema de colores con Wallust
+# -----------------------------------------------------
+wallust run "$wallpaper"
 echo "Wallpaper: $wallpaper"
 
 # -----------------------------------------------------
 # Notificación de cambio de fondo
 # -----------------------------------------------------
-
 # notify-send --transient "Fondo de Pantalla" "$(basename "$wallpaper")"
 
 # -----------------------------------------------------
@@ -28,7 +48,6 @@ else
     echo "$wallpaper" > "$HOME/.cache/current_wallpaper"
 fi
 
-
 # -----------------------------------------------------
 # Reiniciar Waybar, Cava, y actualizar Pywalfox y Walogram
 # -----------------------------------------------------
@@ -38,4 +57,3 @@ sleep 1
 cp ~/.cache/wal/config ~/.config/cava/config
 pywalfox update
 walogram
-

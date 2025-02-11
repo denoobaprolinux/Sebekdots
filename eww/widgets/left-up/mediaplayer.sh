@@ -6,6 +6,9 @@ EWW_PATH="$HOME/.local/bin/eww"
 # Nombre del widget
 WIDGET_NAME="audio-widget-left-up"
 
+# Actualizar las variables del widget antes de abrirlo
+"$HOME/.config/eww/namerules.sh"
+
 # Verificar si el widget está abierto
 if $EWW_PATH active-windows | grep -q "$WIDGET_NAME"; then
   # Si el widget está abierto, cerrarlo

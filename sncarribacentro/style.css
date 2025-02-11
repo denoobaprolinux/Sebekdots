@@ -2,7 +2,7 @@
  * vim: ft=less
  */
 
-@import '../../.cache/wal/colors-waybar.css';
+@import '../../.cache/wallust/colors-waybar.css';
 
 @define-color cc-bg               alpha(@color0, 0.8); /* Entire control center background color */
 

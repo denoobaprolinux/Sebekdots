@@ -110,8 +110,7 @@
     "custom/wallchange": {
         "format": "󰆊 ",
         "exec": "echo ; echo Cambiar Wallpaper",
-        "on-click": "waypaper",
-        "on-click-right": "waypaper --random",
+        "on-click": "waytrogen -e ~/.config/waybar/waytrogen.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -248,7 +247,7 @@
                 "zen-beta": "Zen Browser",
                 "sebekdots.settings": "Configuraciones de Hyprland",
                 "code-oss": "VSCode",
-                "sebekos.mpris.down": ""
+                "org.Waytrogen.Waytrogen": "Waytrogen"
                 },
         "separate-outputs": true
     },

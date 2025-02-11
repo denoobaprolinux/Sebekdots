@@ -3,41 +3,60 @@
 {
 	"layer": "top",
 	"position": "bottom",
+	"height": 12,
 	"reload_style_on_change": true,
 
 	"include": ["~/.config/waybar/themes/modulesbottomcenter.json"],
 			
 	"modules-left": [
 		
-		"hyprland/workspaces",
-		"mpris"
-
+		"custom/updates",
+		"custom/clipboard",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange",
+		"mpris",
+		"custom/edgeright"
 	],
 
 	"modules-center": [
 	
-		"custom/updates",
-		"custom/options",
-		"custom/separador",
 		"custom/launcher",
-		"clock",			
-		"custom/notification",
-		"custom/separador",
-		"custom/clipboard",
-		"custom/themeswitcher",
-		"custom/wallchange"
+		"custom/lowerright",
+		"hyprland/workspaces",
+		"custom/lowerleft",
+		"custom/notification"
 	
 	],
 		
 	"modules-right": [
-	
+		
+		"custom/edgeleft",
 		"hyprland/window",
 		"pulseaudio",
-		"custom/separador",
+		"clock",
 		"tray",
-		"custom/separador",
 		"hyprland/language",
 		"battery",
 				
-	]
+	],
+
+	"mpris": {
+        "justify": "center",
+        "format": "{title}\n<small>{artist}</small>",
+        "format-paused": "{title}\n<small>{artist}</small>",
+        "interval": 1,
+        "title-len": 35,
+        "artist-len": 35,
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "previous": "󰒮"
+        },
+        "on-click": "~/.config/eww/widgets/left-down/mediaplayer.sh",
+    },
 }

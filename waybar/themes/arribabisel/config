@@ -10,35 +10,53 @@
 			
 	"modules-left": [
 		
-		"hyprland/workspaces",
-		"mpris"
-
+		"custom/updates",
+		"custom/clipboard",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange",
+		"mpris",
+		"custom/lowerleft"
 	],
 
 	"modules-center": [
 	
-		"custom/updates",
-		"custom/options",
-		"custom/separador",
 		"custom/launcher",
-		"clock",			
-		"custom/notification",
-		"custom/separador",
-		"custom/clipboard",
-		"custom/themeswitcher",
-		"custom/wallchange"
+		"custom/edgeleft",
+		"hyprland/workspaces",
+		"custom/edgeright",
+		"custom/notification"
 	
 	],
 		
 	"modules-right": [
-	
+		
+		"custom/lowerright",
 		"hyprland/window",
 		"pulseaudio",
-		"custom/separador",
+		"clock",
 		"tray",
-		"custom/separador",
 		"hyprland/language",
 		"battery",
 				
-	]
+	],
+
+	"mpris": {
+        "justify": "center",
+        "format": "{title}\n<small>{artist}</small>",
+        "format-paused": "{title}\n<small>{artist}</small>",
+        "interval": 1,
+        "title-len": 35,
+        "artist-len": 35,
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "previous": "󰒮"
+        },
+        "on-click": "~/.config/eww/widgets/left-up/mediaplayer.sh",
+    },
 }

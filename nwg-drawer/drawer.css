@@ -1,4 +1,4 @@
-@import '../../.cache/wal/colors-waybar.css';
+@import '../../.cache/wallust/colors-waybar.css';
 @define-color main              alpha(@color0, 0.75);
 @define-color hover            alpha(@color10, 0.75);
 

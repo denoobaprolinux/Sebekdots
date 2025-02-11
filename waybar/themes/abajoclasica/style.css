@@ -1,4 +1,4 @@
-@import '../../../../.cache/wal/colors-waybar.css';
+@import '../../../../.cache/wallust/colors-waybar.css';
 
 @define-color background-module     @transparent;
 @define-color border-color          @color10;
@@ -196,7 +196,7 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: @color10;
+    color: @color5;
     padding: 0px 10px 0px 15px;
     font-size:12px;
 }

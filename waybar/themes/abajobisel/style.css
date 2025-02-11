@@ -13,7 +13,7 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wal/colors-waybar.css';
+@import '../../../../.cache/wallust/colors-waybar.css';
 
 @define-color background-module     @transparent;
 @define-color border-color          @color10;
@@ -24,7 +24,7 @@
 * {
     font-size: 12px;
     font-family: neuropolitical;    
-    margin: -3px 0px -3px 0px;
+    margin: -2px 0px -2px 0px;
 }
 
 window#waybar {
@@ -34,38 +34,63 @@ window#waybar {
 }
 
 .modules-left {
-    border: 2px solid @color0;
-    border-radius: 0px 0px 100px 0px;
-    background-color: alpha(@color0, 0.7);
+
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 15px;
-    padding-left: 4px;
+    padding-left: 0px;
 }
 
 .modules-center {
-    border: 2px solid @color0;
-    border-radius: 100px 0px 100px 0px;
-    background-color: @color10;
+    
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .modules-right {
-    border: 2px solid @color0;
-    border-radius: 100px 0px 0px 0px;
-    background-color: alpha(@color0, 0.7);
+    
     padding-top: 2px;
     padding-bottom: 2px;
-    padding-right: 4px;
+    padding-right: 0px;
     padding-left: 4px;
 }
 
 #custom-separador {
     font-size: 20px;
     padding: 0px 0px 0px 0px;
+}
+
+#custom-edgeleft {
+    font-size: 24px;
+    color: @color0;
+    background-color: transparent;
+    opacity: 0.75;
+
+}
+
+#custom-edgeright {
+    font-size: 24px;
+    color: @color0;
+    background-color: transparent;
+    opacity: 0.75;
+}
+
+#custom-lowerleft {
+    font-size: 24px;
+    color: @color10;
+    background-color: transparent;
+    opacity: 1.0;
+
+}
+
+#custom-lowerright {
+    font-size: 24px;
+    color: @color10;
+    background-color: transparent;
+    opacity: 1.0;
+
 }
 
 #custom-notification {
@@ -115,7 +140,8 @@ window#waybar {
     color: white;
     font-size:11px;
     padding: 2px 5px 0px 10px;
-    background-color: alpha(@modules, 0.7);
+    background-color: @color0;
+    opacity: 0.75;
     transition: all 0.3s ease-in-out;
 }
 
@@ -139,20 +165,25 @@ window#waybar {
 
     font-size:11px;
     color: aliceblue;
-    padding: 0px 10px 0px 10px;
-    background-color: alpha(@modules, 0.7);
-    margin: 10px 0px 10px 0px;
+    padding: 0px 0px 0px 10px;
+    background-color: @color0;
+    opacity: 0.75;
+    margin: 0px 0px 0px 0px;
     transition: all 0.3s ease-in-out;
 }
 
 #custom-options {
-    padding: 0px 30px 0px 10px;
+    padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #custom-themeswitcher {
     padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #custom-wallchange,
@@ -161,13 +192,17 @@ window#waybar {
     color: aliceblue;
     padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #custom-clipboard {
     
     color: white;
-    padding: 0px 10px 0px 15px;
+    padding: 0px 10px 0px 10px;
     transition: all 0.3s ease-in-out;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #pulseaudio,
@@ -182,8 +217,10 @@ window#waybar {
 #window  {
     
     font-size: 12px;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 5px;
     color:#FFFFFF;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 window#waybar.empty #window {
@@ -195,8 +232,8 @@ window#waybar.empty #window {
 
 #workspaces {
    
-    padding: 0px 1px;
-    opacity:0.8;
+    padding: 0px 0px;
+    opacity: 1.0;
     color:#FFFFFF;
 }
 
@@ -205,7 +242,7 @@ window#waybar.empty #window {
     border-radius: 15px;
     border:0px;
     color: @color13;
-    background-color: transparent;
+    background-color: @color10;
     opacity:1.0;
 }
 
@@ -229,9 +266,9 @@ window#waybar.empty #window {
 #workspaces button:hover {
 
     color: @color12;
-    background: rgba(0, 0, 0, 0);
+    background-color: @color10;
+    opacity: 1.0;
     transition: all 0.3s ease-in-out;
-    opacity:1.0;
 }
 
 tooltip {
@@ -249,9 +286,11 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: white;
-    padding: 0px 10px 0px 15px;
+    color: @color5;
+    padding: 0px 0px 0px 10px;
     font-size:12px;
+    background-color: @color0;
+    opacity: 0.75;
 }
 #pulseaudio.muted {
     color: red;
@@ -259,8 +298,11 @@ tooltip label {
 }
 
 #mpris {
-    padding-left: 10px;
+    font-size: 10px;
+    padding-left: 5px;
     padding-right: 5px;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #mpris.paused {
@@ -269,8 +311,10 @@ tooltip label {
 
 #battery {
     color: #fff;
-    padding: 1px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     font-size: 10.5px;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 #battery.warning {
@@ -300,8 +344,10 @@ tooltip label {
 
 #language {
     color: white;
-    padding-left: 10px;
+    padding-left: 0px;
     font-size: 11px;
+    background-color: @color0;
+    opacity: 0.75;
 }
 
 /* Color de resaltado de los elementos de Waybar */
