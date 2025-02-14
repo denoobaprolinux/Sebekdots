@@ -18,7 +18,6 @@ configuration {
 
 /* ---- Load pywal colors (custom wal template) ---- */
 @import "~/.cache/wallust/colors-rofi.rasi"
-@import "~/.cache/current_wallpaper.rasi"
 
 /* ---- Window ---- */
 window {
