@@ -1,4 +1,4 @@
-@import '../../../../.cache/wallust/colors-waybar.css';
+@import '../../../../.cache/wallust/waybar.css';
 
 * {
     font-family: Neuropolitical;
@@ -17,7 +17,7 @@ window#waybar{
 }
 
 window#waybar > box {
-    background-color: @color0;
+    background-color: @background;
 }
 
 .modules-center,.modules-right,.modules-left{
@@ -28,13 +28,13 @@ window#waybar > box {
 }
 
 .modules-left{
-	background: linear-gradient(180deg, @color10, @color0);
+	background: linear-gradient(180deg, @source_color, @background);
 	border-radius: 20px;
 	padding-top: 8px;
 }
 
 .modules-right {
-	background: linear-gradient(0deg, @color10, @color0);
+	background: linear-gradient(0deg, @source_color, @background);
 	border-left:0;
 	border-radius: 20px;
 	padding:0px 4px 8px 0px;
@@ -130,7 +130,7 @@ window#waybar > box {
 	/* ORDEN DEL PADDING: ARRIBA/DERECHA/ABAJO/IZQUIERDA  */
 	padding: 0px 8px 0px 0px ;
 	background-color:transparent;
-	color: @color15; /* Color de todos los espacios de trabajo usados */
+	color: @primary; /* Color de todos los espacios de trabajo usados */
 	transition: 0.25s ease-in-out;
 }
 
@@ -186,7 +186,7 @@ window#waybar > box {
 	margin:0;
 	padding:0;
 	font-size:calc(18px * 1.2);
-	color: @color14;
+	color: @background4;
 	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
 }
 
@@ -222,7 +222,7 @@ window#waybar > box {
 
 #pulseaudio.sound {
 	padding: 8px 0px 0px 6px;
-	color:@color15;
+	color:@background5;
 	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
 }
 
@@ -234,7 +234,7 @@ window#waybar > box {
 
 #pulseaudio.icon {
 	padding: 0px 0px 0px 0px;
-	color: @color15;
+	color: @background5;
 	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
 }
 
@@ -253,7 +253,7 @@ window#waybar > box {
 	color:white;
 	min-width: 10px;
     border-radius: 20px;
-    background-color: @color14;
+    background-color: @background4;
     padding: 0px 0px 0px 0px;
 }
 
@@ -263,13 +263,13 @@ window#waybar > box {
 	margin:0 4px;
 	padding:4px 0;
 	border-radius:8px;
-    color: @color15;
+    color: @background5;
 }
 
 #battery {
 	font-size: 18px;
-	color: @color14;
-	padding: 0px 0px 4px 6.5px ;
+	color: @background4;
+	padding: 6px 0px 4px 5px ;
 	text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
 }
 
@@ -305,7 +305,7 @@ window#waybar > box {
 tooltip {
 	font-family: Neuropolitical;
     border-radius: 10px;
-    border: 2px solid @color10;
+    border: 2px solid @source_color;
     background-color: rgba(0, 0, 0, 1);
     padding:12px;
     margin:0px;

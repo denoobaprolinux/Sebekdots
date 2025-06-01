@@ -36,7 +36,6 @@
         "custom/options",
         "custom/clipboard",
         "custom/updates",
-		"group/pulse",
 		"battery",
 		"custom/notification",
 	],

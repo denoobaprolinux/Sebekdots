@@ -1,4 +1,4 @@
-@import '../../.cache/wallust/colors-waybar.css';
+@import '../../.cache/wallust/waybar.css';
 
 * {
     font-size: 10px;
@@ -6,9 +6,9 @@
 }
 
 window {
-    background: alpha(@color0, 0.8);
+    background: alpha(@scrim, 0.8);
     border-radius: 15px;
-    border:2px solid @color10;
+    border:2px solid @primary;
     color: #fff
 }
 
@@ -18,15 +18,16 @@ list {
 
 entry {
     background-color: rgba (0, 0, 0, 0.2);
-    border: 1px solid @color10;
+    border: 1px solid @primary;
 }
 
 button {
-    background: @color0;
+    background: rgba (0, 0, 0, 0);
+    border: 0px solid @primary;
     border-radius: 25px;
 }
 
 button:hover {
-    background: alpha(@color11, 0.8);
+    background: alpha(@surface_tint, 0.8);
     border-radius: 25px;
 }

@@ -32,7 +32,6 @@
 	"modules-right": [
 	
 		"hyprland/window",
-		"pulseaudio",
 		"clock",
 		"tray",
 		"battery",

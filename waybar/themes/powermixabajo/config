@@ -17,7 +17,6 @@
 		"custom/revealer-left",
 		"custom/rightin1",
 		"mpris",	
-		"pulseaudio",
 		"custom/updates",
 		"custom/clipboard",
 		"custom/options",
@@ -34,16 +33,15 @@
 		
 	"modules-right": [
 	
-      "hyprland/window",
-      "clock",
-      "tray",
-      "battery",
-      "custom/battery_notify",
-      "hyprland/language",
-      "custom/leftin1",
+     	"hyprland/window",
+     	"clock",
+     	"tray",
+     	"battery",
+     	"custom/battery_notify",
+     	"hyprland/language",
+    	"custom/leftin1",
 		"custom/revealer-right",
-		"custom/notification"
-				
+		"custom/notification"				
 	],
 
 	// Elementos únicos de la barra

@@ -13,10 +13,10 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wallust/colors-waybar.css';
+@import '../../../../.cache/wallust/waybar.css';
 
 @define-color background-module     @transparent;
-@define-color border-color          @color10;
+@define-color border-color          @source_color;
 @define-color button-color          @color12;
 @define-color button-hover          @color11;
 
@@ -58,7 +58,7 @@ window#waybar.empty #window ,
 #battery,
 #language {
 
-    background: @color0;
+    background: @background;
 }
 
 #custom-notification,
@@ -66,7 +66,7 @@ window#waybar.empty #window ,
 #custom-notification.dnd-none,
 #custom-notification.dnd-inhibited-none {
 
-    background: @color10;
+    background: @source_color;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -74,25 +74,25 @@ window#waybar.empty #window ,
 #custom-revealer-left {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color10;
+    color: @source_color;
 }
 
 #custom-right3 {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
 }
 
 #custom-rightin1 {
     font-size: 26.9px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
 }
 
 #custom-revealer-right {
-    font-size: 26px;
+    font-size: 26.9px;
     padding: 0px 0px 0px 0px;
-    color: @color10;
+    color: @source_color;
 }
 
 #custom-left2 {
@@ -104,7 +104,7 @@ window#waybar.empty #window ,
 #custom-leftin1 {
     font-size: 26.9px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
 }
 
 #custom-notification {
@@ -140,7 +140,7 @@ window#waybar.empty #window ,
 
     font-size: 23px;
     color: #1793d1;
-    background: @color10;
+    background: @source_color;
     padding: 0px 15px 0px 15px;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
@@ -227,15 +227,15 @@ window#waybar.empty #window ,
    
     padding: 0px 10px 0px 10px;
     opacity: 1;
-    color:#FFFFFF;
-    background: @color0;
+    color: red;
+    background: @background;
     border-radius: 20px;
 }
 
 #workspaces button {
     padding: 2px 2px;
     border:0px;
-    color: @color15;
+    color: @primary;
     opacity:1.0;
 }
 
@@ -288,13 +288,13 @@ tooltip label {
 }
 
 #mpris {
-    color: #fff;
+    color: @primary;
     transition: all 0.3s ease-in-out;
     padding: 0px 0px 0px 10px;
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @error;
 }
 
 #battery {
@@ -363,7 +363,7 @@ tooltip label {
     color: orange;
     padding: 0px 20px 0px 10px;
     transition: all 0.3s ease-in-out;
-    background: @color10;
+    background: @source_color;
 }
 
 /* Sombras de cada elemento de la barra */

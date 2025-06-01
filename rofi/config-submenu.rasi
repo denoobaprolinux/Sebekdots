@@ -8,29 +8,28 @@ configuration {
     display-run:                "RUN";
     display-filebrowser:        "FILES";
     display-window:             "WINDOW";
-	hover-select:               true;
+    hover-select:               true;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
-    
 }
 
 /* ---- Load pywal colors (custom wal template) ---- */
-@import "~/.cache/wallust/colors-rofi.rasi"
+@import "~/.config/rofi/matugen/rofi-colors.rasi"
 
 /* ---- Window ---- */
 window {
     width:                        600px;
-    height:                       240px;
+    height:                       280px;
     x-offset:                     0px;
     y-offset:                     35px;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
-    color:                        #FFFFFF;
+    color:                        @on-surface;
     border:                       2px;
-    border-color:                 @selected;
+    border-color:                 @primary;
     cursor:                       "default";
     transparency:                 "real";
     location:                     north;
@@ -47,7 +46,7 @@ mainbox {
     orientation:                  horizontal;
     spacing:                      0px;
     margin:                       0px;
-    background-color:             @background;
+    background-color:             @surface-dim;
     background-image:             transparent;
     children:                     ["listbox"];
 }
@@ -76,12 +75,12 @@ dummy {
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                      true;
-    text-color:                   @foreground;
+    text-color:                   @on-surface;
     spacing:                      10px;
     padding:                      15px;
     border-radius:                0px;
-    border-color:                 @foreground;
-    background-color:             @background;
+    border-color:                 @on-surface;
+    background-color:             @surface-dim;
     children:                     [ "textbox-prompt-colon", "entry" ];
 }
 
@@ -107,21 +106,21 @@ mode-switcher{
     enabled:                      true;
     spacing:                      20px;
     background-color:             transparent;
-    text-color:                   @foreground;
+    text-color:                   @on-surface;
 }
 
 button {
     padding:                      10px;
     border-radius:                10px;
-    background-color:             @background;
+    background-color:             @surface-dim;
     text-color:                   inherit;
     cursor:                       pointer;
     border:                       0px;
 }
 
 button selected {
-    background-color:             @background;
-    text-color:                   @foreground;
+    background-color:             @primary;
+    text-color:                   @on-primary;
 }
 
 /* ---- Listview ---- */
@@ -139,7 +138,7 @@ listview {
     spacing:                      0px;
     padding:                      10px;
     margin:                       0px;
-    background-color:             @background;
+    background-color:             @surface-dim;
     border:0px;
 }
 
@@ -149,55 +148,56 @@ element {
     padding:                      10px;
     margin:                       5px;
     cursor:                       pointer;
-    background-color:             @background;
-    border-radius:                10px;
+    background-color:             @surface-dim;
+    border-radius:                20px;
+    border-color:                 @primary;
     border:                       2px;
 }
 
 element normal.normal {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element normal.urgent {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element normal.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element selected.normal {
-    background-color:            @background;
-    text-color:                  @selected;
-    border-color:                @selected;
+    background-color:            @primary;
+    text-color:                  @on-primary;
+    border-color:                @primary;
 }
 
 element selected.urgent {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element selected.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element alternate.normal {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element alternate.urgent {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element alternate.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @on-surface;
 }
 
 element-icon {
@@ -229,8 +229,8 @@ textbox {
     padding:                     15px;
     margin:                      0px;
     border-radius:               0px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @surface-dim;
+    text-color:                  @on-surface;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
@@ -238,6 +238,6 @@ textbox {
 error-message {
     padding:                     15px;
     border-radius:               20px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
 }

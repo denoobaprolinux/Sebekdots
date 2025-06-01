@@ -221,7 +221,6 @@
         },        
         "modules": [
             "custom/revealer-right",
-            "pulseaudio",
             "clock",
             "tray",
             "battery",
@@ -302,7 +301,7 @@
                 "org.kde.kdeconnect.app": "KDE Connect",
                 "org.kde.kdenlive": "Kdenlive",
                 "org.manjaro.pamac.manager": "Pamac",
-                "zen-beta": "Zen Browser",
+                "zen": "Zen Browser",
                 "sebekdots.settings": "Configuraciones de Hyprland",
                 "code-oss": "VSCode",
                 "org.Waytrogen.Waytrogen": "Waytrogen"

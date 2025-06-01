@@ -30,7 +30,7 @@
 window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
-    background: alpha(@color0, 0.7);
+    background: alpha(@color1, 0.7);
     border-radius: 10px;
         
 }

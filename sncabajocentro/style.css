@@ -4,7 +4,7 @@
 
 @import '../../.cache/wallust/colors-waybar.css';
 
-@define-color cc-bg               alpha(@color0, 0.8); /* Entire control center background color */
+@define-color cc-bg               alpha(@color1, 0.8); /* Entire control center background color */
 
 @define-color noti-border-color   alpha(@color10, 0.4); /* Border color for popup notifications */
 @define-color noti-bg             rgba(0, 0, 0, 0.4);   /* Background for popup notification */

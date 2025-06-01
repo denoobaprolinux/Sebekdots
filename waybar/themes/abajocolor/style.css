@@ -13,13 +13,7 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wallust/colors-waybar.css';
-
-@define-color background-module     @transparent;
-@define-color border-color          @color10;
-@define-color button-color          @color12;
-@define-color button-hover          @color11;
-
+@import '../../../../.cache/wallust/waybar.css';
 
 * {
     font-size: 11px;
@@ -28,18 +22,18 @@
 }
 
 window#waybar {
-    /*background: linear-gradient(0deg, @border-color, black);*/
+    /*background: linear-gradient(0deg, @source_color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
-    background: @color0;
+    background: @background;
         
 }
 
 .modules-left {
-    background: linear-gradient(90deg, @border-color, @color0);
+    background: linear-gradient(90deg, @source_color, @background);
 }
 
 .modules-right {
-    background: linear-gradient(270deg, @border-color, @color0);
+    background: linear-gradient(270deg, @source_color, @background);
 }
 
 #custom-notification {
@@ -152,13 +146,13 @@ window#waybar.empty #window {
     padding: 2px 2px;
     border-radius: 15px;
     border:0px;
-    color: @color13;
+    color: @primary;
     background-color: transparent;
     opacity:1.0;
 }
 
 #workspaces button.active {
-    color: @color10;
+    color: @primary;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
 }
@@ -183,7 +177,7 @@ window#waybar.empty #window {
 
 tooltip {
     border-radius: 10px;
-    border: 2px solid @border-color;
+    border: 2px solid @source_color;
     background-color: black;
     opacity:0.8;
     padding:20px;
@@ -206,12 +200,12 @@ tooltip label {
 }
 
 #mpris {
-    color: white;
+    color: @primary;
     transition: all 0.3s ease-in-out;
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @error;
     transition: all 0.3s ease-in-out;
 }
 

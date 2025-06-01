@@ -17,7 +17,6 @@
 		"custom/revealer-left",
 		"custom/rightin1",
 		"mpris",	
-		"pulseaudio",
 		"custom/updates",
 		"custom/clipboard",
 		"custom/options",
@@ -40,8 +39,8 @@
       "battery",
       "hyprland/language",
       "custom/leftin1",
-		"custom/revealer-right",
-		"custom/notification"
+	  "custom/revealer-right",
+	  "custom/notification"
 				
 	],
 

@@ -29,7 +29,6 @@
 		//"hyprland/window",
 		"mpris",	
 		"clock",
-		"pulseaudio",
 		"tray",
 		"battery",
 		"custom/notification"

@@ -1,6 +1,6 @@
-@import '../../.cache/wallust/colors-waybar.css';
-@define-color main              alpha(@color0, 0.75);
-@define-color hover            alpha(@color10, 0.75);
+@import '../../.cache/wallust/waybar.css';
+@define-color main              alpha(@shadow, 0.75);
+@define-color hover            alpha(@primary, 0.75);
 
 
 window {
@@ -29,7 +29,7 @@ button:hover {
 
 #pinned-box {
     padding-bottom: 5px;
-    border-bottom: 3px dotted @color10
+    border-bottom: 3px dotted @primary
 }
 
 #files-box {

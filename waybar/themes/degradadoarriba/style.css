@@ -13,13 +13,7 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wallust/colors-waybar.css';
-
-@define-color background-module     @transparent;
-@define-color border-color          @color10;
-@define-color button-color          @color12;
-@define-color button-hover          @color11;
-
+@import '../../../../.cache/wallust/waybar.css';
 
 * {
     font-size: 10px;
@@ -30,15 +24,15 @@
 window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
-    background: @color0;
+    background: @background;
 }
 
 .modules-left {
-    background: linear-gradient(90deg, @color10, @color0);
+    background: linear-gradient(90deg, @source_color, @background);
 }
 
 .modules-right {
-    background: linear-gradient(270deg, @color10, @color0);
+    background: linear-gradient(270deg, @source_color, @background);
 }
 
 #custom-notification {
@@ -166,7 +160,7 @@ window#waybar.empty #window {
 #workspaces button {
     padding: 2px 2px;
     border:0px;
-    color: @color15;
+    color: @primary;
     opacity:1.0;
 }
 
@@ -219,12 +213,12 @@ tooltip label {
 }
 
 #mpris {
-    color: #fff;
+    color: @primary;
     transition: all 0.3s ease-in-out;
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @error;
 }
 
 #battery {

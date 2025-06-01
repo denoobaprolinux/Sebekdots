@@ -263,8 +263,7 @@
                 "org.kde.kdeconnect.app": "KDE Connect",
                 "org.kde.kdenlive": "Kdenlive",
                 "org.manjaro.pamac.manager": "Pamac",
-                "zen-beta": "Zen Browser",
-                "sebekdots.settings": "Configuraciones de Hyprland",
+                "zen": "Zen Browser",
                 "code-oss": "VSCode",
                 "org.Waytrogen.Waytrogen": "Waytrogen"
                 },

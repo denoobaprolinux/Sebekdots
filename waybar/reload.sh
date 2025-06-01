@@ -50,19 +50,3 @@ if [[ $themestyle == *izquierda* ]]; then
     killall swaync
     swaync -c ~/.config/sncizq/config.json -s ~/.config/sncizq/style.css &
 fi
-if [[ $themestyle == *abajobisel* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
-fi
-if [[ $themestyle == *arribabisel* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
-fi
-if [[ $themestyle == *revealerarriba* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
-fi
-if [[ $themestyle == *revealerabajo* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
-fi

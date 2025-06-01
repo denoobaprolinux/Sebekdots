@@ -130,7 +130,7 @@ if [ "$updates_yay" -gt 0 ];then
         all_updates_skipped=false
     fi
 else
-    echo "No hay actualizaciones de Yay."
+    echo "No hay actualizaciones de AUR."
 fi
 
 # Actualiza Flatpak si hay actualizaciones
@@ -181,4 +181,3 @@ fi
 sleep 2
 ~/.config/waybar/updates.sh
 pkill -SIGUSR2 waybar
-

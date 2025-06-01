@@ -1,71 +1,39 @@
 #!/bin/bash
 
-# ----------------------------------------------------- 
-# Cierra todas las instancias existentes de Waybar
-# ----------------------------------------------------- 
-killall waybar
-sleep 0.2
+# -----------------------------------------------------
+# Cerrar instancias previas de Waybar y Swaync
+# -----------------------------------------------------
+pkill waybar
+pkill swaync
+sleep 1
 
-# ----------------------------------------------------- 
-# Obtiene información del tema actual de .cache/.themestyle.sh
-# ----------------------------------------------------- 
+# -----------------------------------------------------
+# Leer el tema actual desde .cache/.themestyle.sh
+# -----------------------------------------------------
 if [ -f ~/.cache/.themestyle.sh ]; then
     themestyle=$(cat ~/.cache/.themestyle.sh)
 else
-    touch ~/.cache/.themestyle.sh
+    themestyle="/classic;/classic"
     echo "$themestyle" > ~/.cache/.themestyle.sh
 fi
 
 IFS=';' read -ra arrThemes <<< "$themestyle"
-echo ${arrThemes[0]}
 
-if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-    themestyle="/classic;/classic"
-fi
+# -----------------------------------------------------
+# Iniciar Waybar con la configuración y estilo correctos
+# -----------------------------------------------------
+waybar -c ~/.config/waybar/themes${arrThemes[0]}/config -s ~/.config/waybar/themes${arrThemes[1]}/style.css &
 
-# ----------------------------------------------------- 
-# Cargando la Configuración
-# ----------------------------------------------------- 
-
-config_file="config"
-style_file="style.css"
-
-# Revisa archivos usados
-echo "Config: $config_file"
-echo "Style: $style_file"
-
-waybar -c ~/.config/waybar/themes${arrThemes[0]}/$config_file -s ~/.config/waybar/themes${arrThemes[1]}/$style_file &
-sleep 3 && ~/.config/hypr/hyprctl.sh
-
-# Funciones para determinar cuál configuración de Swaync se va a cargar
-
-themestyle=$(cat ~/.cache/.themestyle.sh)
-
-if [[ $themestyle == *arriba* ]]; then
-    killall swaync 
-    swaync -c ~/.config/sncarriba/config.json -s ~/.config/sncarriba/style.css &
-fi
-if [[ $themestyle == *abajo* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncabajo/config.json -s ~/.config/sncabajo/style.css &
-fi
-if [[ $themestyle == *izquierda* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncizq/config.json -s ~/.config/sncizq/style.css &
-fi
-if [[ $themestyle == *abajobisel* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
-fi
-if [[ $themestyle == *arribabisel* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
-fi
-if [[ $themestyle == *revealerarriba* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css &
-fi
-if [[ $themestyle == *revealerabajo* ]]; then
-    killall swaync
-    swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css &
-fi
+# -----------------------------------------------------
+# Configurar y ejecutar Swaync según el estilo actual
+# -----------------------------------------------------
+sleep 1
+case "$themestyle" in
+    *arriba*)       swaync -c ~/.config/sncarriba/config.json -s ~/.config/sncarriba/style.css & ;;
+    *abajo*)        swaync -c ~/.config/sncabajo/config.json -s ~/.config/sncabajo/style.css & ;;
+    *izquierda*)    swaync -c ~/.config/sncizq/config.json -s ~/.config/sncizq/style.css & ;;
+    *abajobisel*)   swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css & ;;
+    *arribabisel*)  swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css & ;;
+    *revealerarriba*) swaync -c ~/.config/sncarribacentro/config.json -s ~/.config/sncarribacentro/style.css & ;;
+    *revealerabajo*)  swaync -c ~/.config/sncabajocentro/config.json -s ~/.config/sncabajocentro/style.css & ;;
+esac

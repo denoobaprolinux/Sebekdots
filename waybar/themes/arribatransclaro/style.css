@@ -13,13 +13,7 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wallust/colors-waybar.css';
-
-@define-color background-module     @transparent;
-@define-color border-color          @color10;
-@define-color button-color          @color12;
-@define-color button-hover          @color11;
-
+@import '../../../../.cache/wallust/waybar.css';
 
 * {
     font-size: 12px;
@@ -153,7 +147,7 @@ window#waybar.empty #window {
     padding: 3px 3px;
     border-radius: 15px;
     border:0px;
-    color: @color13;
+    color: @primary;
     background-color: transparent;
     opacity:1.0;
 }
@@ -175,7 +169,7 @@ window#waybar.empty #window {
     background: rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out;
     opacity:1.0;
-    text-shadow: 1px -1px 1px @color10;
+    text-shadow: 1px -1px 1px @source_color;
 }
 
 tooltip {
@@ -203,7 +197,7 @@ tooltip label {
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @secondary;
 }
 
 #battery {
@@ -260,13 +254,13 @@ tooltip label {
 
     color: orange;
     transition: all 0.3s ease-in-out;
-    text-shadow: 1px -1px 1px @color10;
+    text-shadow: 1px -1px 1px @source_color;
 }
 
 #custom-launcher:hover {
 
     color: #9ff;
-    text-shadow: 1px -1px 1px @color10;
+    text-shadow: 1px -1px 1px @source_color;
     padding: 0px 21px 0px 15px;
     transition: all 0.3s ease-in-out;
 }
@@ -277,7 +271,7 @@ tooltip label {
 #custom-notification.dnd-inhibited-none:hover {
 
     color: orange;
-    text-shadow: 1px -1px 1px @color10;
+    text-shadow: 1px -1px 1px @source_color;
     padding: 0px 17px 0px 15px;
     transition: all 0.3s ease-in-out; 
 }
@@ -306,5 +300,5 @@ tooltip label {
 #custom-notification.none,
 #custom-notification.dnd {
 
-    text-shadow: 1px -1px 2px @color10;
+    text-shadow: 1px -1px 2px @source_color;
 }

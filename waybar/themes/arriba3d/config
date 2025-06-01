@@ -1,0 +1,62 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"height": 12,
+	"margin-top": 5,
+	"margin-left": 5,
+	"margin-right": 5,
+	"reload_style_on_change": true,
+
+	"include": ["~/.config/waybar/themes/modulestop.json"],
+			
+	"modules-left": [
+		
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/clipboard",
+		"custom/updates",
+		"custom/options",
+		"custom/themeswitcher",
+		"custom/wallchange"
+
+	],
+
+	"modules-center": [
+	
+		"mpris"	
+	
+	],
+		
+	"modules-right": [
+	
+		"clock",
+		"tray",
+		"battery",
+		"hyprland/language",
+		"custom/notification"
+				
+	],
+
+	// Módulos únicos para la barra
+
+	"mpris": {
+        "justify": "center",
+        "format": "{title}\n<small>{artist}</small>",
+        "format-paused": "{title}\n<small>{artist}</small>",
+        "interval": 1,
+        "title-len": 60,
+        "artist-len": 60,
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "previous": "󰒮",
+        },
+        // "ignored-players": ["firefox"]
+    },
+}

@@ -13,12 +13,12 @@
 @define-color teal-trans    rgba(1, 117, 84, 0.5);
 @define-color cyan          rgba(53, 140, 169, 1);
 
-@import '../../../../.cache/wallust/colors-waybar.css';
+@import '../../../../.cache/wallust/waybar.css';
 
 @define-color background-module     @transparent;
-@define-color border-color          @color10;
-@define-color button-color          @color12;
-@define-color button-hover          @color11;
+@define-color border-color          @on_primary;
+@define-color button-color          @background2;
+@define-color button-hover          @background1;
 
 
 * {
@@ -30,12 +30,12 @@
 window#waybar {
     /*background: linear-gradient(0deg, @border-color, black);*/
     /*background: rgba(1, 117, 84, 0.5);*/
-    background: @color0;
+    background: @background;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-bottom: 6px solid @color10;
+    border-bottom: 6px solid @on_primary;
 }
 
 .modules-left {
@@ -54,7 +54,7 @@ window#waybar {
 #custom-notification.dnd-none,
 #custom-notification.dnd-inhibited-none {
 
-    background: @color10;
+    background: @on_primary;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -62,35 +62,35 @@ window#waybar {
 #custom-revealer-left {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color10;
-    background: @color0;
+    color: @on_primary;
+    background: @background;
 }
 
 #custom-left1 {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
     background: rgba(0, 0, 0, 0);
 }
 
 #custom-revealer-right {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color10;
-    background: @color0;
+    color: @on_primary;
+    background: @background;
 }
 
 #custom-right1 {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
     background: rgba(0, 0, 0, 0);
 }
 
 #custom-left2 {
     font-size: 26px;
     padding: 0px 0px 0px 0px;
-    color: @color0;
+    color: @background;
 }
 
 #custom-notification {
@@ -126,7 +126,7 @@ window#waybar {
 
     font-size: 23px;
     color: #1793d1;
-    background: @color10;
+    background: @on_primary;
     padding: 0px 15px 0px 15px;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
@@ -153,7 +153,7 @@ window#waybar {
 }
 
 #custom-updates.white {
-    color: @color7; /* Blanco por defecto */
+    color: white; /* Blanco por defecto */
 }
 
 #clock {
@@ -207,13 +207,13 @@ window#waybar {
     padding: 0px 0px 0px 0px;
     opacity: 1;
     color:#FFFFFF;
-    background: @color0;
+    background: @background;
 }
 
 #workspaces button {
     padding: 2px 2px;
     border:0px;
-    color: @color15;
+    color: @primary;
     opacity:1.0;
 }
 
@@ -243,7 +243,7 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    border: 2px solid @border-color;
+    border: 2px solid @on_primary;
     background-color: black;
     opacity:0.8;
     padding:20px;
@@ -272,7 +272,7 @@ tooltip label {
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @on_primary;
 }
 
 #battery {
@@ -342,7 +342,7 @@ tooltip label {
     color: orange;
     padding: 0px 20px 0px 10px;
     transition: all 0.3s ease-in-out;
-    background: @color10;
+    background: @on_primary;
 }
 
 /* Color de fondo de los módulos */
@@ -361,7 +361,7 @@ window#waybar.empty #window ,
 #language,
 #battery {
 
-    background: @color0;
+    background: @background;
 }
 
 /* Sombras de cada elemento de la barra */

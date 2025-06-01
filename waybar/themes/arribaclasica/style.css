@@ -1,9 +1,5 @@
-@import '../../../../.cache/wallust/colors-waybar.css';
+@import '../../../../.cache/wallust/waybar.css';
 
-@define-color background-module     @transparent;
-@define-color border-color          @color10;
-@define-color button-color          @color12;
-@define-color button-hover          @color11;
 
 * {
     font-size: 10.5px;
@@ -11,24 +7,24 @@
 }
 
 window#waybar {
-    background: linear-gradient(0deg, @color10, black);
+    background: linear-gradient(0deg, @on_primary_container, black);
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-bottom: 1px solid @color0;        
+    border-bottom: 1px solid @on_primary;        
 }
 
 .modules-left {
-    background: linear-gradient(0deg, @color10, black);
+    background: linear-gradient(0deg, @primary, black);
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-bottom: 3px solid @color0;
+    border-bottom: 3px solid @on_primary;
 }
 
 .modules-right {
-    background: linear-gradient(0deg, @color10, black);
+    background: linear-gradient(0deg, @primary, black);
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-bottom: 3px solid @color0;
+    border-bottom: 3px solid @on_primary;
 }
 
 #custom-notification {
@@ -96,9 +92,8 @@ window#waybar {
 #clock {
 
     font-size:11px;
-    color: aliceblue;
     padding: 0px 10px 0px 10px;
-    background-color: alpha(@modules, 0.7);
+    background-color: alpha(@primary, 0);
     margin: 10px 0px 10px 0px;
     transition: all 0.3s ease-in-out;
 }
@@ -152,7 +147,7 @@ window#waybar.empty #window {
     padding: 3px 3px;
     border-radius: 15px;
     border:0px;
-    color: @color13;
+    color: @on_primary_container;
     background-color: transparent;
     opacity:1.0;
 }
@@ -183,7 +178,7 @@ window#waybar.empty #window {
 
 tooltip {
     border-radius: 10px;
-    border: 2px solid @border-color;
+    border: 2px solid @on_primary_container;
     background-color: black;
     opacity:0.8;
     padding:20px;
@@ -206,7 +201,7 @@ tooltip label {
 }
 
 #mpris.paused {
-    color: @color10;
+    color: @on_primary_container;
 }
 
 #memory {

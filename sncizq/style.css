@@ -2,23 +2,22 @@
  * vim: ft=less
  */
 
-@import '../../.cache/wallust/colors-waybar.css';
+@import '../../.cache/wallust/waybar.css';
 
-@define-color cc-bg               alpha(@color0, 0.8); /* Entire control center background color */
+@define-color cc-bg               alpha(@scrim, 0.8); /* Entire control center background color */
 
-@define-color noti-border-color   alpha(@color10, 0.4); /* Border color for popup notifications */
+@define-color noti-border-color   alpha(@primary, 0.4); /* Border color for popup notifications */
 @define-color noti-bg             rgba(0, 0, 0, 0.4);   /* Background for popup notification */
 @define-color noti-bg-darker      rgba(0, 0, 0, 0.6);   /* Idk yet */
-@define-color noti-bg-hover       alpha(@color10, 0.7); /* Main color for popup notifications */
+@define-color noti-bg-hover       alpha(@primary, 0.7); /* Main color for popup notifications */
 @define-color noti-bg-focus       rgba(0, 0, 0, 0.0);   /* Background for selected notification in CC */
 @define-color noti-close-bg       rgba(0, 0, 0, 0.1);
 @define-color noti-close-bg-hover rgba(0, 0, 0, 0.15);
 
 @define-color text-color          rgb(255, 255, 255);
 @define-color text-color-disabled rgb(150, 150, 150);
-
-@define-color dnd-switch          @color11;
-@define-color dnd-switch-bg       alpha(@color10, 0.5);
+@define-color dnd-switch          @surface_dim;
+@define-color dnd-switch-bg       alpha(@primary, 0.5);
 
 * {
     
@@ -197,7 +196,7 @@
 
 .control-center {
   background: @cc-bg;
-  border:2px solid @color10;
+  border:2px solid @primary;
 }
 
 .control-center-list {
