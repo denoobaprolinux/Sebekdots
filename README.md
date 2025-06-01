@@ -31,6 +31,8 @@ Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
 4. Desaparecen de la configuración una cantidad importante de scripts y el funcionamiento de otros tantos ha sido simplificado para corregir errores y redundancias.
 
+5. Hyprshot es el nuevo programa para gestionar capturas de pantalla. 
+
 ## Importante, MUY importante
 
 *ELIMINADO HYPREXPO*
