@@ -8,7 +8,7 @@ Gracias ;)
 
 **Sebek**
 
-# ¡Sebekdots 3.6-RC2 ya está aquí!
+# ¡Sebekdots 3.6-stable ya está aquí!
 
 ![Hyprland_2024-12-31_04 25 49](https://github.com/user-attachments/assets/0169a992-291a-4129-a1a4-a2b95537babc)
 _Widget de Audio_
@@ -23,11 +23,11 @@ _Nuevo GUI para el Portapapeles, nwg-clipman_
 
 Actualizaciones acumulativas a mis dotfiles, con la siguiente lista de cambios:
 
-1. Wallust es el nuevo gestor de esquema de colores del sistema.
+1. Matugen es el nuevo gestor de esquema de colores del sistema.
 
-2. Waytrogen ahora es el nuevo software para gestionar wallpapers, pudiendo seleccionar entre swww y hyprpaper. La configuración para hyprpaper está provista en esta actualización, funcionando para Waytrogen del mismo modo que funcionaba en Waypaper.
+2. Eliminado el módulo de audio y sustituido por pasystray.
 
-3. Reformadas las barras "Bisel". El diseño es más sencillo ahora.
+3. Eliminadas las barras "Bisel" y "Revealer", sustituidas por 3D Clásica y 3D Modular.
 
 4. Desaparecen de la configuración una cantidad importante de scripts y el funcionamiento de otros tantos ha sido simplificado para corregir errores y redundancias.
 
