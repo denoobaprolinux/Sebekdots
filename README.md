@@ -1,3 +1,5 @@
+# Repositorio Archivado - No recibirá más actualizaciones
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/hyprsebek?country.x=TT&locale.x=en_US)
 
 ¡Si te gusta este proyecto, considera donar!
